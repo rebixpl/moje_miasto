@@ -36,10 +36,13 @@ class _LanguageSelectorState extends State<LanguageSelector>
   late AnimationController _controller;
   late Animation<double> widthAnimation;
   bool isClosed = true;
+  List<AppLanguage> appLanguagesFiltered = [...appLanguages];
 
   @override
   void initState() {
     super.initState();
+
+    // Set up an animation
     _controller = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 400));
 
@@ -61,6 +64,10 @@ class _LanguageSelectorState extends State<LanguageSelector>
   }
 
   void toggleLanguageSelector() {
+    // always make sure that active language is first (makes animations better)
+    appLanguagesFiltered.remove(activeAppLang);
+    appLanguagesFiltered.insert(0, activeAppLang);
+
     setState(() {
       isClosed = !isClosed;
       if (!isClosed) {
@@ -96,11 +103,11 @@ class _LanguageSelectorState extends State<LanguageSelector>
                   // Language Selector View
                   : ListView.builder(
                       shrinkWrap: true,
-                      itemCount: appLanguages.length,
+                      itemCount: appLanguagesFiltered.length,
                       scrollDirection: Axis.horizontal,
                       physics: const NeverScrollableScrollPhysics(),
                       itemBuilder: (context, i) => SingleLanguage(
-                        lang: appLanguages[i],
+                        lang: appLanguagesFiltered[i],
                         toggleLanguageSelector: toggleLanguageSelector,
                       ),
                     ),
