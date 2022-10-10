@@ -88,10 +88,12 @@ class _LanguageSelectorState extends State<LanguageSelector>
               ),
               color: Theme.of(context).colorScheme.secondary,
               child: isClosed
+                  // Single Language View (currently used)
                   ? SingleLanguage(
                       lang: activeAppLang,
                       toggleLanguageSelector: toggleLanguageSelector,
                     )
+                  // Language Selector View
                   : ListView.builder(
                       shrinkWrap: true,
                       itemCount: appLanguages.length,
@@ -109,6 +111,7 @@ class _LanguageSelectorState extends State<LanguageSelector>
           "Język/мова",
           style: Theme.of(context).textTheme.caption!.copyWith(
                 color: Theme.of(context).colorScheme.secondary,
+                fontWeight: FontWeight.bold,
               ),
         ),
       ],
@@ -130,12 +133,17 @@ class SingleLanguage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        debugPrint("Selected Language: ${lang.langId}");
-        activeAppLang = lang;
-        toggleLanguageSelector();
-
         // TODO: bloc action >>> change selected app language to 'langId'
         // note: this value is only temporary, later the selected language will be stored inside some bloc
+        activeAppLang.langId != lang.langId
+            ? debugPrint('language changed')
+            : null;
+        activeAppLang.langId != lang.langId ? activeAppLang = lang : null;
+        debugPrint(
+            "Tapped Language: ${lang.langId} | Active Language ${activeAppLang.langId}");
+
+        // When user has selected the language, run the animation to close the language selector widget and go back to single language view
+        toggleLanguageSelector();
       },
       child: Padding(
         padding: const EdgeInsets.all(6.0),
