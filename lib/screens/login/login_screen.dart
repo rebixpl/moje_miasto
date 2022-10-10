@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/login/widgets/language_selector.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -11,33 +12,9 @@ class LoginScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
-              children: [
-                Card(
-                  color: Theme.of(context).colorScheme.secondary,
-                  child: Container(
-                    width: 50.0,
-                    height: 50.0,
-                    child: ,
-                  ),
-                ),
-                Text(
-                  "Język/мова",
-                  style: Theme.of(context).textTheme.caption!.copyWith(
-                        color: Theme.of(context).colorScheme.secondary,
-                      ),
-                ),
+              children: const [
+                LanguageSelector(),
               ],
-            ),
-            Text(
-              "Witaj Baryla!",
-              style: Theme.of(context).textTheme.titleMedium,
-            ),
-            Card(
-              color: Colors.amber,
-              child: SizedBox(
-                width: 100.0,
-                height: 100.0,
-              ),
             ),
           ],
         ),
