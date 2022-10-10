@@ -7,12 +7,14 @@ class InformationsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         GestureDetector(
-          onTap: () => debugPrint("navigate to about screen"),
+          // TODO: Nawiguj do ekranu informacji about us
+          onTap: () => debugPrint('navigate to about screen'),
           child: SizedBox(
-            width: 60,
-            height: 60,
+            width: 50,
+            height: 50,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
@@ -20,18 +22,18 @@ class InformationsButton extends StatelessWidget {
               color: Theme.of(context).colorScheme.secondary,
               child: const Icon(
                 FontAwesomeIcons.circleInfo,
-                size: 40.0,
+                size: 30.0,
                 color: Colors.white,
               ),
             ),
           ),
         ),
         Text(
-          "Informacje",
-          style: Theme.of(context).textTheme.caption!.copyWith(
-                color: Theme.of(context).colorScheme.secondary,
-                fontWeight: FontWeight.bold,
-              ),
+          'Informacje',
+          style: TextStyle(
+              color: Theme.of(context).colorScheme.secondary,
+              fontWeight: FontWeight.bold,
+              fontSize: 9.0),
         ),
       ],
     );

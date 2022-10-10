@@ -16,7 +16,7 @@ class Logo extends StatelessWidget {
         ),
         const SizedBox(height: 10.0),
         Text(
-          "Moje Miasto",
+          'Moje Miasto',
           style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                 color: Theme.of(context).colorScheme.secondary,
                 fontWeight: FontWeight.bold,

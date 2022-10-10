@@ -8,9 +8,10 @@ class ForgotPasswordButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () => debugPrint("navigate to forgot password screen"),
+      // TODO: nawiguj do ekranu zapomnialem haslo forgot password
+      onPressed: () => debugPrint('navigate to forgot password screen'),
       child: Text(
-        "Zapomniałeś hasła?",
+        'Zapomniałeś hasła?',
         style: TextStyle(
           color: const Color(0xFF211A4C).withOpacity(0.75),
           fontWeight: FontWeight.bold,

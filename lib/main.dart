@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           secondary: Color(0xFF211A4C),
           primary: Color(0xFF293462),
         ),
-        fontFamily: "Montserrat",
+        fontFamily: 'Montserrat',
       ),
       home: const LoginScreen(),
     );

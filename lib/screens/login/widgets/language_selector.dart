@@ -46,7 +46,7 @@ class _LanguageSelectorState extends State<LanguageSelector>
     _controller = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 400));
 
-    widthAnimation = Tween<double>(begin: 60.0, end: 165.0).animate(
+    widthAnimation = Tween<double>(begin: 50.0, end: 135.0).animate(
       CurvedAnimation(
         parent: _controller,
         curve: const Interval(0.0, 0.5, curve: Curves.decelerate),
@@ -68,27 +68,24 @@ class _LanguageSelectorState extends State<LanguageSelector>
     appLanguagesFiltered.remove(activeAppLang);
     appLanguagesFiltered.insert(0, activeAppLang);
 
-    setState(() {
-      isClosed = !isClosed;
-      if (!isClosed) {
-        _controller.forward();
-      } else {
-        _controller.reverse();
-      }
-    });
+    isClosed = !isClosed;
+    if (!isClosed) {
+      _controller.forward();
+    } else {
+      _controller.reverse();
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment:
-          isClosed ? CrossAxisAlignment.center : CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         GestureDetector(
           onTap: () => toggleLanguageSelector(),
           child: SizedBox(
             width: widthAnimation.value,
-            height: 60,
+            height: 50,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10.0),
@@ -115,11 +112,12 @@ class _LanguageSelectorState extends State<LanguageSelector>
           ),
         ),
         Text(
-          "Język/мова",
-          style: Theme.of(context).textTheme.caption!.copyWith(
-                color: Theme.of(context).colorScheme.secondary,
-                fontWeight: FontWeight.bold,
-              ),
+          'Język/мова',
+          style: TextStyle(
+            color: Theme.of(context).colorScheme.secondary,
+            fontWeight: FontWeight.bold,
+            fontSize: 9.0,
+          ),
         ),
       ],
     );
@@ -147,7 +145,7 @@ class SingleLanguage extends StatelessWidget {
             : null;
         activeAppLang.langId != lang.langId ? activeAppLang = lang : null;
         debugPrint(
-            "Tapped Language: ${lang.langId} | Active Language ${activeAppLang.langId}");
+            'Tapped Language: ${lang.langId} | Active Language ${activeAppLang.langId}');
 
         // When user has selected the language, run the animation to close the language selector widget and go back to single language view
         toggleLanguageSelector();
@@ -157,8 +155,8 @@ class SingleLanguage extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10.0),
           child: SizedBox(
-            width: 40.0,
-            height: 40.0,
+            width: 30.0,
+            height: 30.0,
             child: Image.asset(
               lang.langImg,
               fit: BoxFit.cover,
