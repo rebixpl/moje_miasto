@@ -12,7 +12,7 @@ class Logo extends StatelessWidget {
       children: [
         SvgPicture.asset(
           'images/app/moje_miasto_logo.svg',
-          width: 240.0,
+          width: 200.0,
         ),
         const SizedBox(height: 10.0),
         Text(

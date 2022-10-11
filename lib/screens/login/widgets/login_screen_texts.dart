@@ -33,13 +33,17 @@ Row doesNotHaveAnAccountText(BuildContext context) {
           fontSize: 14.5,
         ),
       ),
-      const SizedBox(width: 3.0),
-      Text(
-        'Zarejestruj się',
-        style: TextStyle(
-          color: Theme.of(context).colorScheme.secondary.withOpacity(0.75),
-          fontWeight: FontWeight.bold,
-          fontSize: 14.5,
+      TextButton(
+        onPressed: () =>
+            // TODO: Nawiguj do ekranu rejestracji przez email >>> BLOC AUTORYZACJI
+            debugPrint('nawiguj do Rejestracja przez Email'),
+        child: Text(
+          'Zarejestruj się',
+          style: TextStyle(
+            color: Theme.of(context).colorScheme.secondary.withOpacity(0.75),
+            fontWeight: FontWeight.bold,
+            fontSize: 14.5,
+          ),
         ),
       ),
     ],

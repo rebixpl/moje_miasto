@@ -15,7 +15,7 @@ class MyElevatedButton extends StatelessWidget {
     required this.child,
     this.borderRadius,
     this.width,
-    this.height = 60.0,
+    this.height = 50.0,
     this.gradient = const LinearGradient(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,

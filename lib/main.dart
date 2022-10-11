@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: 'Montserrat',
       ),
-      home: const LoginScreen(),
+      home: LoginScreen(),
     );
   }
 }
