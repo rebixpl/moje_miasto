@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/forgot_password/forgot_password_screen.dart';
 
 class ForgotPasswordButton extends StatelessWidget {
   const ForgotPasswordButton({
@@ -9,7 +10,10 @@ class ForgotPasswordButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       // TODO: nawiguj do ekranu zapomnialem haslo forgot password
-      onPressed: () => debugPrint('navigate to forgot password screen'),
+      onPressed: () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: ((context) => const ForgotPasswordScreen())),
+      ),
       child: Text(
         'Zapomniałeś hasła?',
         style: TextStyle(
