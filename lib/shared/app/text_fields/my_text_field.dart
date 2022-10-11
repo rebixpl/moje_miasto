@@ -10,9 +10,9 @@ class MyTextField extends StatelessWidget {
     this.focusedColor = const Color(0xff554F76),
     this.textColor = const Color(0xff211A4C),
     required this.validator,
-    this.errorColor = const Color(0xffFFD8BE),
+    this.errorColor = const Color(0xff554F76),
     this.fillColor = const Color(0xff211A4C),
-    this.focusedErrorBorderColor = const Color(0xffFFEEDD),
+    this.focusedErrorBorderColor = const Color(0xff211A4C),
     this.obscureText = false,
     VoidCallback? suffixIconPressed,
     this.isSuffixButtonActive = false,
@@ -54,7 +54,8 @@ class MyTextField extends StatelessWidget {
     return InputDecoration(
       isDense: true,
       errorStyle: TextStyle(
-        color: errorColor,
+        color: textColor.withOpacity(0.5),
+        fontWeight: FontWeight.w500,
       ),
       labelText: fieldName,
       suffixIcon: IconButton(
@@ -81,12 +82,16 @@ class MyTextField extends StatelessWidget {
       errorBorder: OutlineInputBorder(
         borderSide: BorderSide(
           color: errorColor,
+          width: 1.0,
         ),
+        borderRadius: BorderRadius.circular(20.0),
       ),
       focusedErrorBorder: OutlineInputBorder(
         borderSide: BorderSide(
           color: focusedErrorBorderColor,
+          width: 2.0,
         ),
+        borderRadius: BorderRadius.circular(20.0),
       ),
       labelStyle: TextStyle(
         color: textColor.withOpacity(0.5),

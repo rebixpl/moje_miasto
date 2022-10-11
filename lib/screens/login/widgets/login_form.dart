@@ -26,8 +26,7 @@ class LoginForm extends StatelessWidget {
             myController: emailController,
             fieldName: 'Email',
             myIcon: FontAwesomeIcons.solidEnvelope,
-            validator:
-                Validators.validateTitleQuiz, // TODO: create custom validator
+            validator: Validators.validateEmail,
           ),
           // Password Form
           PasswordTextField(passwordController: passwordController),
@@ -59,8 +58,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
       myController: widget.passwordController,
       fieldName: 'Hasło',
       myIcon: isHidden ? FontAwesomeIcons.eye : FontAwesomeIcons.eyeSlash,
-      validator:
-          Validators.validateDescriptionQuiz, // TODO: create cursom validator
+      validator: Validators.validatePasswordLogin,
       obscureText: isHidden,
       isSuffixButtonActive: true,
       suffixIconPressed: () {
