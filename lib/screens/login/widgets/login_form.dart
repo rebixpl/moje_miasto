@@ -30,7 +30,6 @@ class LoginForm extends StatelessWidget {
           ),
           // Password Form
           PasswordTextField(passwordController: passwordController),
-          // Img Form
         ],
       ),
     );

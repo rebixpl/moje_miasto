@@ -12,7 +12,7 @@ class ForgotPasswordButton extends StatelessWidget {
       // TODO: nawiguj do ekranu zapomnialem haslo forgot password
       onPressed: () => Navigator.push(
         context,
-        MaterialPageRoute(builder: ((context) => const ForgotPasswordScreen())),
+        MaterialPageRoute(builder: ((context) => ForgotPasswordScreen())),
       ),
       child: Text(
         'Zapomniałeś hasła?',

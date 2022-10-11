@@ -15,7 +15,6 @@ class LoginScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
 
   final _emailController = TextEditingController();
-
   final _passwordController = TextEditingController();
 
   @override
@@ -48,16 +47,17 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20.0),
                   BigElevatedButton(
-                      text: 'Logowanie',
-                      onTap: () {
-                        if (_formKey.currentState!.validate()) {
-                          // TODO: Logowanie przez email i haslo, potem nawigacja do home screen >>> BLOC AUTORYZACJI
-                          debugPrint(
-                              'email and password validated successfully! >>> zaloguj i nawiguj do home screen');
-                        } else {
-                          debugPrint('ERROR validating email and password!');
-                        }
-                      }),
+                    text: 'Logowanie',
+                    onTap: () {
+                      if (_formKey.currentState!.validate()) {
+                        // TODO: Logowanie przez email i haslo, potem nawigacja do home screen >>> BLOC AUTORYZACJI
+                        debugPrint(
+                            'email and password validated successfully! >>> zaloguj i nawiguj do home screen');
+                      } else {
+                        debugPrint('ERROR validating email and password!');
+                      }
+                    },
+                  ),
                   const SizedBox(height: 10.0),
                   const ForgotPasswordButton(),
                   const SizedBox(height: 14.0),
