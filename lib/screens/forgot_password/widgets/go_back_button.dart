@@ -1,14 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:moje_miasto/screens/login/login_screen.dart';
 
 class GoBackButton extends StatelessWidget {
-  const GoBackButton({super.key});
+  final bool clearNavHistory;
+  final Widget? widgetToNavAfterClear;
+
+  const GoBackButton({
+    super.key,
+    this.clearNavHistory = false,
+    this.widgetToNavAfterClear,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       // TODO: Nawiguj jeden ekran do tyłu
-      onTap: () => Navigator.pop(context),
+      onTap: () => clearNavHistory
+          ? Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(
+                builder: (context) => widgetToNavAfterClear ?? LoginScreen(),
+              ),
+              (route) => false,
+            )
+          : Navigator.pop(context),
       child: SizedBox(
         width: 50,
         height: 50,

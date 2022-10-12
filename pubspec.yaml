@@ -63,7 +63,7 @@ flutter:
   assets:
     - images/screens/
     - images/screens/language_selector/
-    - images/screens/forgot_password_screen/
+    - images/screens/forgot_password/
     - images/app/
 
   # An image asset can refer to one or more resolution-specific "variants", see
