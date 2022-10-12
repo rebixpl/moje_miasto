@@ -43,6 +43,7 @@ class InfoScreen extends StatelessWidget {
           ),
           Expanded(
             child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
               child: Padding(
                 padding: const EdgeInsets.only(
                   bottom: AppTheme.kDefaultPadding,
@@ -52,7 +53,7 @@ class InfoScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const SizedBox(height: 10.0),
+                    const SizedBox(height: 30.0),
                     const InfoTitle(
                       text: 'o projekcie moje miasto',
                     ),

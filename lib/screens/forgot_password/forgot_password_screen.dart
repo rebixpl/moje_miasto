@@ -28,43 +28,48 @@ class ForgotPasswordScreen extends StatelessWidget {
                   GoBackButton(),
                 ],
               ),
-              const Spacer(),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const SizedBox(height: 20.0),
-                  resetPasswordText(context),
-                  const SizedBox(height: 40.0),
-                  lockImg(),
-                  const SizedBox(height: 40.0),
-                  const FullWidthDivider(),
-                  const SizedBox(height: 40.0),
-                  forgotPasswordText(context),
-                  const SizedBox(height: 20.0),
-                  forgotPasswordDescriptionText(context),
-                  const SizedBox(height: 20.0),
-                  ForgotPasswordEmailForm(
-                    formKey: _formKey,
-                    emailController: _emailController,
+              const SizedBox(height: 20.0),
+              Expanded(
+                child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(height: 20.0),
+                      resetPasswordText(context),
+                      const SizedBox(height: 40.0),
+                      lockImg(),
+                      const SizedBox(height: 40.0),
+                      const FullWidthDivider(),
+                      const SizedBox(height: 40.0),
+                      forgotPasswordText(context),
+                      const SizedBox(height: 20.0),
+                      forgotPasswordDescriptionText(context),
+                      const SizedBox(height: 20.0),
+                      ForgotPasswordEmailForm(
+                        formKey: _formKey,
+                        emailController: _emailController,
+                      ),
+                      const SizedBox(height: 20.0),
+                      BigElevatedButton(
+                        text: 'Dalej',
+                        onTap: () {
+                          if (_formKey.currentState!.validate()) {
+                            // TODO: Wyslac prosbe o reset hasla na podany email
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const FPConfirmationScreen(),
+                              ),
+                            );
+                          }
+                        },
+                      ),
+                    ],
                   ),
-                  const SizedBox(height: 20.0),
-                  BigElevatedButton(
-                    text: 'Dalej',
-                    onTap: () {
-                      if (_formKey.currentState!.validate()) {
-                        // TODO: Wyslac prosbe o reset hasla na podany email
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const FPConfirmationScreen(),
-                          ),
-                        );
-                      }
-                    },
-                  ),
-                ],
+                ),
               ),
-              const Spacer(),
             ],
           ),
         ),
