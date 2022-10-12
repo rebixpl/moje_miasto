@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:moje_miasto/screens/info/info_screen.dart';
 
 class InformationsButton extends StatelessWidget {
   const InformationsButton({super.key});
@@ -11,7 +12,10 @@ class InformationsButton extends StatelessWidget {
       children: [
         GestureDetector(
           // TODO: Nawiguj do ekranu informacji about us
-          onTap: () => debugPrint('navigate to about screen'),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const InfoScreen()),
+          ),
           child: SizedBox(
             width: 50,
             height: 50,
