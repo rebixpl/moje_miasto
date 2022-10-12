@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:moje_miasto/theme.dart';
 
 class GoogleAuthButton extends StatelessWidget {
+  final bool isWide;
+
   const GoogleAuthButton({
     Key? key,
+    this.isWide = false,
   }) : super(key: key);
 
   @override
@@ -23,6 +26,7 @@ class GoogleAuthButton extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(1.0),
             child: Container(
+              width: isWide ? 100.0 : null,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.0),
                 color: Colors.white,

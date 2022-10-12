@@ -4,17 +4,19 @@ import 'package:moje_miasto/shared/app/text_fields/my_text_field.dart';
 import 'package:moje_miasto/shared/app/text_fields/password_text_field.dart';
 import 'package:moje_miasto/shared/app/text_fields/text_field_validators.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({
+class CreateAccountForm extends StatelessWidget {
+  const CreateAccountForm({
     super.key,
     required this.formKey,
     required this.emailController,
     required this.passwordController,
+    required this.usernameController,
   });
 
   final GlobalKey<FormState> formKey;
-  final TextEditingController emailController;
-  final TextEditingController passwordController;
+  final TextEditingController emailController,
+      passwordController,
+      usernameController;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,14 @@ class LoginForm extends StatelessWidget {
           // Password Form
           PasswordTextField(
             passwordController: passwordController,
-            validator: Validators.validatePasswordLogin,
+            validator: Validators.validatePasswordCreateAccount,
+          ),
+          // Username Form
+          MyTextField(
+            myController: usernameController,
+            fieldName: 'Nazwa Użytkownika',
+            myIcon: FontAwesomeIcons.solidCircleUser,
+            validator: Validators.validateUsername,
           ),
         ],
       ),

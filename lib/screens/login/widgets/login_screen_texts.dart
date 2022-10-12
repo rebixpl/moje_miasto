@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/create_account/create_account_screen.dart';
 import 'package:moje_miasto/screens/login/widgets/thin_divider.dart';
 
 Row orSignUpWithGoogleText(BuildContext context) {
@@ -36,7 +37,12 @@ Row doesNotHaveAnAccountText(BuildContext context) {
       TextButton(
         onPressed: () =>
             // TODO: Nawiguj do ekranu rejestracji przez email >>> BLOC AUTORYZACJI
-            debugPrint('nawiguj do Rejestracja przez Email'),
+            Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => CreateAccountScreen(),
+          ),
+        ),
         child: Text(
           'Zarejestruj się',
           style: TextStyle(

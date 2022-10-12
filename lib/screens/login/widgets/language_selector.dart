@@ -112,7 +112,7 @@ class _LanguageSelectorState extends State<LanguageSelector>
           ),
         ),
         Text(
-          'Język/мова',
+          'Język',
           style: TextStyle(
             color: Theme.of(context).colorScheme.secondary,
             fontWeight: FontWeight.bold,
