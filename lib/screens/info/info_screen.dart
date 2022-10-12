@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/go_back_button.dart';
-import 'package:moje_miasto/screens/login/widgets/forgot_password_button.dart';
-import 'package:moje_miasto/screens/login/widgets/google_auth_button.dart';
-import 'package:moje_miasto/screens/login/widgets/login_screen_texts.dart';
+import 'package:moje_miasto/screens/info/widgets/background_img.dart';
+import 'package:moje_miasto/screens/info/widgets/info_screen_texts.dart';
 import 'package:moje_miasto/screens/login/widgets/logo.dart';
 import 'package:moje_miasto/theme.dart';
+import 'package:moje_miasto/shared/app/text/title_case.dart';
 
 class InfoScreen extends StatelessWidget {
   const InfoScreen({super.key});
@@ -12,38 +12,54 @@ class InfoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
-          child: Column(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  GoBackButton(),
-                ],
+              const BackgroundImg(),
+              SafeArea(
+                child: Padding(
+                  padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          GoBackButton(),
+                        ],
+                      ),
+                      const SizedBox(height: 30.0),
+                      const Logo(),
+                      const SizedBox(height: 20.0),
+                      aboutUsText(context),
+                    ],
+                  ),
+                ),
               ),
-              const Spacer(),
-              Column(
+            ],
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 20.0),
-                  const Logo(),
-                  const SizedBox(height: 20.0),
                   Text(
-                    'O NAS',
-                    style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                          fontFamily: 'Montserrat',
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 22.0,
-                        ),
+                    'o projekcie moje miasto'.toTitleCase(),
+                    textAlign: TextAlign.start,
+                    style: const TextStyle(
+                      fontFamily: 'Montserrat',
+                      color: AppTheme.kAboutTextColor,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18.0,
+                    ),
                   ),
                 ],
               ),
-              const Spacer(),
-            ],
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
