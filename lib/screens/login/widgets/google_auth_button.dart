@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account_google/create_account_google_screen.dart';
 import 'package:moje_miasto/theme.dart';
 
 class GoogleAuthButton extends StatelessWidget {
@@ -14,7 +15,12 @@ class GoogleAuthButton extends StatelessWidget {
     return InkWell(
       borderRadius: BorderRadius.circular(20.0),
       // TODO: nawiguj do ekranu rejestracji / logowania przez google
-      onTap: () => debugPrint('Continue with google'),
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => CreateAccountGoogleScreen(),
+        ),
+      ), //debugPrint('Continue with google'),
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Container(
