@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/terms_of_service/terms_of_service_screen.dart';
 
 Text createAccountText(BuildContext context) {
   return Text(
@@ -36,7 +37,10 @@ Row bottomTosTexts(BuildContext context) {
       ),
       TextButton(
         // TODO: Navigate to TOS SCREEN
-        onPressed: () => debugPrint('Navigate to TOS Screen'),
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const TosScreen()),
+        ),
         child: Text(
           'Zasady & Warunki Użytkowania',
           style: TextStyle(
