@@ -68,6 +68,7 @@ flutter:
     - images/screens/forgot_password/
     - images/screens/info/
     - images/screens/create_account/avatar_selector/
+    - images/screens/create_account/
     - images/app/
 
   # An image asset can refer to one or more resolution-specific "variants", see
