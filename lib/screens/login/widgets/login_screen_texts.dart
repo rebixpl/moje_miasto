@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/screens/create_account/create_account_screen.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/create_account_screen.dart';
 import 'package:moje_miasto/screens/login/widgets/thin_divider.dart';
 
 Row orSignUpWithGoogleText(BuildContext context) {

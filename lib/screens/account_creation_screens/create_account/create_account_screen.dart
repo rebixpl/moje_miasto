@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/screens/create_account/widgets/avatar_selector.dart';
-import 'package:moje_miasto/screens/create_account/widgets/create_account_form.dart';
-import 'package:moje_miasto/screens/create_account/widgets/create_account_texts.dart';
-import 'package:moje_miasto/screens/create_account/widgets/google_auth_btn_centred.dart';
+import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/ca_more_info_screen.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/create_account_form.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/create_account_texts.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/google_auth_btn_centred.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
 import 'package:moje_miasto/screens/login/widgets/big_elevated_button.dart';
 import 'package:moje_miasto/theme.dart';
@@ -51,6 +52,11 @@ class CreateAccountScreen extends StatelessWidget {
                           // TODO: also validate avatar selector, or create a cubit with default first avatar
                           if (_formKey.currentState!.validate()) {
                             // TODO: navigate to CA Additional Informations Screen
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => CAMoreInfoScreen()),
+                            );
                             debugPrint(
                                 'validation successfull, navigate to CA Additional Informations Screen');
                           } else {
