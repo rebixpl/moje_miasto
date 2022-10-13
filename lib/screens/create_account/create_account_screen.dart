@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/create_account/widgets/avatar_selector.dart';
 import 'package:moje_miasto/screens/create_account/widgets/create_account_form.dart';
+import 'package:moje_miasto/screens/create_account/widgets/create_account_texts.dart';
+import 'package:moje_miasto/screens/create_account/widgets/google_auth_btn_centred.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
 import 'package:moje_miasto/screens/login/widgets/big_elevated_button.dart';
-import 'package:moje_miasto/screens/login/widgets/google_auth_button.dart';
-import 'package:moje_miasto/screens/login/widgets/thin_divider.dart';
 import 'package:moje_miasto/theme.dart';
 
 class CreateAccountScreen extends StatelessWidget {
@@ -29,25 +30,11 @@ class CreateAccountScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 20.0),
-                      Text(
-                        'utwórz konto'.toUpperCase(),
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.secondary,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 36.0,
-                        ),
-                      ),
+                      createAccountText(context),
                       const SizedBox(height: 20.0),
                       const FullWidthDivider(),
                       const SizedBox(height: 20.0),
-                      Text(
-                        'Powiedz nam coś o sobie 😀',
-                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                              color: Theme.of(context).colorScheme.secondary,
-                              fontWeight: FontWeight.w600,
-                              fontSize: 18.0,
-                            ),
-                      ),
+                      tellUsMoreText(context),
                       const SizedBox(height: 20.0),
                       CreateAccountForm(
                         formKey: _formKey,
@@ -55,69 +42,31 @@ class CreateAccountScreen extends StatelessWidget {
                         passwordController: _passwordController,
                         usernameController: _usernameController,
                       ),
+                      const SizedBox(height: 20.0),
+                      const SelectAvatar(),
                       const SizedBox(height: 40.0),
-                      const Text(
-                          'avatar selector'), // TODO: avatar selector widget
-                      const SizedBox(height: 60.0),
                       BigElevatedButton(
                         text: 'Kontynuuj',
                         onTap: () {
+                          // TODO: also validate avatar selector, or create a cubit with default first avatar
                           if (_formKey.currentState!.validate()) {
-                            // TODO: Logowanie przez email i haslo, potem nawigacja do home screen >>> BLOC AUTORYZACJI
+                            // TODO: navigate to CA Additional Informations Screen
                             debugPrint(
-                                'email and password validated successfully! >>> zaloguj i nawiguj do home screen');
+                                'validation successfull, navigate to CA Additional Informations Screen');
                           } else {
-                            debugPrint('ERROR validating email and password!');
+                            debugPrint('ERROR validating create account!');
                           }
                         },
                       ),
                       const SizedBox(height: 30.0),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          ThinDivider(),
-                          SizedBox(width: 6.0),
-                          GoogleAuthButton(isWide: true),
-                          SizedBox(width: 6.0),
-                          ThinDivider(),
-                        ],
-                      ),
+                      const GoogleAuthBtnCentred(),
                       const SizedBox(height: 20.0),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Po zarejstrowaniu zgadzasz sie na',
-                            style: TextStyle(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .secondary
-                                  .withOpacity(0.5),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 9.0,
-                            ),
-                          ),
-                          TextButton(
-                            // TODO: Navigate to TOS SCREEN
-                            onPressed: () =>
-                                debugPrint('Navigate to TOS Screen'),
-                            child: Text(
-                              'Zasady & Warunki Użytkowania',
-                              style: TextStyle(
-                                color: Theme.of(context).colorScheme.secondary,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 9.0,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
+                      bottomTosTexts(context),
                       const SizedBox(height: 20.0),
                     ],
                   ),
                 ),
               ),
-              // const Spacer(),
             ],
           ),
         ),
