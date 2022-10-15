@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/country_picker/widgets/country_picker_form.dart';
+import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/city_picker/widgets/city_picker_form.dart';
 
-class CountryPicker extends StatelessWidget {
-  const CountryPicker({
+class CityPicker extends StatelessWidget {
+  const CityPicker({
     Key? key,
     required TextEditingController cityNameController,
     required GlobalKey<FormState> formKey,
@@ -39,7 +39,7 @@ class CountryPicker extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(
-                  child: CountryPickerForm(
+                  child: CityPickerForm(
                     cityNameController: _cityNameController,
                     formKey: _formKey,
                   ),

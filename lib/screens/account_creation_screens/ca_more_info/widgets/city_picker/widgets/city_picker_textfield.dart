@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CountryPickerTextField extends StatelessWidget {
-  const CountryPickerTextField({
+class CityPickerTextField extends StatelessWidget {
+  const CityPickerTextField({
     super.key,
     required this.myController,
     required this.fieldName,

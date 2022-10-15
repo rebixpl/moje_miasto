@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/country_picker/widgets/country_picker_textfield.dart';
+import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/city_picker/widgets/city_picker_textfield.dart';
 
-class CountryPickerForm extends StatelessWidget {
-  const CountryPickerForm({
+class CityPickerForm extends StatelessWidget {
+  const CityPickerForm({
     super.key,
     required this.formKey,
     required this.cityNameController,
@@ -19,7 +19,7 @@ class CountryPickerForm extends StatelessWidget {
       child: Column(
         children: [
           // City Name Textfield
-          CountryPickerTextField(
+          CityPickerTextField(
             myController: cityNameController,
             fieldName: 'Wyszukaj swoje miasto...',
             myIcon: FontAwesomeIcons.magnifyingGlass,

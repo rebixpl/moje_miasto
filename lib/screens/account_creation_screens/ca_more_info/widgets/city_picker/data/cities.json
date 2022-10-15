@@ -1,0 +1,30 @@
+[
+  {
+    "cityId": "lublin",
+    "cityName": "Lublin"
+  },
+  {
+    "cityId": "warszawa",
+    "cityName": "Warszawa"
+  },
+  {
+    "cityId": "krakow",
+    "cityName": "Kraków"
+  },
+  {
+    "cityId": "leczna",
+    "cityName": "Łęczna"
+  },
+  {
+    "cityId": "katowice",
+    "cityName": "Katowice"
+  },
+  {
+    "cityId": "gdansk",
+    "cityName": "Gdańsk"
+  },
+  {
+    "cityId": "wroclaw",
+    "cityName": "Wrocław"
+  }
+]
