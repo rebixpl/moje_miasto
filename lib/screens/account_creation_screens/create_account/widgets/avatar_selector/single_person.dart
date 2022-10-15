@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/cubits/avatar_selector_cubit.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatars.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/cubits/avatar_selector_cubit.dart';
 
 class SinglePerson extends StatelessWidget {
   const SinglePerson({

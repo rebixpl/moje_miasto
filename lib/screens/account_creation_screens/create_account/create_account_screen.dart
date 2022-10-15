@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:moje_miasto/cubits/avatar_selector_cubit.dart';
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/ca_more_info_screen.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatar_selector.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/cubits/avatar_selector_cubit.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/create_account_form.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/create_account_texts.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/google_auth_btn_centred.dart';
@@ -63,8 +63,8 @@ class CreateAccountScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>
-                                        const CAMoreInfoScreen()),
+                                  builder: (context) => CAMoreInfoScreen(),
+                                ),
                               );
                               debugPrint(
                                   'validation successfull, navigate to CA Additional Informations Screen');

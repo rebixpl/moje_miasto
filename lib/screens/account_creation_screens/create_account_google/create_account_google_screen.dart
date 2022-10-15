@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:moje_miasto/cubits/avatar_selector_cubit.dart';
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/ca_more_info_screen.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatar_selector.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/cubits/avatar_selector_cubit.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/create_account_texts.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account_google/widgets/user_big_img.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
@@ -73,8 +73,7 @@ class CreateAccountGoogleScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) =>
-                                      const CAMoreInfoScreen(),
+                                  builder: (context) => CAMoreInfoScreen(),
                                 ),
                               );
                               debugPrint(
