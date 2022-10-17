@@ -24,7 +24,7 @@ class CAMoreInfoScreen extends StatelessWidget {
           create: (BuildContext context) => AccountTypeSelectorCubit(),
         ),
         BlocProvider(
-          create: (context) => CityPickerSelectionCubit(),
+          create: (BuildContext context) => CityPickerSelectionCubit(),
         ),
       ],
       child: Scaffold(

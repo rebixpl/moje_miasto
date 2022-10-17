@@ -17,7 +17,6 @@ class AccountTypeSelector extends StatefulWidget {
 
 class _AccountTypeSelectorState extends State<AccountTypeSelector> {
   late final PageController _pageViewController;
-  late final AccountTypeSelectorCubit accountTypeSelectorCubit;
 
   @override
   void initState() {
@@ -45,7 +44,7 @@ class _AccountTypeSelectorState extends State<AccountTypeSelector> {
 
   @override
   Widget build(BuildContext context) {
-    accountTypeSelectorCubit = context.read<AccountTypeSelectorCubit>();
+    final accountTypeSelectorCubit = context.read<AccountTypeSelectorCubit>();
 
     return Card(
       shape: RoundedRectangleBorder(

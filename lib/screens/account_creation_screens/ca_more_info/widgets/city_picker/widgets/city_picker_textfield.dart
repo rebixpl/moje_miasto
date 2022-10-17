@@ -10,12 +10,14 @@ class CityPickerTextField extends StatelessWidget {
     this.focusedColor = const Color(0xff554F76),
     this.textColor = const Color(0xff211A4C),
     this.fillColor = const Color(0xff211A4C),
+    required this.onChanged,
   });
 
   final TextEditingController myController;
   final String fieldName;
   final IconData myIcon;
   final Color prefixIconColor, focusedColor, textColor, fillColor;
+  final Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class CityPickerTextField extends StatelessWidget {
         fontSize: 14.0,
       ),
       decoration: _textFormFieldDecoration(),
+      onChanged: onChanged,
     );
   }
 

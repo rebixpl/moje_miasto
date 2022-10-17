@@ -4,19 +4,15 @@ import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widget
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/city_picker/models/models.dart';
 
 class CityCard extends StatelessWidget {
-  final List<City> cities;
-  final int index;
+  final City city;
 
   const CityCard({
     Key? key,
-    required this.cities,
-    required this.index,
+    required this.city,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final City city = cities[index];
-
     return BlocBuilder<CityPickerSelectionCubit, String>(
       builder: (context, state) {
         final cityPickerSelectionCubit =
