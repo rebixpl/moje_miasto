@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/screens/home_screen/home_screen.dart';
+import 'package:moje_miasto/screens/page_view_screen/page_view_screen.dart';
 import 'package:moje_miasto/screens/login/widgets/big_elevated_button.dart';
 import 'package:moje_miasto/screens/login/widgets/forgot_password_button.dart';
 import 'package:moje_miasto/screens/login/widgets/google_auth_button.dart';
@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                             Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const HomeScreen(),
+                                builder: (context) => const PageViewScreen(),
                               ),
                               (route) => false,
                             );
