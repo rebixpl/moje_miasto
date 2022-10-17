@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/home_screen/home_screen.dart';
 import 'package:moje_miasto/screens/login/widgets/big_elevated_button.dart';
 import 'package:moje_miasto/screens/login/widgets/forgot_password_button.dart';
 import 'package:moje_miasto/screens/login/widgets/google_auth_button.dart';
@@ -56,6 +57,13 @@ class LoginScreen extends StatelessWidget {
                             // TODO: Logowanie przez email i haslo, potem nawigacja do home screen >>> BLOC AUTORYZACJI
                             debugPrint(
                                 'email and password validated successfully! >>> zaloguj i nawiguj do home screen');
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const HomeScreen(),
+                              ),
+                              (route) => false,
+                            );
                           } else {
                             debugPrint('ERROR validating email and password!');
                           }

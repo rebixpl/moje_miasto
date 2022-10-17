@@ -6,6 +6,7 @@ import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widget
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/city_picker/city_picker.dart';
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/city_picker/cubits/city_picker_cubit.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
+import 'package:moje_miasto/screens/home_screen/home_screen.dart';
 import 'package:moje_miasto/screens/login/widgets/big_elevated_button.dart';
 import 'package:moje_miasto/theme.dart';
 
@@ -56,6 +57,13 @@ class CAMoreInfoScreen extends StatelessWidget {
                           text: 'Kontynuuj',
                           onTap: () {
                             // TODO: Validate user selection and navigate to Home Screen
+                            Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const HomeScreen(),
+                              ),
+                              (route) => false,
+                            );
                           },
                         ),
                         const SizedBox(height: 30.0),
