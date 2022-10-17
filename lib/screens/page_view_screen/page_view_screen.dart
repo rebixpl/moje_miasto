@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moje_miasto/screens/home_screen/home_screen.dart';
-import 'package:moje_miasto/screens/home_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
-import 'package:moje_miasto/screens/home_screen/widgets/custom_bottom_navbar/custom_bottom_navbar.dart';
-import 'package:moje_miasto/screens/home_screen/widgets/home_screen_appbar.dart';
+import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
+import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/custom_bottom_navbar.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/school_ranking_screen.dart';
 
 class PageViewScreen extends StatefulWidget {
   const PageViewScreen({super.key});
@@ -52,11 +52,7 @@ class _PageViewScreenState extends State<PageViewScreen> {
               controller: _pageController,
               children: const [
                 HomeScreen(),
-                Scaffold(
-                  body: Center(
-                    child: Text('Ranking & Oceny'),
-                  ),
-                ),
+                SchoolRankingScreen(),
                 Scaffold(
                   body: Center(
                     child: Text('Waldek AI Chatbot'),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatars.dart';
-import 'package:moje_miasto/screens/home_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
+import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/theme.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
