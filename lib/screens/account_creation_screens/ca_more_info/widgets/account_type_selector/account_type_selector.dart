@@ -99,7 +99,7 @@ class _AccountTypeSelectorState extends State<AccountTypeSelector> {
                     final CardData currentCard = cards[index];
 
                     accountTypeSelectorCubit
-                        .setAccountTypeId(cards[index].accountTypeId);
+                        .setAccountTypeId(currentCard.accountTypeId);
 
                     return AccountTypeCard(currentCard: currentCard);
                   }),

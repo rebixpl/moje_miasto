@@ -23,7 +23,7 @@ const List<CardData> cards = [
   CardData(
     cardTitle: 'Uczniem',
     accountTypeId: 'uczen',
-    photoUrl: 'images/screens/tos/paper_sheets_tos.png',
+    photoUrl: 'images/screens/ca_more_info/account_type_selector/uczen.jpeg',
     contentText1:
         'Znajdż osoby o podobnych zainteresowaniach i rozwijaj się razem z nimi',
     contentText2: 'Listy szkół w twoim mieście wraz z rankingiem',
@@ -33,7 +33,7 @@ const List<CardData> cards = [
   CardData(
     cardTitle: 'Obywatelem',
     accountTypeId: 'obywatel',
-    photoUrl: 'images/screens/tos/paper_sheets_tos.png',
+    photoUrl: 'images/screens/ca_more_info/account_type_selector/obywatel.jpeg',
     contentText1: 'Listy projektów realizowanych w twoim mieście',
     contentText2:
         'Zgłoszenie do lokalnego wolontariatu działającego w twoim mieście',
@@ -43,7 +43,8 @@ const List<CardData> cards = [
   CardData(
     cardTitle: 'Małym przedsiębiorcą',
     accountTypeId: 'przedsiebiorca',
-    photoUrl: 'images/screens/tos/paper_sheets_tos.png',
+    photoUrl:
+        'images/screens/ca_more_info/account_type_selector/maly_przedsiebiorca.jpeg',
     contentText1:
         'Specjalnego miejsca przeznaczonego do promowania twoich usług wśród lokalnej społeczności',
     contentText2: 'Znalezienia potencjalnych klientów',

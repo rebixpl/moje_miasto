@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/account_type_selector/data/card_data.dart';
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/account_type_selector/widgets/account_type_selector_texts.dart';
+import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/account_type_selector/widgets/card_image.dart';
 
 class AccountTypeCard extends StatelessWidget {
   const AccountTypeCard({
@@ -17,19 +18,7 @@ class AccountTypeCard extends StatelessWidget {
         Expanded(
           child: Stack(
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(14.0),
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(currentCard.photoUrl),
-                    colorFilter: ColorFilter.mode(
-                      Colors.black.withOpacity(0.2),
-                      BlendMode.darken,
-                    ),
-                  ),
-                ),
-              ),
+              CardImage(imagePath: currentCard.photoUrl),
               Center(
                 child: Icon(
                   currentCard.cardIcon,
