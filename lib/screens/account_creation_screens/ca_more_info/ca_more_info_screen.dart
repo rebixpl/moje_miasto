@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/account_type_selector/account_type_selector.dart';
+import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/account_type_selector/cubits/account_type_cubit.dart';
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/ca_more_info_texts.dart';
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/city_picker/city_picker.dart';
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/city_picker/cubits/city_picker_cubit.dart';
@@ -16,8 +18,15 @@ class CAMoreInfoScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<CityPickerSelectionCubit>(
-      create: (context) => CityPickerSelectionCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (BuildContext context) => AccountTypeSelectorCubit(),
+        ),
+        BlocProvider(
+          create: (context) => CityPickerSelectionCubit(),
+        ),
+      ],
       child: Scaffold(
         body: SafeArea(
           child: Padding(
@@ -35,6 +44,8 @@ class CAMoreInfoScreen extends StatelessWidget {
                         const FullWidthDivider(),
                         const SizedBox(height: 20.0),
                         tellUsMoreAbYourselfText(context),
+                        const SizedBox(height: 30.0),
+                        const AccountTypeSelector(),
                         const SizedBox(height: 30.0),
                         CityPicker(
                           cityNameController: _cityNameController,
