@@ -12,6 +12,7 @@ class CityPickerCubit extends Cubit<List<City>> {
   getCities() async {
     debugPrint('.... getCities being called ....');
 
+    // ignore: unused_local_variable
     int x = 0;
     final List<City> cities = [];
     final citiesJson = jsonDecode(

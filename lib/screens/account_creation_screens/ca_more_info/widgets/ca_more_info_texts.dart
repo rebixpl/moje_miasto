@@ -24,7 +24,8 @@ Text almostDoneText(BuildContext context) {
 
 Text bottomText(BuildContext context) {
   return Text(
-    'Zależnie od wybranych opcji funkcje aplikacji będą się różnić',
+    'Zależnie od wybranych opcji funkcje aplikacji będą się różnić. Każdą opcję można zmienić później w ustawieniach',
+    textAlign: TextAlign.center,
     style: TextStyle(
       color: Theme.of(context).colorScheme.secondary.withOpacity(0.5),
       fontWeight: FontWeight.bold,
