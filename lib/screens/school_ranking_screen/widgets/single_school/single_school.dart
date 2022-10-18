@@ -33,7 +33,7 @@ class SingleSchool extends StatelessWidget {
                       'images/screens/ca_more_info/account_type_selector/maly_przedsiebiorca.jpeg',
                 ),
               ),
-              const SizedBox(width: 20.0),
+              const SizedBox(width: 12.0),
               Expanded(
                 flex: 7,
                 child: Padding(
