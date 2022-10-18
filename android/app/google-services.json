@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1077582319221",
+    "project_id": "moje-miasto-bf057",
+    "storage_bucket": "moje-miasto-bf057.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077582319221:android:81889499a4b18555f8f23c",
+        "android_client_info": {
+          "package_name": "team.siwych.moje_miasto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077582319221-m1hboq99rrp0dackum7a01o46nf2m7bu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8HUjCVDmcvRBfVRh0dUou6Oxzogm_YPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077582319221-m1hboq99rrp0dackum7a01o46nf2m7bu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
