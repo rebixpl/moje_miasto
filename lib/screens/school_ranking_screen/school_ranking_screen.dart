@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/rounded_corners_adapter.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/single_school.dart';
-import 'package:moje_miasto/screens/school_ranking_screen/widgets/sr_sliver_appbar.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/widgets/sr_sliver_appbar/sr_sliver_appbar.dart';
 
 class SchoolRankingScreen extends StatelessWidget {
   const SchoolRankingScreen({super.key});
@@ -9,6 +9,7 @@ class SchoolRankingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: HomeScreenAppbar(),
       body: CustomScrollView(
         shrinkWrap: true,
         physics: const ClampingScrollPhysics(),
