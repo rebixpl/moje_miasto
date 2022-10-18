@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:moje_miasto/screens/home_screen/hs_settings_screen/hs_settings_screen.dart';
 
 class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
   const HomeScreenAppbar({
@@ -38,7 +39,15 @@ class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
             ),
             IconButton(
               splashRadius: 22.0,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        HomeScreenSettingsScreen(),
+                  ),
+                );
+              },
               icon: Icon(
                 FontAwesomeIcons.gear,
                 color: Theme.of(context).colorScheme.secondary,
