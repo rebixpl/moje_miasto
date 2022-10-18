@@ -11,7 +11,7 @@ class User extends Equatable {
     required this.id,
     this.email,
     this.name,
-    this.avatarId,
+    this.photo,
   });
 
   /// The current user's email address.
@@ -23,8 +23,8 @@ class User extends Equatable {
   /// The current user's name (display name).
   final String? name;
 
-  /// Id of the current user's avatar he selected.
-  final String? avatarId;
+  /// Url for the current user's photo.
+  final String? photo;
 
   /// Empty user which represents an unauthenticated user.
   static const empty = User(id: '');
@@ -36,5 +36,5 @@ class User extends Equatable {
   bool get isNotEmpty => this != User.empty;
 
   @override
-  List<Object?> get props => [email, id, name, avatarId];
+  List<Object?> get props => [email, id, name, photo];
 }
