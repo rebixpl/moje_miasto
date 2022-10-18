@@ -32,14 +32,14 @@ class HomeScreenSettingsScreen extends StatelessWidget {
           automaticallyImplyLeading: false, // Don't show the leading button
           backgroundColor: Colors.transparent,
           elevation: 0.0,
-          title: Row(
-            children: [
-              const Padding(
-                padding: EdgeInsets.all(8.0),
-                child: GoBackButton(),
-              ),
-              appBarTitleText(context),
-            ],
+          title: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              children: [
+                const GoBackButton(),
+                appBarTitleText(context),
+              ],
+            ),
           ),
           centerTitle: true,
           toolbarHeight: 80.0,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/widgets/show_thank_you_snackbar.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
 import 'package:moje_miasto/theme.dart';
 
@@ -10,7 +11,9 @@ class VoteButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      onPressed: () {},
+      onPressed: () {
+        showThankYouSnackbar(context);
+      },
       color: AppTheme.kAccentColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
