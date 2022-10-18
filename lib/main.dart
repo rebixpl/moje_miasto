@@ -1,49 +1,17 @@
+import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/firebase_options.dart';
-import 'package:moje_miasto/screens/login/login_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:moje_miasto/app/app.dart';
 import 'package:firebase_core/firebase_core.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp(const MyApp());
-}
+  Bloc.observer = AppBlocObserver();
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  await Firebase.initializeApp();
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Moje Miasto',
-      theme: ThemeData(
-        primarySwatch: const MaterialColor(
-          0xFF211A4C,
-          <int, Color>{
-            // https://maketintsandshades.com/
-            50: Color(0xff1e1744), //10%
-            100: Color(0xff1a153d), //20%
-            200: Color(0xff171235), //30%
-            300: Color(0xff14102e), //40%
-            400: Color(0xff110d26), //50%
-            500: Color(0xff0d0a1e), //60%
-            600: Color(0xff0a0817), //70%
-            700: Color(0xff07050f), //80%
-            800: Color(0xff030308), //90%
-            900: Color(0xff000000), //100%
-          },
-        ),
-        colorScheme: const ColorScheme.light(
-          secondary: Color(0xFF211A4C),
-          primary: Color(0xFF293462),
-        ),
-        fontFamily: 'Montserrat',
-        scaffoldBackgroundColor: Colors.white,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: LoginScreen(),
-    );
-  }
+  final authenticationRepository = AuthenticationRepository();
+  await authenticationRepository.user.first;
+
+  runApp(App(authenticationRepository: authenticationRepository));
 }
