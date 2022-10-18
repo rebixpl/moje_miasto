@@ -81,6 +81,7 @@ flutter:
     - images/screens/tos/
     - lib/screens/account_creation_screens/ca_more_info/widgets/city_picker/data/
     - images/screens/ca_more_info/account_type_selector/
+    - images/screens/home_screen/features_carousel/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

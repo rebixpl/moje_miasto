@@ -11,7 +11,7 @@ void showThankYouSnackbar(BuildContext context) {
           'dziękujemy!'.allInCaps,
           style: const TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 26.0,
+            fontSize: 22.0,
             color: Colors.white,
           ),
         ),

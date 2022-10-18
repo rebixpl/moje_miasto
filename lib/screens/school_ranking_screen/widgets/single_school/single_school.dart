@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_photo.dart';
-import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/data/school_types.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/widgets/photo_ui_changer_debug.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/widgets/single_school_texts.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/widgets/vote_button.dart';
