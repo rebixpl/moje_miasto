@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/shared/app/text/title_case.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/cubit/school_type_selector_cubit.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/data/school_types.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/widgets/single_school_card.dart';
 
 class SchoolTypeSelector extends StatelessWidget {
   const SchoolTypeSelector({
@@ -8,52 +11,37 @@ class SchoolTypeSelector extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> schoolTypes = [
-      'szkoły podstawowe',
-      'szkoły ponadpodstawowe',
-      'studia',
-    ];
+    return BlocBuilder<SchoolTypeSelectorCubit, String>(
+      builder: (context, state) {
+        SchoolTypeSelectorCubit schoolTypeSelectorCubit =
+            context.read<SchoolTypeSelectorCubit>();
 
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: const EdgeInsets.only(left: 20.0),
-        child: Container(
-          height: 60,
-          decoration: const BoxDecoration(
-            color: Colors.white,
-          ),
-          child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) => Padding(
-              padding: const EdgeInsets.only(right: 20.0),
-              child: Container(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 8.0,
-                  horizontal: 14.0,
-                ),
-                decoration: BoxDecoration(
-                  color: Theme.of(context).colorScheme.secondary,
-                  borderRadius: BorderRadius.circular(10.0),
-                ),
-                height: 60,
-                alignment: Alignment.center,
-                child: Text(
-                  schoolTypes[index].allInCaps,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12.0,
+        return SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.only(left: 20.0),
+            child: Container(
+              height: 60,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+              ),
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.only(right: 20.0),
+                  child: SingleSchoolCard(
+                    schoolTypeSelectorCubit: schoolTypeSelectorCubit,
+                    index: index,
+                    state: state,
                   ),
                 ),
+                itemCount: schoolTypes.length,
+                separatorBuilder: (BuildContext context, int index) =>
+                    const SizedBox(width: 0.0),
               ),
             ),
-            itemCount: schoolTypes.length,
-            separatorBuilder: (BuildContext context, int index) =>
-                const SizedBox(width: 0.0),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }

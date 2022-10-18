@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_photo.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/data/school_types.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/widgets/photo_ui_changer_debug.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/widgets/single_school_texts.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/widgets/vote_button.dart';
 import 'package:moje_miasto/theme.dart';
@@ -7,10 +9,16 @@ import 'package:moje_miasto/theme.dart';
 class SingleSchool extends StatelessWidget {
   const SingleSchool({
     Key? key,
+    required this.schoolType,
   }) : super(key: key);
+
+  final String schoolType;
 
   @override
   Widget build(BuildContext context) {
+    // this is temporary only to see changes while im making the ui layer, later the data will be pulled from the firebase
+    final String photoUrl = debugPhotoChanger(schoolType);
+
     return Padding(
       padding: const EdgeInsets.only(
         top: AppTheme.kDefaultPadding / 2,
@@ -26,11 +34,10 @@ class SingleSchool extends StatelessWidget {
           padding: const EdgeInsets.all(14.0),
           child: Row(
             children: [
-              const Expanded(
+              Expanded(
                 flex: 4,
                 child: SchoolPhoto(
-                  photoUrl:
-                      'images/screens/ca_more_info/account_type_selector/maly_przedsiebiorca.jpeg',
+                  photoUrl: photoUrl,
                 ),
               ),
               const SizedBox(width: 12.0),
