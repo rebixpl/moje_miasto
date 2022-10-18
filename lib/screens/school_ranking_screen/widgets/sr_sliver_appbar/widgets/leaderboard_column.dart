@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/widgets/sr_sliver_appbar/widgets/school_circular_image.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/widgets/sr_sliver_appbar/widgets/single_column.dart';
 
 class LeaderboardColumn extends StatelessWidget {
   final int place;
@@ -12,33 +14,20 @@ class LeaderboardColumn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 120.0,
-      height: height,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color(0xff152C4F),
-            Color(0xff211A4C),
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SchoolCircularImage(
+          place: place,
+          imageUrl:
+              'images/screens/ca_more_info/account_type_selector/uczen.jpeg',
         ),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(10.0),
-          topRight: Radius.circular(10.0),
+        SingleColumn(
+          height: height,
+          place: place,
         ),
-      ),
-      child: Center(
-        child: Text(
-          place.toString(),
-          style: const TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 60.0,
-          ),
-        ),
-      ),
+      ],
     );
   }
 }

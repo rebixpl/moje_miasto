@@ -10,3 +10,14 @@ Text bestSchoolsText() {
     ),
   );
 }
+
+Text placeText(int place) {
+  return Text(
+    place.toString(),
+    style: const TextStyle(
+      color: Colors.white,
+      fontWeight: FontWeight.bold,
+      fontSize: 60.0,
+    ),
+  );
+}
