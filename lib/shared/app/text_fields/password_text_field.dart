@@ -7,10 +7,12 @@ class PasswordTextField extends StatefulWidget {
     Key? key,
     required this.passwordController,
     required this.validator,
+    this.onChanged,
   }) : super(key: key);
 
   final TextEditingController passwordController;
   final String? Function(String?) validator;
+  final Function(String)? onChanged;
 
   @override
   State<PasswordTextField> createState() => _PasswordTextFieldState();
@@ -22,7 +24,9 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
   @override
   Widget build(BuildContext context) {
     return MyTextField(
+      key: widget.key,
       myController: widget.passwordController,
+      onChanged: widget.onChanged,
       fieldName: 'Hasło',
       myIcon:
           isHidden ? FontAwesomeIcons.solidEye : FontAwesomeIcons.solidEyeSlash,

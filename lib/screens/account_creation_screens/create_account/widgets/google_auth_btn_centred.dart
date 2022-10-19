@@ -11,12 +11,15 @@ class GoogleAuthBtnCentred extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
-        ThinDivider(),
-        SizedBox(width: 6.0),
-        GoogleAuthButton(isWide: true),
-        SizedBox(width: 6.0),
-        ThinDivider(),
+      children: [
+        const ThinDivider(),
+        const SizedBox(width: 6.0),
+        GoogleAuthButton(
+          isWide: true,
+          onTap: () {},
+        ),
+        const SizedBox(width: 6.0),
+        const ThinDivider(),
       ],
     );
   }

@@ -16,11 +16,14 @@ class MyTextField extends StatelessWidget {
     this.obscureText = false,
     VoidCallback? suffixIconPressed,
     this.isSuffixButtonActive = false,
+    this.onChanged,
+    this.isEmail = false,
   }) : suffixIconPressed = suffixIconPressed ?? (() {});
 
   final TextEditingController myController;
   final String fieldName;
   final IconData myIcon;
+  final bool isEmail;
   final Color prefixIconColor,
       focusedColor,
       textColor,
@@ -30,6 +33,7 @@ class MyTextField extends StatelessWidget {
   final String? Function(String?) validator;
   final VoidCallback suffixIconPressed;
   final bool obscureText, isSuffixButtonActive;
+  final Function(String)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +42,8 @@ class MyTextField extends StatelessWidget {
       child: TextFormField(
         // autofocus: true,
         obscureText: obscureText,
+        keyboardType: isEmail ? TextInputType.emailAddress : null,
+        onChanged: onChanged,
         obscuringCharacter: '●',
         validator: validator,
         controller: myController,

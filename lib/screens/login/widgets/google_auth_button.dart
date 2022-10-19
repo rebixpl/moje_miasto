@@ -4,23 +4,25 @@ import 'package:moje_miasto/theme.dart';
 
 class GoogleAuthButton extends StatelessWidget {
   final bool isWide;
+  final Function()? onTap;
 
   const GoogleAuthButton({
     Key? key,
     this.isWide = false,
+    required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(20.0),
-      // TODO: nawiguj do ekranu rejestracji / logowania przez google
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => CreateAccountGoogleScreen(),
-        ),
-      ), //debugPrint('Continue with google'),
+      onTap: onTap,
+      // onTap: () => Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) => CreateAccountGoogleScreen(),
+      //   ),
+      // ), //debugPrint('Continue with google'),
       child: Padding(
         padding: const EdgeInsets.all(4.0),
         child: Container(
