@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1077582319221-3np4r6a9afeusspbvafkt0loa6d306kg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "team.siwych.moje_miasto",
+            "certificate_hash": "6f1a3187d16df48056106c5f1f77c308b82820fd"
+          }
+        },
+        {
           "client_id": "1077582319221-m1hboq99rrp0dackum7a01o46nf2m7bu.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "1077582319221-m1hboq99rrp0dackum7a01o46nf2m7bu.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1077582319221-4j3ms61id5v67lkqso2lin0tgr005t87.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "team.siwych.mojeMiasto"
+              }
             }
           ]
         }

@@ -26,69 +26,72 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  LanguageSelector(),
-                  InformationsButton(),
-                ],
-              ),
+    return BlocProvider(
+      create: (_) => LoginCubit(context.read<AuthenticationRepository>()),
+      child: Scaffold(
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    LanguageSelector(),
+                    InformationsButton(),
+                  ],
+                ),
 
-              BlocListener<LoginCubit, LoginState>(
-                listener: (context, state) {
-                  if (state.status.isSubmissionFailure) {
-                    ScaffoldMessenger.of(context)
-                      ..hideCurrentSnackBar()
-                      ..showSnackBar(
-                        SnackBar(
-                          content: Text(
-                              state.errorMessage ?? 'Authentication Failure'),
-                        ),
-                      );
-                  }
-                },
-                child: Expanded(
-                  child: SingleChildScrollView(
-                    physics: const BouncingScrollPhysics(),
-                    child: BlocProvider(
-                      create: (context) =>
-                          LoginCubit(context.read<AuthenticationRepository>()),
-                      child: Column(
-                        children: [
-                          const SizedBox(height: 60.0),
-                          const Logo(),
-                          const SizedBox(height: 20.0),
-                          welcomeBackText(context),
-                          const SizedBox(height: 20.0),
-                          LoginForm(
-                            formKey: _formKey,
-                            emailController: _emailController,
-                            passwordController: _passwordController,
+                BlocListener<LoginCubit, LoginState>(
+                  listener: (context, state) {
+                    if (state.status.isSubmissionFailure) {
+                      ScaffoldMessenger.of(context)
+                        ..hideCurrentSnackBar()
+                        ..showSnackBar(
+                          SnackBar(
+                            content: Text(
+                                state.errorMessage ?? 'Authentication Failure'),
                           ),
-                          const SizedBox(height: 20.0),
-                          _LoginButton(formKey: _formKey),
-                          const SizedBox(height: 10.0),
-                          const ForgotPasswordButton(),
-                          const SizedBox(height: 14.0),
-                          orSignUpWithGoogleText(context),
-                          const SizedBox(height: 18.0),
-                          const _LoginGoogleButton(),
-                          const SizedBox(height: 6.0),
-                          doesNotHaveAnAccountText(context),
-                        ],
+                        );
+                    }
+                  },
+                  child: Expanded(
+                    child: SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      child: BlocProvider(
+                        create: (context) => LoginCubit(
+                            context.read<AuthenticationRepository>()),
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 60.0),
+                            const Logo(),
+                            const SizedBox(height: 20.0),
+                            welcomeBackText(context),
+                            const SizedBox(height: 20.0),
+                            LoginForm(
+                              formKey: _formKey,
+                              emailController: _emailController,
+                              passwordController: _passwordController,
+                            ),
+                            const SizedBox(height: 20.0),
+                            _LoginButton(formKey: _formKey),
+                            const SizedBox(height: 10.0),
+                            const ForgotPasswordButton(),
+                            const SizedBox(height: 14.0),
+                            orSignUpWithGoogleText(context),
+                            const SizedBox(height: 18.0),
+                            const _LoginGoogleButton(),
+                            const SizedBox(height: 6.0),
+                            doesNotHaveAnAccountText(context),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              // const Spacer(),
-            ],
+                // const Spacer(),
+              ],
+            ),
           ),
         ),
       ),

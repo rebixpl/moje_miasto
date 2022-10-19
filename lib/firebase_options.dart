@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1077582319221',
     projectId: 'moje-miasto-bf057',
     storageBucket: 'moje-miasto-bf057.appspot.com',
+    androidClientId: '1077582319221-3np4r6a9afeusspbvafkt0loa6d306kg.apps.googleusercontent.com',
     iosClientId: '1077582319221-4j3ms61id5v67lkqso2lin0tgr005t87.apps.googleusercontent.com',
     iosBundleId: 'team.siwych.mojeMiasto',
   );
