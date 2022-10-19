@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:moje_miasto/app/app.dart';
 import 'package:moje_miasto/screens/home_screen/home_screen.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/custom_bottom_navbar.dart';
@@ -10,6 +11,8 @@ class PageViewScreen extends StatefulWidget {
 
   @override
   State<PageViewScreen> createState() => _PageViewScreenState();
+
+  static Page<void> page() => const MaterialPage<void>(child: PageViewScreen());
 }
 
 class _PageViewScreenState extends State<PageViewScreen> {
@@ -37,6 +40,8 @@ class _PageViewScreenState extends State<PageViewScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final user = context.select((AppBloc bloc) => bloc.state.user);
+
     return BlocProvider(
       create: (context) => PageViewNavCubit(),
       child: BlocConsumer<PageViewNavCubit, PageViewNavState>(
@@ -50,17 +55,30 @@ class _PageViewScreenState extends State<PageViewScreen> {
             body: PageView(
               physics: const NeverScrollableScrollPhysics(),
               controller: _pageController,
-              children: const [
-                HomeScreen(),
-                SchoolRankingScreen(),
-                Scaffold(
+              children: [
+                const HomeScreen(),
+                const SchoolRankingScreen(),
+                const Scaffold(
                   body: Center(
                     child: Text('Waldek AI Chatbot'),
                   ),
                 ),
                 Scaffold(
                   body: Center(
-                    child: Text('Profile Page'),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        const Text('Profile Page'),
+                        Text('Email: ${user.email}'),
+                        MaterialButton(
+                          key: const Key('homePage_logout_iconButton'),
+                          child: const Text('Wyloguj się'),
+                          onPressed: () =>
+                              context.read<AppBloc>().add(AppLogoutRequested()),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

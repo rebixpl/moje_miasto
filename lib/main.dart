@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moje_miasto/app/app.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:moje_miasto/app/bloc_observer.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
