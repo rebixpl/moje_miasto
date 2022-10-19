@@ -33,19 +33,23 @@ class SingleCard extends StatelessWidget {
             child: Center(
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: Text(
-                  schoolType.title.allInCaps,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 12.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                child: schoolTypeTitleText(schoolType.title),
               ),
             ),
           ),
         );
       },
+    );
+  }
+
+  Text schoolTypeTitleText(String text) {
+    return Text(
+      text.allInCaps,
+      style: const TextStyle(
+        color: Colors.white,
+        fontSize: 12.0,
+        fontWeight: FontWeight.bold,
+      ),
     );
   }
 }

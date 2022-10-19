@@ -13,7 +13,7 @@ class SchoolTypePicker extends StatelessWidget {
     return Column(
       children: [
         schoolTypeText(context),
-        const SizedBox(height: 10.0),
+        const SizedBox(height: 14.0),
         ListView.separated(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),

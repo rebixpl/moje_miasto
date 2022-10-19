@@ -8,7 +8,6 @@ import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_scr
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/cubit/image_picker_state.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/image_picker_texts.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/no_image_container.dart';
-import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/select_image_btn.dart';
 
 class ImagePickerAS extends StatefulWidget {
   const ImagePickerAS({
@@ -33,7 +32,7 @@ class _ImagePickerASState extends State<ImagePickerAS> {
 
         return SizedBox(
           width: double.infinity,
-          height: 120.0,
+          height: 200.0,
           child: Card(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20.0),
@@ -42,33 +41,26 @@ class _ImagePickerASState extends State<ImagePickerAS> {
             elevation: 0.0,
             child: Padding(
               padding: const EdgeInsets.all(14.0),
-              child: Row(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      selectImageText(context),
-                      const SizedBox(height: 10.0),
-                      SelectImageBtn(
-                        onTap: () => cubit.takePhotoFromGallery(),
-                      ),
-                    ],
-                  ),
+                  selectImageText(context),
+                  const SizedBox(height: 10.0),
                   BlocBuilder<ImagePickerCubit, ImagePickerState>(
                     bloc: cubit,
                     builder: (context, state) {
                       if (state is ImagePickerInitialize) {
-                        return const NoImageContainer();
+                        return NoImageContainer(cubit: cubit);
                       }
                       if (state is ImagePickerSuccess) {
                         _image = state.image;
                         if (_image == null) {
-                          return const NoImageContainer();
+                          return NoImageContainer(cubit: cubit);
                         } else {
                           return Expanded(
                             child: Container(
-                              margin: const EdgeInsets.only(left: 10.0),
+                              width: double.infinity,
                               height: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.grey[400],
