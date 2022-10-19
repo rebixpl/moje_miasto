@@ -53,4 +53,13 @@ class Validators {
     }
     return null;
   }
+
+  static String? validateSchoolName(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Nazwa szkoły nie może być pusta!';
+    } else if (value.length > 200) {
+      return 'Dozwolone maksymalnie 200 znaków!';
+    }
+    return null;
+  }
 }

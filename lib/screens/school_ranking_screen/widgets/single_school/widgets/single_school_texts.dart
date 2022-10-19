@@ -7,6 +7,7 @@ Text votesCountText(int count) {
     style: TextStyle(
       color: Colors.white.withOpacity(0.5),
       fontWeight: FontWeight.bold,
+      fontSize: 12.0,
     ),
   );
 }
@@ -39,6 +40,7 @@ Text votesText() {
     style: TextStyle(
       color: Colors.white.withOpacity(0.75),
       fontWeight: FontWeight.bold,
+      fontSize: 12.0,
     ),
   );
 }

@@ -55,6 +55,7 @@ dependencies:
   form_inputs:
     path: packages/form_inputs
   formz: ^0.4.1
+  # cross_file: ^0.3.3+2
 
 dev_dependencies:
   bloc_test: ^9.0.0
@@ -89,6 +90,7 @@ flutter:
     - lib/screens/account_creation_screens/ca_more_info/widgets/city_picker/data/
     - images/screens/ca_more_info/account_type_selector/
     - images/screens/home_screen/features_carousel/
+    - images/screens/add_school_screen/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

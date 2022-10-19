@@ -50,32 +50,38 @@ class SingleSchool extends StatelessWidget {
                     children: [
                       rankingPlacementText(1),
                       Expanded(
-                        child: schoolNameText(
-                          'Prywatna Szkoła Podstawowa im. Królowej Jadwigi Lublin',
+                        child: Center(
+                          child: schoolNameText(
+                            'Prywatna Szkoła Podstawowa im. Królowej Jadwigi Lublin',
+                          ),
                         ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Card(
-                            color: const Color(0xff6A6493),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12.0),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(11.0),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  votesText(),
-                                  const SizedBox(width: 4.0),
-                                  votesCountText(211),
-                                ],
+                          Expanded(
+                            child: Card(
+                              color: const Color(0xff6A6493),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(11.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    votesText(),
+                                    votesCountText(211),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                          const VoteButton(),
+                          const SizedBox(width: 6.0),
+                          const Expanded(
+                            child: VoteButton(),
+                          ),
                         ],
                       ),
                     ],
