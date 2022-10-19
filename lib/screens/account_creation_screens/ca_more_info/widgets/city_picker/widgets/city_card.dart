@@ -15,7 +15,7 @@ class CityCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<CityPickerSelectionCubit, String>(
       builder: (context, state) {
-        final cityPickerSelectionCubit =
+        final CityPickerSelectionCubit cityPickerSelectionCubit =
             context.read<CityPickerSelectionCubit>();
         final String selectedCityId = cityPickerSelectionCubit.state;
 

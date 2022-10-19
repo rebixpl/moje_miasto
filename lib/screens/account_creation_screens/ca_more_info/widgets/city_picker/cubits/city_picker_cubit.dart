@@ -88,15 +88,13 @@ class CityPickerSelectionCubit extends Cubit<String> {
   CityPickerSelectionCubit() : super('');
 
 // set new avatar image id
-  void selectCityId(String newId) {
-    final selectedCityId = newId;
-    emit(selectedCityId);
-  }
+  void selectCityId(String newId) => emit(newId);
 
   @override
   void onChange(Change<String> change) {
     super.onChange(change);
-    debugPrint('currentState: ${change.currentState}');
-    debugPrint('nextState: ${change.nextState}');
+    debugPrint(
+        'CityPickerSelectionCubit - currentState: ${change.currentState}');
+    debugPrint('CityPickerSelectionCubit - nextState: ${change.nextState}');
   }
 }

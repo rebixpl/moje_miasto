@@ -7,6 +7,7 @@ import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_scr
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/cubit/image_picker_provider.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/cubit/image_picker_state.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/image_picker_texts.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/no_image_container.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/select_image_btn.dart';
 
 class ImagePickerAS extends StatefulWidget {
@@ -58,40 +59,30 @@ class _ImagePickerASState extends State<ImagePickerAS> {
                     bloc: cubit,
                     builder: (context, state) {
                       if (state is ImagePickerInitialize) {
-                        return Expanded(
-                          child: Container(
-                            margin: const EdgeInsets.only(left: 10.0),
-                            decoration: BoxDecoration(
-                              color: Colors.grey[400],
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            height: double.infinity,
-                            child: Icon(
-                              Icons.camera_alt,
-                              color: Colors.grey[800],
-                              size: 40.0,
-                            ),
-                          ),
-                        );
+                        return const NoImageContainer();
                       }
                       if (state is ImagePickerSuccess) {
                         _image = state.image;
-                        return Expanded(
-                          child: Container(
-                            margin: const EdgeInsets.only(left: 10.0),
-                            height: double.infinity,
-                            decoration: BoxDecoration(
-                              color: Colors.grey[400],
-                              borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: Image.file(
-                                  File(_image!.path),
-                                ).image,
+                        if (_image == null) {
+                          return const NoImageContainer();
+                        } else {
+                          return Expanded(
+                            child: Container(
+                              margin: const EdgeInsets.only(left: 10.0),
+                              height: double.infinity,
+                              decoration: BoxDecoration(
+                                color: Colors.grey[400],
+                                borderRadius: BorderRadius.circular(20),
+                                image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: Image.file(
+                                    File(_image!.path),
+                                  ).image,
+                                ),
                               ),
                             ),
-                          ),
-                        );
+                          );
+                        }
                       }
                       if (state is ImagePickerFailure) {
                         return Expanded(
