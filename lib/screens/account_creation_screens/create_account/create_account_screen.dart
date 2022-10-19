@@ -48,6 +48,8 @@ class CreateAccountScreen extends StatelessWidget {
                         ..hideCurrentSnackBar()
                         ..showSnackBar(
                           SnackBar(
+                            backgroundColor:
+                                Theme.of(context).colorScheme.secondary,
                             content: Text(
                               state.errorMessage ?? 'Sign Up Failure',
                             ),
@@ -116,8 +118,10 @@ class _SignUpButton extends StatelessWidget {
                 key: const Key('signUpForm_continue_raisedButton'),
                 text: 'Kontynuuj',
                 onTap: () {
-                  if (state.status.isValidated) {
-                    context.read<SignUpCubit>().signUpFormSubmitted();
+                  if (_formKey.currentState!.validate()) {
+                    if (state.status.isValidated) {
+                      context.read<SignUpCubit>().signUpFormSubmitted();
+                    }
                   }
                 },
                 // onTap: () {

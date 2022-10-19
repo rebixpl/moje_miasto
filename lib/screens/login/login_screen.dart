@@ -133,8 +133,10 @@ class _LoginButton extends StatelessWidget {
                 key: const Key('loginForm_logowanie_raisedButton'),
                 text: 'Logowanie',
                 onTap: () {
-                  if (state.status.isValidated) {
-                    context.read<LoginCubit>().logInWithCredentials();
+                  if (_formKey.currentState!.validate()) {
+                    if (state.status.isValidated) {
+                      context.read<LoginCubit>().logInWithCredentials();
+                    }
                   }
                 },
                 // onTap: () {

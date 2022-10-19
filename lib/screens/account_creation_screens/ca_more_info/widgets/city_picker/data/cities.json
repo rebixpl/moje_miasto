@@ -1600,963 +1600,2589 @@
     "cityName": "Łapy"
   },
   {
-    "cityId": "",
+    "cityId": "401",
     "cityName": "Łasin"
   },
   {
-    "cityId": "",
+    "cityId": "402",
     "cityName": "Łask"
   },
   {
-    "cityId": "",
+    "cityId": "403",
     "cityName": "Łaskarzew"
   },
   {
-    "cityId": "",
+    "cityId": "404",
     "cityName": "Łaszczów"
   },
   {
-    "cityId": "",
+    "cityId": "405",
     "cityName": "Łaziska Górne"
   },
   {
-    "cityId": "",
+    "cityId": "406",
     "cityName": "Łazy"
   },
   {
-    "cityId": "",
+    "cityId": "407",
     "cityName": "Łeba"
   },
   {
-    "cityId": "",
+    "cityId": "408",
     "cityName": "Łęczna"
   },
   {
-    "cityId": "",
+    "cityId": "409",
     "cityName": "Łęczyca"
   },
   {
-    "cityId": "",
+    "cityId": "410",
     "cityName": "Łęknica"
   },
   {
-    "cityId": "",
+    "cityId": "410",
     "cityName": "Łobez"
   },
   {
-    "cityId": "",
+    "cityId": "411",
     "cityName": "Łobżenica"
   },
   {
-    "cityId": "",
+    "cityId": "412",
     "cityName": "Łochów"
   },
   {
-    "cityId": "",
+    "cityId": "413",
     "cityName": "Łomianki"
   },
   {
-    "cityId": "",
+    "cityId": "414",
     "cityName": "Łomża"
   },
   {
-    "cityId": "",
+    "cityId": "415",
     "cityName": "Łosice"
   },
   {
-    "cityId": "",
+    "cityId": "416",
     "cityName": "Łowicz"
   },
   {
-    "cityId": "",
+    "cityId": "417",
     "cityName": "Łódź"
   },
   {
-    "cityId": "",
+    "cityId": "418",
     "cityName": "Łuków"
   },
   {
-    "cityId": "",
+    "cityId": "419",
     "cityName": "Maków Mazowiecki"
   },
   {
-    "cityId": "",
+    "cityId": "420",
     "cityName": "Maków Podhalański"
   },
   {
-    "cityId": "",
+    "cityId": "421",
     "cityName": "Malbork"
   },
   {
-    "cityId": "",
+    "cityId": "422",
     "cityName": "Małogoszcz"
   },
   {
-    "cityId": "",
+    "cityId": "423",
     "cityName": "Małomice"
   },
   {
-    "cityId": "",
+    "cityId": "424",
     "cityName": "Margonin"
   },
   {
-    "cityId": "",
+    "cityId": "425",
     "cityName": "Marki"
   },
   {
-    "cityId": "",
+    "cityId": "426",
     "cityName": "Maszewo"
   },
   {
-    "cityId": "",
+    "cityId": "427",
     "cityName": "Miasteczko Śląskie"
   },
   {
-    "cityId": "",
+    "cityId": "428",
     "cityName": "Miastko"
   },
   {
-    "cityId": "",
+    "cityId": "429",
     "cityName": "Michałowo"
   },
   {
-    "cityId": "",
+    "cityId": "430",
     "cityName": "Miechów"
   },
   {
-    "cityId": "",
+    "cityId": "431",
     "cityName": "Miejska Górka"
   },
   {
-    "cityId": "",
+    "cityId": "432",
     "cityName": "Mielec"
   },
   {
-    "cityId": "",
+    "cityId": "433",
     "cityName": "Mielno"
   },
   {
-    "cityId": "",
+    "cityId": "434",
     "cityName": "Mieroszów"
   },
   {
-    "cityId": "",
+    "cityId": "435",
     "cityName": "Mieszkowice"
   },
   {
-    "cityId": "",
+    "cityId": "436",
     "cityName": "Międzybórz"
   },
   {
-    "cityId": "",
+    "cityId": "437",
     "cityName": "Międzychód"
   },
   {
-    "cityId": "",
+    "cityId": "438",
     "cityName": "Międzylesie"
   },
   {
-    "cityId": "",
+    "cityId": "439",
     "cityName": "Międzyrzec Podlaski"
   },
   {
-    "cityId": "",
+    "cityId": "440",
     "cityName": "Międzyrzecz"
   },
   {
-    "cityId": "",
+    "cityId": "441",
     "cityName": "Międzyzdroje"
   },
   {
-    "cityId": "",
+    "cityId": "442",
     "cityName": "Mikołajki"
   },
   {
-    "cityId": "",
+    "cityId": "443",
     "cityName": "Mikołów"
   },
   {
-    "cityId": "",
+    "cityId": "444",
     "cityName": "Mikstat"
   },
   {
-    "cityId": "",
+    "cityId": "445",
     "cityName": "Milanówek"
   },
   {
-    "cityId": "",
+    "cityId": "445",
     "cityName": "Milicz"
   },
   {
-    "cityId": "",
+    "cityId": "446",
     "cityName": "Miłakowo"
   },
   {
-    "cityId": "",
+    "cityId": "447",
     "cityName": "Miłomłyn"
   },
   {
-    "cityId": "",
+    "cityId": "448",
     "cityName": "Miłosław"
   },
   {
-    "cityId": "",
+    "cityId": "449",
     "cityName": "Mińsk Mazowiecki"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "450",
+    "cityName": "Barylnów"
   },
   {
-    "cityId": "",
+    "cityId": "451",
     "cityName": "Mirosławiec"
   },
   {
-    "cityId": "",
+    "cityId": "452",
     "cityName": "Mirsk"
   },
   {
-    "cityId": "",
+    "cityId": "453",
     "cityName": "Mława"
   },
   {
-    "cityId": "",
+    "cityId": "454",
     "cityName": "Młynary"
   },
   {
-    "cityId": "",
+    "cityId": "455",
     "cityName": "Modliborzyce"
   },
   {
-    "cityId": "",
+    "cityId": "456",
     "cityName": "Mogielnica"
   },
   {
-    "cityId": "",
+    "cityId": "457",
     "cityName": "Mogilno"
   },
   {
-    "cityId": "",
+    "cityId": "458",
     "cityName": "Mońki"
   },
   {
-    "cityId": "",
+    "cityId": "459",
     "cityName": "Morawica"
   },
   {
-    "cityId": "",
+    "cityId": "460",
     "cityName": "Morąg"
   },
   {
-    "cityId": "",
+    "cityId": "461",
     "cityName": "Mordy"
   },
   {
-    "cityId": "",
+    "cityId": "462",
     "cityName": "Moryń"
   },
   {
-    "cityId": "",
+    "cityId": "463",
     "cityName": "Mosina"
   },
   {
-    "cityId": "",
+    "cityId": "464",
     "cityName": "Mrągowo"
   },
   {
-    "cityId": "",
+    "cityId": "465",
     "cityName": "Mrocza"
   },
   {
-    "cityId": "",
+    "cityId": "466",
     "cityName": "Mrozy"
   },
   {
-    "cityId": "",
+    "cityId": "467",
     "cityName": "Mszana Dolna"
   },
   {
-    "cityId": "",
+    "cityId": "468",
     "cityName": "Mszczonów"
   },
   {
-    "cityId": "",
+    "cityId": "469",
     "cityName": "Murowana Goślina"
   },
   {
-    "cityId": "",
+    "cityId": "470",
     "cityName": "Muszyna"
   },
   {
-    "cityId": "",
+    "cityId": "471",
     "cityName": "Mysłowice"
   },
   {
-    "cityId": "",
+    "cityId": "472",
     "cityName": "Myszków"
   },
   {
-    "cityId": "",
+    "cityId": "473",
     "cityName": "Myszyniec"
   },
   {
-    "cityId": "",
+    "cityId": "474",
     "cityName": "Myślenice"
   },
   {
-    "cityId": "",
+    "cityId": "475",
     "cityName": "Myślibórz"
   },
   {
-    "cityId": "",
+    "cityId": "476",
     "cityName": "Nakło nad Notecią"
   },
   {
-    "cityId": "",
+    "cityId": "477",
     "cityName": "Nałęczów"
   },
   {
-    "cityId": "",
+    "cityId": "478",
     "cityName": "Namysłów"
   },
   {
-    "cityId": "",
+    "cityId": "479",
     "cityName": "Narol"
   },
   {
-    "cityId": "",
+    "cityId": "480",
     "cityName": "Nasielsk"
   },
   {
-    "cityId": "",
+    "cityId": "481",
     "cityName": "Nekla"
   },
   {
-    "cityId": "",
+    "cityId": "482",
     "cityName": "Nidzica"
   },
   {
-    "cityId": "",
+    "cityId": "483",
     "cityName": "Niemcza"
   },
   {
-    "cityId": "",
+    "cityId": "484",
     "cityName": "Niemodlin"
   },
   {
-    "cityId": "",
+    "cityId": "485",
     "cityName": "Niepołomice"
   },
   {
-    "cityId": "",
+    "cityId": "486",
     "cityName": "Nieszawa"
   },
   {
-    "cityId": "",
+    "cityId": "487",
     "cityName": "Nisko"
   },
   {
-    "cityId": "",
+    "cityId": "488",
     "cityName": "Nowa Dęba"
   },
   {
-    "cityId": "",
+    "cityId": "489",
     "cityName": "Nowa Ruda"
   },
   {
-    "cityId": "",
+    "cityId": "490",
     "cityName": "Nowa Sarzyna"
   },
   {
-    "cityId": "",
+    "cityId": "491",
     "cityName": "Nowa Słupia"
   },
   {
-    "cityId": "",
+    "cityId": "492",
     "cityName": "Nowa Sól"
   },
   {
-    "cityId": "",
+    "cityId": "493",
     "cityName": "Nowe"
   },
   {
-    "cityId": "",
+    "cityId": "494",
     "cityName": "Nowe Brzesko"
   },
   {
-    "cityId": "",
+    "cityId": "495",
     "cityName": "Nowe Miasteczko"
   },
   {
-    "cityId": "",
+    "cityId": "496",
     "cityName": "Nowe Miasto"
   },
   {
-    "cityId": "",
+    "cityId": "497",
     "cityName": "Nowe Miasto Lubawskie"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "498",
+    "cityName": "Nowe Miasto nad Pilicą"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "499",
+    "cityName": "Nowe Skalmierzyce"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "500",
+    "cityName": "Nowe Warpno"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "501",
+    "cityName": "Nowogard"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "502",
+    "cityName": "Nowogrodziec"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "503",
+    "cityName": "Nowogród"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "504",
+    "cityName": "Nowogród Bobrzański"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "505",
+    "cityName": "Nowy Dwór Gdański"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "506",
+    "cityName": "Nowy Dwór Mazowiecki"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "507",
+    "cityName": "Nowy Korczyn"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "508",
+    "cityName": "Nowy Sącz"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "509",
+    "cityName": "Nowy Staw"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "510",
+    "cityName": "Nowy Targ"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "511",
+    "cityName": "Nowy Tomyśl"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "512",
+    "cityName": "Nowy Wiśnicz"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "513",
+    "cityName": "Nysa"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "514",
+    "cityName": "Oborniki"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "515",
+    "cityName": "Oborniki Śląskie"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "516",
+    "cityName": "Obrzycko"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "517",
+    "cityName": "Odolanów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "518",
+    "cityName": "Ogrodzieniec"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "519",
+    "cityName": "Okonek"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "520",
+    "cityName": "Olecko"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "521",
+    "cityName": "Olesno"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "522",
+    "cityName": "Oleszyce"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "523",
+    "cityName": "Oleśnica"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "524",
+    "cityName": "Oleśnica"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "525",
+    "cityName": "Olkusz"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "526",
+    "cityName": "Olsztyn"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "527",
+    "cityName": "Olsztyn"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "528",
+    "cityName": "Olsztynek"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "529",
+    "cityName": "Olszyna"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "530",
+    "cityName": "Oława"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "531",
+    "cityName": "Opalenica"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "532",
+    "cityName": "Opatowiec"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "533",
+    "cityName": "Opatów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "534",
+    "cityName": "Opatówek"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "535",
+    "cityName": "Opoczno"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "536",
+    "cityName": "Opole"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "537",
+    "cityName": "Opole Lubelskie"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "538",
+    "cityName": "Orneta"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "539",
+    "cityName": "Orzesze"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "540",
+    "cityName": "Orzysz"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "541",
+    "cityName": "Osieczna"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "542",
+    "cityName": "Osiek"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "543",
+    "cityName": "Ostrołęka"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "544",
+    "cityName": "Ostroróg"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "545",
+    "cityName": "Ostrowiec Świętokrzyski"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "546",
+    "cityName": "Ostróda"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "547",
+    "cityName": "Ostrów Lubelski"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "548",
+    "cityName": "Ostrów Mazowiecka"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "549",
+    "cityName": "Ostrów Wielkopolski"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "550",
+    "cityName": "Ostrzeszów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "551",
+    "cityName": "Ośno Lubuskie"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "552",
+    "cityName": "Oświęcim"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "553",
+    "cityName": "Otmuchów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "554",
+    "cityName": "Otwock"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "555",
+    "cityName": "Otyń"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "556",
+    "cityName": "Ozimek"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "557",
+    "cityName": "Ozorków"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "558",
+    "cityName": "Ożarów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "559",
+    "cityName": "Ożarów Mazowiecki"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "560",
+    "cityName": "Pabianice"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "561",
+    "cityName": "Pacanów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "562",
+    "cityName": "Paczków"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "563",
+    "cityName": "Pajęczno"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "564",
+    "cityName": "Pakość"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "565",
+    "cityName": "Parczew"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "566",
+    "cityName": "Pasłęk"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "567",
+    "cityName": "Pasym"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "568",
+    "cityName": "Pelplin"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "569",
+    "cityName": "Pełczyce"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "570",
+    "cityName": "Piaseczno"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "571",
+    "cityName": "Piaski"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "572",
+    "cityName": "Piastów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "573",
+    "cityName": "Piątek"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "574",
+    "cityName": "Piechowice"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "575",
+    "cityName": "Piekary Śląskie"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "576",
+    "cityName": "Pieniężno"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "577",
+    "cityName": "Pieńsk"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "578",
+    "cityName": "Pierzchnica"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "579",
+    "cityName": "Pieszyce"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "580",
+    "cityName": "Pilawa"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "581",
+    "cityName": "Pilica"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "582",
+    "cityName": "Pilzno"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "583",
+    "cityName": "Piła"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "584",
+    "cityName": "Piława Górna"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "585",
+    "cityName": "Pińczów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "596",
+    "cityName": "Pionki"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "587",
+    "cityName": "Piotrków Kujawski"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "588",
+    "cityName": "Piotrków Trybunalski"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "589",
+    "cityName": "Pisz"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "590",
+    "cityName": "Piwniczna-Zdrój"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "591",
+    "cityName": "Pleszew"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "592",
+    "cityName": "Płock"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "593",
+    "cityName": "Płońsk"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "594",
+    "cityName": "Płoty"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "595",
+    "cityName": "Pniewy"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "596",
+    "cityName": "Pobiedziska"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "597",
+    "cityName": "Poddębice"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "598",
+    "cityName": "Podkowa Leśna"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "599",
+    "cityName": "Pogorzela"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "600",
+    "cityName": "Polanica-Zdrój"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "601",
+    "cityName": "Polanów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "602",
+    "cityName": "Police"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "603",
+    "cityName": "Polkowice"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "604",
+    "cityName": "Połaniec"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "605",
+    "cityName": "Połczyn-Zdrój"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "606",
+    "cityName": "Poniatowa"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "607",
+    "cityName": "Poniec"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "608",
+    "cityName": "Poręba"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "609",
+    "cityName": "Poznań"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "610",
+    "cityName": "Prabuty"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "611",
+    "cityName": "Praszka"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "612",
+    "cityName": "Prochowice"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "613",
+    "cityName": "Prószków"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "614",
+    "cityName": "Pruchnik"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "615",
+    "cityName": "Prudnik"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "616",
+    "cityName": "Prusice"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "617",
+    "cityName": "Pruszcz"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "618",
+    "cityName": "Pruszcz Gdański"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "619",
+    "cityName": "Pruszków"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "620",
+    "cityName": "Przasnysz"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "621",
+    "cityName": "Przecław"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "622",
+    "cityName": "Przedbórz"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "623",
+    "cityName": "Przedecz"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "624",
+    "cityName": "Przemków"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "625",
+    "cityName": "Przemyśl"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "626",
+    "cityName": "Przeworsk"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "627",
+    "cityName": "Przysucha"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "628",
+    "cityName": "Pszczyna"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "629",
+    "cityName": "Pszów"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "630",
+    "cityName": "Puck"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "631",
+    "cityName": "Puławy"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "632",
+    "cityName": "Pułtusk"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "633",
+    "cityName": "Puszczykowo"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "634",
+    "cityName": "Pyrzyce"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "637",
+    "cityName": "Pyskowice"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "638",
+    "cityName": "Pyzdry"
   },
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "639",
+    "cityName": "Rabka-Zdrój"
   },
+
   {
-    "cityId": "",
-    "cityName": ""
+    "cityId": "640",
+    "cityName": "Raciąż"
+  },
+
+  {
+    "cityId": "641",
+    "cityName": "Racibórz"
+  },
+
+  {
+    "cityId": "642",
+    "cityName": "Radków"
+  },
+
+  {
+    "cityId": "643",
+    "cityName": "Radlin"
+  },
+
+  {
+    "cityId": "644",
+    "cityName": "Radłów"
+  },
+
+  {
+    "cityId": "645",
+    "cityName": "Radom"
+  },
+
+  {
+    "cityId": "646",
+    "cityName": "Radomsko"
+  },
+
+  {
+    "cityId": "647",
+    "cityName": "Radomyśl Wielki"
+  },
+
+  {
+    "cityId": "648",
+    "cityName": "Radoszyce"
+  },
+
+  {
+    "cityId": "649",
+    "cityName": "Radymno"
+  },
+
+  {
+    "cityId": "650",
+    "cityName": "Radziejów"
+  },
+
+  {
+    "cityId": "651",
+    "cityName": "Radzionków"
+  },
+
+  {
+    "cityId": "652",
+    "cityName": "Radzymin"
+  },
+
+  {
+    "cityId": "653",
+    "cityName": "Radzyń Chełmiński"
+  },
+
+  {
+    "cityId": "654",
+    "cityName": "Radzyń Podlaski"
+  },
+
+  {
+    "cityId": "655",
+    "cityName": "Rajgród"
+  },
+
+  {
+    "cityId": "656",
+    "cityName": "Rakoniewice"
+  },
+
+  {
+    "cityId": "657",
+    "cityName": "Raszków"
+  },
+
+  {
+    "cityId": "658",
+    "cityName": "Rawa Mazowiecka"
+  },
+
+  {
+    "cityId": "659",
+    "cityName": "Rawicz"
+  },
+
+  {
+    "cityId": "670",
+    "cityName": "Recz"
+  },
+
+  {
+    "cityId": "671",
+    "cityName": "Reda"
+  },
+
+  {
+    "cityId": "672",
+    "cityName": "Rejowiec"
+  },
+
+  {
+    "cityId": "673",
+    "cityName": "Rejowiec Fabryczny"
+  },
+
+  {
+    "cityId": "674",
+    "cityName": "Resko"
+  },
+
+  {
+    "cityId": "675",
+    "cityName": "Reszel"
+  },
+
+  {
+    "cityId": "676",
+    "cityName": "Rogoźno"
+  },
+
+  {
+    "cityId": "677",
+    "cityName": "Ropczyce"
+  },
+
+  {
+    "cityId": "678",
+    "cityName": "Różan"
+  },
+
+  {
+    "cityId": "679",
+    "cityName": "Ruciane-Nida"
+  },
+
+  {
+    "cityId": "680",
+    "cityName": "Ruda Śląska"
+  },
+
+  {
+    "cityId": "681",
+    "cityName": "Rudnik nad Sanem"
+  },
+
+  {
+    "cityId": "682",
+    "cityName": "Rumia"
+  },
+
+  {
+    "cityId": "683",
+    "cityName": "Rybnik"
+  },
+
+  {
+    "cityId": "684",
+    "cityName": "Rychwał"
+  },
+
+  {
+    "cityId": "684",
+    "cityName": "Rydułtowy"
+  },
+
+  {
+    "cityId": "685",
+    "cityName": "Rydzyna"
+  },
+
+  {
+    "cityId": "686",
+    "cityName": "Ryglice"
+  },
+
+  {
+    "cityId": "687",
+    "cityName": "Ryki"
+  },
+
+  {
+    "cityId": "688",
+    "cityName": "Rymanów"
+  },
+
+  {
+    "cityId": "689",
+    "cityName": "Ryn"
+  },
+
+  {
+    "cityId": "690",
+    "cityName": "Rypin"
+  },
+
+  {
+    "cityId": "691",
+    "cityName": "Rzepin"
+  },
+
+  {
+    "cityId": "692",
+    "cityName": "Rzeszów"
+  },
+
+  {
+    "cityId": "693",
+    "cityName": "Rzgów"
+  },
+
+  {
+    "cityId": "694",
+    "cityName": "Sandomierz"
+  },
+
+  {
+    "cityId": "695",
+    "cityName": "Sanniki"
+  },
+
+  {
+    "cityId": "696",
+    "cityName": "Sanok"
+  },
+
+  {
+    "cityId": "697",
+    "cityName": "Sejny"
+  },
+
+  {
+    "cityId": "698",
+    "cityName": "Serock"
+  },
+
+  {
+    "cityId": "699",
+    "cityName": "Sędziszów"
+  },
+
+  {
+    "cityId": "660",
+    "cityName": "Sędziszów Małopolski"
+  },
+
+  {
+    "cityId": "661",
+    "cityName": "Sępopol"
+  },
+
+  {
+    "cityId": "662",
+    "cityName": "Sępólno Krajeńskie"
+  },
+
+  {
+    "cityId": "663",
+    "cityName": "Sianów"
+  },
+
+  {
+    "cityId": "664",
+    "cityName": "Siechnice"
+  },
+
+  {
+    "cityId": "665",
+    "cityName": "Siedlce"
+  },
+
+  {
+    "cityId": "666",
+    "cityName": "Siedliszcze"
+  },
+
+  {
+    "cityId": "667",
+    "cityName": "Siemianowice Śląskie"
+  },
+
+  {
+    "cityId": "668",
+    "cityName": "Siemiatycze"
+  },
+
+  {
+    "cityId": "669",
+    "cityName": "Sieniawa"
+  },
+
+  {
+    "cityId": "700",
+    "cityName": "Sieradz"
+  },
+
+  {
+    "cityId": "701",
+    "cityName": "Sieraków"
+  },
+
+  {
+    "cityId": "702",
+    "cityName": "Sierpc"
+  },
+
+  {
+    "cityId": "703",
+    "cityName": "Siewierz"
+  },
+
+  {
+    "cityId": "704",
+    "cityName": "Skalbmierz"
+  },
+
+  {
+    "cityId": "705",
+    "cityName": "Skała"
+  },
+
+  {
+    "cityId": "706",
+    "cityName": "Skaryszew"
+  },
+
+  {
+    "cityId": "707",
+    "cityName": "Skarżysko-Kamienna"
+  },
+
+  {
+    "cityId": "708",
+    "cityName": "Skawina"
+  },
+
+  {
+    "cityId": "709",
+    "cityName": "Skępe"
+  },
+
+  {
+    "cityId": "710",
+    "cityName": "Skierniewice"
+  },
+
+  {
+    "cityId": "711",
+    "cityName": "Skoczów"
+  },
+
+  {
+    "cityId": "712",
+    "cityName": "Skoki"
+  },
+
+  {
+    "cityId": "713",
+    "cityName": "Skórcz"
+  },
+
+  {
+    "cityId": "714",
+    "cityName": "Skwierzyna"
+  },
+
+  {
+    "cityId": "715",
+    "cityName": "Sława"
+  },
+
+  {
+    "cityId": "716",
+    "cityName": "Sławków"
+  },
+
+  {
+    "cityId": "717",
+    "cityName": "Sławno"
+  },
+
+  {
+    "cityId": "718",
+    "cityName": "Słomniki"
+  },
+
+  {
+    "cityId": "719",
+    "cityName": "Słubice"
+  },
+
+  {
+    "cityId": "720",
+    "cityName": "Słupca"
+  },
+
+  {
+    "cityId": "721",
+    "cityName": "Słupsk"
+  },
+
+  {
+    "cityId": "722",
+    "cityName": "Sobótka"
+  },
+
+  {
+    "cityId": "723",
+    "cityName": "Sochaczew"
+  },
+
+  {
+    "cityId": "724",
+    "cityName": "Sochocin"
+  },
+
+  {
+    "cityId": "725",
+    "cityName": "Sokołów Małopolski"
+  },
+
+  {
+    "cityId": "726",
+    "cityName": "Sokołów Podlaski"
+  },
+
+  {
+    "cityId": "727",
+    "cityName": "Sokółka"
+  },
+
+  {
+    "cityId": "728",
+    "cityName": "Solec Kujawski"
+  },
+
+  {
+    "cityId": "729",
+    "cityName": "Solec nad Wisłą"
+  },
+
+  {
+    "cityId": "730",
+    "cityName": "Sompolno"
+  },
+
+  {
+    "cityId": "731",
+    "cityName": "Sopot"
+  },
+
+  {
+    "cityId": "732",
+    "cityName": "Sosnowiec"
+  },
+
+  {
+    "cityId": "733",
+    "cityName": "Sośnicowice"
+  },
+
+  {
+    "cityId": "734",
+    "cityName": "Stalowa Wola"
+  },
+
+  {
+    "cityId": "735",
+    "cityName": "Starachowice"
+  },
+
+  {
+    "cityId": "736",
+    "cityName": "Stargard"
+  },
+
+  {
+    "cityId": "737",
+    "cityName": "Starogard Gdański"
+  },
+
+  {
+    "cityId": "738",
+    "cityName": "Stary Sącz"
+  },
+
+  {
+    "cityId": "739",
+    "cityName": "Staszów"
+  },
+
+  {
+    "cityId": "740",
+    "cityName": "Stawiski"
+  },
+
+  {
+    "cityId": "741",
+    "cityName": "Stawiszyn"
+  },
+
+  {
+    "cityId": "742",
+    "cityName": "Stąporków"
+  },
+
+  {
+    "cityId": "743",
+    "cityName": "Stepnica"
+  },
+
+  {
+    "cityId": "744",
+    "cityName": "Stęszew"
+  },
+
+  {
+    "cityId": "745",
+    "cityName": "Stoczek Łukowski"
+  },
+
+  {
+    "cityId": "746",
+    "cityName": "Stopnica"
+  },
+
+  {
+    "cityId": "747",
+    "cityName": "Stronie Śląskie"
+  },
+
+  {
+    "cityId": "748",
+    "cityName": "Strumień"
+  },
+
+  {
+    "cityId": "749",
+    "cityName": "Stryków"
+  },
+
+  {
+    "cityId": "750",
+    "cityName": "Strzegom"
+  },
+
+  {
+    "cityId": "751",
+    "cityName": "Strzelce Krajeńskie"
+  },
+
+  {
+    "cityId": "752",
+    "cityName": "Strzelce Opolskie"
+  },
+
+  {
+    "cityId": "753",
+    "cityName": "Strzelin"
+  },
+
+  {
+    "cityId": "754",
+    "cityName": "Strzelno"
+  },
+
+  {
+    "cityId": "755",
+    "cityName": "Strzyżów"
+  },
+
+  {
+    "cityId": "756",
+    "cityName": "Sucha Beskidzka"
+  },
+
+  {
+    "cityId": "757",
+    "cityName": "Suchań"
+  },
+
+  {
+    "cityId": "758",
+    "cityName": "Suchedniów"
+  },
+
+  {
+    "cityId": "759",
+    "cityName": "Suchowola"
+  },
+
+  {
+    "cityId": "760",
+    "cityName": "Sulechów"
+  },
+
+  {
+    "cityId": "761",
+    "cityName": "Sulejów"
+  },
+
+  {
+    "cityId": "762",
+    "cityName": "SulejóweK"
+  },
+
+  {
+    "cityId": "763",
+    "cityName": "Sulęcin"
+  },
+
+  {
+    "cityId": "764",
+    "cityName": "Sulmierzyce"
+  },
+
+  {
+    "cityId": "765",
+    "cityName": "Sułkowice"
+  },
+
+  {
+    "cityId": "766",
+    "cityName": "Supraśl"
+  },
+
+  {
+    "cityId": "767",
+    "cityName": "Suraż"
+  },
+
+  {
+    "cityId": "768",
+    "cityName": "Susz"
+  },
+
+  {
+    "cityId": "769",
+    "cityName": "Suwałki"
+  },
+
+  {
+    "cityId": "770",
+    "cityName": "Swarzędz"
+  },
+
+  {
+    "cityId": "771",
+    "cityName": "Syców"
+  },
+
+  {
+    "cityId": "772",
+    "cityName": "Szadek"
+  },
+
+  {
+    "cityId": "773",
+    "cityName": "Szamocin"
+  },
+
+  {
+    "cityId": "774",
+    "cityName": "Szamotuły"
+  },
+
+  {
+    "cityId": "775",
+    "cityName": "Szczawnica"
+  },
+
+  {
+    "cityId": "776",
+    "cityName": "Szczawno-Zdrój"
+  },
+
+  {
+    "cityId": "778",
+    "cityName": "Szczebrzeszyn"
+  },
+
+  {
+    "cityId": "779",
+    "cityName": "Szczecin"
+  },
+
+  {
+    "cityId": "780",
+    "cityName": "Szczecinek"
+  },
+
+  {
+    "cityId": "781",
+    "cityName": "Szczekociny"
+  },
+
+  {
+    "cityId": "782",
+    "cityName": "Szczucin"
+  },
+
+  {
+    "cityId": "783",
+    "cityName": "Szczuczyn"
+  },
+
+  {
+    "cityId": "784",
+    "cityName": "Szczyrk"
+  },
+
+  {
+    "cityId": "785",
+    "cityName": "Szczytna"
+  },
+
+  {
+    "cityId": "786",
+    "cityName": "Szczytno"
+  },
+
+  {
+    "cityId": "787",
+    "cityName": "Szepietowo"
+  },
+
+  {
+    "cityId": "788",
+    "cityName": "Szklarska Poręba"
+  },
+
+  {
+    "cityId": "789",
+    "cityName": "Szlichtyngowa"
+  },
+
+  {
+    "cityId": "790",
+    "cityName": "Szprotawa"
+  },
+
+  {
+    "cityId": "791",
+    "cityName": "Sztum"
+  },
+
+  {
+    "cityId": "792",
+    "cityName": "Szubin"
+  },
+
+  {
+    "cityId": "793",
+    "cityName": "Szydłów"
+  },
+
+  {
+    "cityId": "794",
+    "cityName": "Szydłowiec"
+  },
+
+  {
+    "cityId": "795",
+    "cityName": "Ścinawa"
+  },
+
+  {
+    "cityId": "796",
+    "cityName": "Ślesin"
+  },
+
+  {
+    "cityId": "797",
+    "cityName": "Śmigiel"
+  },
+
+  {
+    "cityId": "798",
+    "cityName": "Śrem"
+  },
+
+  {
+    "cityId": "799",
+    "cityName": "Środa Śląska"
+  },
+
+  {
+    "cityId": "800",
+    "cityName": "Środa Wielkopolska"
+  },
+
+  {
+    "cityId": "801",
+    "cityName": "Świątniki Górne"
+  },
+
+  {
+    "cityId": "802",
+    "cityName": "Świdnica"
+  },
+
+  {
+    "cityId": "8003",
+    "cityName": "Świdnik"
+  },
+
+  {
+    "cityId": "804",
+    "cityName": "Świdwin"
+  },
+
+  {
+    "cityId": "805",
+    "cityName": "Świebodzice"
+  },
+
+  {
+    "cityId": "806",
+    "cityName": "Świebodzin"
+  },
+
+  {
+    "cityId": "807",
+    "cityName": "Świecie"
+  },
+
+  {
+    "cityId": "808",
+    "cityName": "Świeradów-Zdrój"
+  },
+
+  {
+    "cityId": "809",
+    "cityName": "Świerzawa"
+  },
+
+  {
+    "cityId": "810",
+    "cityName": "Świętochłowice"
+  },
+
+  {
+    "cityId": "811",
+    "cityName": "Świnoujście"
+  },
+
+  {
+    "cityId": "812",
+    "cityName": "Tarczyn"
+  },
+
+  {
+    "cityId": "813",
+    "cityName": "Tarnobrzeg"
+  },
+
+  {
+    "cityId": "814",
+    "cityName": "Tarnogród"
+  },
+
+  {
+    "cityId": "815",
+    "cityName": "Tarnowskie Góry"
+  },
+
+  {
+    "cityId": "816",
+    "cityName": "Tarnów"
+  },
+
+  {
+    "cityId": "817",
+    "cityName": "Tczew"
+  },
+
+  {
+    "cityId": "818",
+    "cityName": "Terespol"
+  },
+
+  {
+    "cityId": "819",
+    "cityName": "Tłuszcz"
+  },
+
+  {
+    "cityId": "820",
+    "cityName": "Tolkmicko"
+  },
+
+  {
+    "cityId": "821",
+    "cityName": "Tomaszów Lubelski"
+  },
+
+  {
+    "cityId": "822",
+    "cityName": "Tomaszów Mazowiecki"
+  },
+
+  {
+    "cityId": "823",
+    "cityName": "Toruń"
+  },
+
+  {
+    "cityId": "824",
+    "cityName": "Torzym"
+  },
+
+  {
+    "cityId": "825",
+    "cityName": "Toszek"
+  },
+
+  {
+    "cityId": "826",
+    "cityName": "Trzcianka"
+  },
+
+  {
+    "cityId": "827",
+    "cityName": "Trzciel"
+  },
+
+  {
+    "cityId": "828",
+    "cityName": "Trzcińsko-Zdrój"
+  },
+
+  {
+    "cityId": "829",
+    "cityName": "Trzebiatów"
+  },
+
+  {
+    "cityId": "830",
+    "cityName": "Trzebinia"
+  },
+
+  {
+    "cityId": "831",
+    "cityName": "Trzebnica"
+  },
+
+  {
+    "cityId": "832",
+    "cityName": "Trzemeszno"
+  },
+
+  {
+    "cityId": "833",
+    "cityName": "Tuchola"
+  },
+
+  {
+    "cityId": "834",
+    "cityName": "Tuchów"
+  },
+
+  {
+    "cityId": "835",
+    "cityName": "Tuczno"
+  },
+
+  {
+    "cityId": "836",
+    "cityName": "Tuliszków"
+  },
+
+  {
+    "cityId": "837",
+    "cityName": "Tułowice"
+  },
+
+  {
+    "cityId": "838",
+    "cityName": "Turek"
+  },
+
+  {
+    "cityId": "839",
+    "cityName": "Turas"
+  },
+
+  {
+    "cityId": "840",
+    "cityName": "Twardogóra"
+  },
+
+  {
+    "cityId": "841",
+    "cityName": "Tychowo"
+  },
+
+  {
+    "cityId": "842",
+    "cityName": "Tychy"
+  },
+
+  {
+    "cityId": "843",
+    "cityName": "Zezulinn"
+  },
+
+  {
+    "cityId": "844",
+    "cityName": "Trębaczóf"
+  },
+
+  {
+    "cityId": "845",
+    "cityName": "Ciechanki z Łańcucha"
+  },
+
+  {
+    "cityId": "846",
+    "cityName": "Tyczyn"
+  },
+
+  {
+    "cityId": "847",
+    "cityName": "Tykocin"
+  },
+
+  {
+    "cityId": "848",
+    "cityName": "Tyszowce"
+  },
+
+  {
+    "cityId": "849",
+    "cityName": "Ujazd"
+  },
+
+  {
+    "cityId": "850",
+    "cityName": "Ujście"
+  },
+
+  {
+    "cityId": "851",
+    "cityName": "Ulanów"
+  },
+
+  {
+    "cityId": "852",
+    "cityName": "Uniejów"
+  },
+
+  {
+    "cityId": "853",
+    "cityName": "Urzędów"
+  },
+
+  {
+    "cityId": "854",
+    "cityName": "Ustka"
+  },
+
+  {
+    "cityId": "855",
+    "cityName": "Ustroń"
+  },
+
+  {
+    "cityId": "856",
+    "cityName": "Ustrzyki Dolne"
+  },
+
+  {
+    "cityId": "857",
+    "cityName": "Wadowice ✝"
+  },
+
+  {
+    "cityId": "858",
+    "cityName": "Wałcz"
+  },
+
+  {
+    "cityId": "859",
+    "cityName": "Wałbrzych"
+  },
+
+  {
+    "cityId": "860",
+    "cityName": "Warka"
+  },
+
+  {
+    "cityId": "861",
+    "cityName": "Warszawa"
+  },
+
+  {
+    "cityId": "862",
+    "cityName": "Warta"
+  },
+
+  {
+    "cityId": "863",
+    "cityName": "Wasilków"
+  },
+
+  {
+    "cityId": "864",
+    "cityName": "Wąbrzeźno"
+  },
+
+  {
+    "cityId": "865",
+    "cityName": "Wąchock"
+  },
+
+  {
+    "cityId": "866",
+    "cityName": "Wągrowiec"
+  },
+
+  {
+    "cityId": "867",
+    "cityName": "Wąsosz"
+  },
+
+  {
+    "cityId": "868",
+    "cityName": "Wejherowo"
+  },
+
+  {
+    "cityId": "869",
+    "cityName": "Węgliniec"
+  },
+
+  {
+    "cityId": "870",
+    "cityName": "Węgorzewo"
+  },
+
+  {
+    "cityId": "871",
+    "cityName": "Węgorzyno"
+  },
+
+  {
+    "cityId": "872",
+    "cityName": "Węgrów"
+  },
+
+  {
+    "cityId": "873",
+    "cityName": "Wiązów"
+  },
+
+  {
+    "cityId": "874",
+    "cityName": "Wielbark"
+  },
+
+  {
+    "cityId": "875",
+    "cityName": "Wieleń"
+  },
+
+  {
+    "cityId": "876",
+    "cityName": "Wielichowo"
+  },
+
+  {
+    "cityId": "877",
+    "cityName": "Wieliczka"
+  },
+
+  {
+    "cityId": "878",
+    "cityName": "Wieluń"
+  },
+
+  {
+    "cityId": "879",
+    "cityName": "Wieruszów"
+  },
+
+  {
+    "cityId": "880",
+    "cityName": "Więcbork"
+  },
+
+  {
+    "cityId": "881",
+    "cityName": "Wilamowice"
+  },
+
+  {
+    "cityId": "882",
+    "cityName": "Wiskitki"
+  },
+
+  {
+    "cityId": "883",
+    "cityName": "Wisła"
+  },
+
+  {
+    "cityId": "884",
+    "cityName": "Wiślica"
+  },
+
+  {
+    "cityId": "885",
+    "cityName": "Witkowo"
+  },
+
+  {
+    "cityId": "886",
+    "cityName": "Witnica"
+  },
+
+  {
+    "cityId": "887",
+    "cityName": "Wleń"
+  },
+
+  {
+    "cityId": "888",
+    "cityName": "Władysławowo"
+  },
+
+  {
+    "cityId": "889",
+    "cityName": "Włocławek"
+  },
+
+  {
+    "cityId": "890",
+    "cityName": "Włodawa"
+  },
+
+  {
+    "cityId": "891",
+    "cityName": "Włoszczowa"
+  },
+
+  {
+    "cityId": "892",
+    "cityName": "Wodzisław"
+  },
+
+  {
+    "cityId": "893",
+    "cityName": "Wodzisław Śląski"
+  },
+
+  {
+    "cityId": "894",
+    "cityName": "Wojcieszów"
+  },
+
+  {
+    "cityId": "895",
+    "cityName": "Wojkowice"
+  },
+
+  {
+    "cityId": "896",
+    "cityName": "Wojnicz"
+  },
+
+  {
+    "cityId": "897",
+    "cityName": "Wolbórz"
+  },
+
+  {
+    "cityId": "898",
+    "cityName": "Wolbrom"
+  },
+
+  {
+    "cityId": "899",
+    "cityName": "Wolin"
+  },
+
+  {
+    "cityId": "900",
+    "cityName": "Wolsztyn"
+  },
+
+  {
+    "cityId": "901",
+    "cityName": "Wołczyn"
+  },
+
+  {
+    "cityId": "901",
+    "cityName": "Wołomin"
+  },
+
+  {
+    "cityId": "902",
+    "cityName": "Wołów"
+  },
+
+  {
+    "cityId": "903",
+    "cityName": "Woźniki"
+  },
+
+  {
+    "cityId": "904",
+    "cityName": "Wrocław"
+  },
+
+  {
+    "cityId": "905",
+    "cityName": "Wronki"
+  },
+
+  {
+    "cityId": "906",
+    "cityName": "Września"
+  },
+
+  {
+    "cityId": "907",
+    "cityName": "Wschowa"
+  },
+
+  {
+    "cityId": "908",
+    "cityName": "Wyrzysk"
+  },
+
+  {
+    "cityId": "909",
+    "cityName": "Wysoka"
+  },
+
+  {
+    "cityId": "910",
+    "cityName": "Wysokie Mazowieckie"
+  },
+
+  {
+    "cityId": "911",
+    "cityName": "Wyszków"
+  },
+
+  {
+    "cityId": "912",
+    "cityName": "Wyszogród"
+  },
+
+  {
+    "cityId": "913",
+    "cityName": "Wyśmierzyce"
+  },
+
+  {
+    "cityId": "914",
+    "cityName": "Zabłudów"
+  },
+
+  {
+    "cityId": "915",
+    "cityName": "Zabrze"
+  },
+
+  {
+    "cityId": "916",
+    "cityName": "Zagórów"
+  },
+
+  {
+    "cityId": "917",
+    "cityName": "Zagórz"
+  },
+
+  {
+    "cityId": "918",
+    "cityName": "Zakliczyn"
+  },
+
+  {
+    "cityId": "919",
+    "cityName": "Zaklików"
+  },
+
+  {
+    "cityId": "920",
+    "cityName": "Zakopane"
+  },
+
+  {
+    "cityId": "921",
+    "cityName": "Zakroczym"
+  },
+
+  {
+    "cityId": "922",
+    "cityName": "Zalewo"
+  },
+
+  {
+    "cityId": "923",
+    "cityName": "Zambrów"
+  },
+
+  {
+    "cityId": "924",
+    "cityName": "Zamość"
+  },
+
+  {
+    "cityId": "925",
+    "cityName": "Zator"
+  },
+
+  {
+    "cityId": "926",
+    "cityName": "Zawadzkie"
+  },
+
+  {
+    "cityId": "927",
+    "cityName": "Zawichost"
+  },
+
+  {
+    "cityId": "928",
+    "cityName": "Zawidów"
+  },
+
+  {
+    "cityId": "929",
+    "cityName": "Zawiercie"
+  },
+
+  {
+    "cityId": "930",
+    "cityName": "Ząbki"
+  },
+
+  {
+    "cityId": "931",
+    "cityName": "Ząbkowice Śląskie"
+  },
+
+  {
+    "cityId": "932",
+    "cityName": "Zbąszynek"
+  },
+
+  {
+    "cityId": "933",
+    "cityName": "Zbąszyń"
+  },
+
+  {
+    "cityId": "934",
+    "cityName": "Zduny"
+  },
+
+  {
+    "cityId": "935",
+    "cityName": "Zduńska Wola"
+  },
+
+  {
+    "cityId": "936",
+    "cityName": "Zdzieszowice"
+  },
+
+  {
+    "cityId": "937",
+    "cityName": "Zelów"
+  },
+
+  {
+    "cityId": "938",
+    "cityName": "Zgierz"
+  },
+
+  {
+    "cityId": "939",
+    "cityName": "Zgorzelec"
+  },
+
+  {
+    "cityId": "940",
+    "cityName": "Zielona Góra"
+  },
+
+  {
+    "cityId": "941",
+    "cityName": "Zielonka"
+  },
+
+  {
+    "cityId": "942",
+    "cityName": "Ziębice"
+  },
+
+  {
+    "cityId": "943",
+    "cityName": "Złocieniec"
+  },
+
+  {
+    "cityId": "944",
+    "cityName": "Złoczew"
+  },
+
+  {
+    "cityId": "945",
+    "cityName": "Złotoryja"
+  },
+
+  {
+    "cityId": "946",
+    "cityName": "Złotów"
+  },
+
+  {
+    "cityId": "947",
+    "cityName": "Złoty Stok"
+  },
+
+  {
+    "cityId": "948",
+    "cityName": "Zwierzyniec"
+  },
+
+  {
+    "cityId": "949",
+    "cityName": "Zwoleń"
+  },
+
+  {
+    "cityId": "950",
+    "cityName": "Żabno"
+  },
+
+  {
+    "cityId": "951",
+    "cityName": "Żagań"
+  },
+
+  {
+    "cityId": "952",
+    "cityName": "Żarki"
+  },
+
+  {
+    "cityId": "953",
+    "cityName": "Żarów"
+  },
+
+  {
+    "cityId": "954",
+    "cityName": "Żary"
+  },
+
+  {
+    "cityId": "955",
+    "cityName": "Żelechów"
+  },
+
+  {
+    "cityId": "956",
+    "cityName": "Żerków"
+  },
+
+  {
+    "cityId": "957",
+    "cityName": "Żmigród"
+  },
+
+  {
+    "cityId": "958",
+    "cityName": "Żnin"
+  },
+
+  {
+    "cityId": "959",
+    "cityName": "Żory"
+  },
+
+  {
+    "cityId": "960",
+    "cityName": "Żukowo"
+  },
+
+  {
+    "cityId": "961",
+    "cityName": "Żuromin"
+  },
+
+  {
+    "cityId": "962",
+    "cityName": "Żychlin"
+  },
+
+  {
+    "cityId": "963",
+    "cityName": "Żyrardów"
+  },
+
+  {
+    "cityId": "964",
+    "cityName": "Żywiec"
   }
 ]
