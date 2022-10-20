@@ -80,7 +80,7 @@ class _AccountTypeSelectorState extends State<AccountTypeSelector> {
             ),
           ),
           SizedBox(
-            height: 180.0,
+            height: 200.0,
             child: Padding(
               padding: const EdgeInsets.only(
                 left: 20.0,

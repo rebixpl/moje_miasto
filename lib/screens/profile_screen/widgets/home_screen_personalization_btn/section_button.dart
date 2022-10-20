@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
 
-class HomeScreenPersonalizationBtn extends StatelessWidget {
-  const HomeScreenPersonalizationBtn({
+class SectionButton extends StatelessWidget {
+  const SectionButton({
     Key? key,
     required this.onTap,
+    required this.icon,
+    required this.label,
   }) : super(key: key);
 
   final VoidCallback onTap;
+  final IconData icon;
+  final String label;
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +29,17 @@ class HomeScreenPersonalizationBtn extends StatelessWidget {
           child: Row(
             children: [
               Icon(
-                FontAwesomeIcons.house,
+                icon,
                 size: 24.0,
                 color: Theme.of(context).colorScheme.secondary,
               ),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: centerText(context),
+                  child: centerText(
+                    context: context,
+                    text: label,
+                  ),
                 ),
               ),
               Icon(
@@ -47,9 +54,12 @@ class HomeScreenPersonalizationBtn extends StatelessWidget {
     );
   }
 
-  Text centerText(BuildContext context) {
+  Text centerText({
+    required BuildContext context,
+    required String text,
+  }) {
     return Text(
-      'personalizacja ekranu głównego'.titleCase,
+      text.titleCase,
       style: TextStyle(
         color: Theme.of(context).colorScheme.secondary,
         fontWeight: FontWeight.bold,

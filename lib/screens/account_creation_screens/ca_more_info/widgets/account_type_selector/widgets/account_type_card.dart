@@ -16,6 +16,7 @@ class AccountTypeCard extends StatelessWidget {
     return Row(
       children: [
         Expanded(
+          flex: 3,
           child: Stack(
             children: [
               CardImage(imagePath: currentCard.photoUrl),
@@ -31,7 +32,7 @@ class AccountTypeCard extends StatelessWidget {
         ),
         const SizedBox(width: 10.0),
         Expanded(
-          flex: 2,
+          flex: 5,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

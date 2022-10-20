@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/shared/app/text/title_case.dart';
 import 'package:moje_miasto/theme.dart';
 
 class LogOutButton extends StatelessWidget {
@@ -18,13 +19,23 @@ class LogOutButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       onPressed: onTap,
-      child: const Text(
-        'Wyloguj się',
-        style: TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 14.0,
-          color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 16.0,
+          horizontal: 30.0,
         ),
+        child: logOutText(),
+      ),
+    );
+  }
+
+  Text logOutText() {
+    return Text(
+      'Wyloguj Się'.allInCaps,
+      style: const TextStyle(
+        fontWeight: FontWeight.bold,
+        fontSize: 16.0,
+        color: Colors.white,
       ),
     );
   }

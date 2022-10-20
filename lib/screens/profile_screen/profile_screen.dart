@@ -8,7 +8,7 @@ import 'package:moje_miasto/screens/account_creation_screens/create_account/widg
 import 'package:moje_miasto/screens/page_view_screen/data/nav_screens_enum.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/screens/profile_screen/widgets/edit_username_snackbar.dart';
-import 'package:moje_miasto/screens/profile_screen/widgets/home_screen_personalization_btn/home_screen_personalization_btn.dart';
+import 'package:moje_miasto/screens/profile_screen/widgets/home_screen_personalization_btn/section_button.dart';
 import 'package:moje_miasto/screens/profile_screen/widgets/log_out_button.dart';
 import 'package:moje_miasto/screens/profile_screen/widgets/profile_screen_texts.dart';
 import 'package:moje_miasto/screens/profile_screen/widgets/user_avatar.dart';
@@ -29,13 +29,13 @@ class ProfileScreen extends StatelessWidget {
       child: Scaffold(
         body: Center(
           child: SafeArea(
-            child: Padding(
-              padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
-              child: Column(
-                children: [
-                  Expanded(
-                    child: SingleChildScrollView(
-                      physics: const BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                Expanded(
+                  child: SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
+                    child: Padding(
+                      padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
                       child: Column(
                         children: [
                           const SizedBox(height: 10.0),
@@ -76,7 +76,9 @@ class ProfileScreen extends StatelessWidget {
                           const SizedBox(height: 20.0),
                           const SelectAvatar(),
                           const SizedBox(height: 20.0),
-                          HomeScreenPersonalizationBtn(
+                          SectionButton(
+                            label: 'personalizacja ekranu głównego',
+                            icon: FontAwesomeIcons.house,
                             onTap: () {
                               ScaffoldMessenger.of(context)
                                   .hideCurrentSnackBar();
@@ -86,6 +88,19 @@ class ProfileScreen extends StatelessWidget {
                             },
                           ),
                           const SizedBox(height: 20.0),
+                          SectionButton(
+                            label: 'twoje wpisy',
+                            icon: FontAwesomeIcons.clipboardList,
+                            onTap: () {
+                              ScaffoldMessenger.of(context)
+                                  .hideCurrentSnackBar();
+
+                              pageViewNavCubit.onTap(
+                                NavScreensEnum.yourEntriesScreen.index,
+                              );
+                            },
+                          ),
+                          const SizedBox(height: 30.0),
                           LogOutButton(onTap: () {
                             ScaffoldMessenger.of(context).hideCurrentSnackBar();
                             context.read<AppBloc>().add(AppLogoutRequested());
@@ -95,8 +110,8 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
