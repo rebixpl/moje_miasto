@@ -8,4 +8,6 @@ enum NavScreensEnum {
   addSchoolConfirmationScreen,
   yourEntriesScreen,
   yeSchoolRankingScreen,
+  yeKorepetycjeIPomocScreen,
+  yeKonkursyIOlimpiadyScreen,
 }

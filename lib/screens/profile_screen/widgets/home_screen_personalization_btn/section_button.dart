@@ -8,11 +8,13 @@ class SectionButton extends StatelessWidget {
     required this.onTap,
     required this.icon,
     required this.label,
+    this.fontSize = 15.0,
   }) : super(key: key);
 
   final VoidCallback onTap;
   final IconData icon;
   final String label;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +41,7 @@ class SectionButton extends StatelessWidget {
                   child: centerText(
                     context: context,
                     text: label,
+                    fontSize: fontSize,
                   ),
                 ),
               ),
@@ -57,13 +60,14 @@ class SectionButton extends StatelessWidget {
   Text centerText({
     required BuildContext context,
     required String text,
+    required double fontSize,
   }) {
     return Text(
       text.titleCase,
       style: TextStyle(
         color: Theme.of(context).colorScheme.secondary,
         fontWeight: FontWeight.bold,
-        fontSize: 15.0,
+        fontSize: fontSize,
       ),
       maxLines: 2,
       textAlign: TextAlign.center,

@@ -8,11 +8,10 @@ import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navba
 import 'package:moje_miasto/screens/profile_screen/widgets/home_screen_personalization_btn/section_button.dart';
 import 'package:moje_miasto/screens/your_entries_screen/widgets/your_entries_screen_texts.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
-
 import 'package:moje_miasto/theme.dart';
 
-class YourEntriesScreen extends StatelessWidget {
-  const YourEntriesScreen({super.key});
+class YeKonkursyIOlimpiadyScreen extends StatelessWidget {
+  const YeKonkursyIOlimpiadyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +29,15 @@ class YourEntriesScreen extends StatelessWidget {
               child: GoBackButton(
                 onTap: () {
                   pageViewNavCubit.onTap(
-                    NavScreensEnum.profileScreen.index,
+                    NavScreensEnum.yourEntriesScreen.index,
                   );
                 },
               ),
             ),
-            appBarTitleText('twoje wpisy'.allInCaps),
+            appBarTitleText(
+              'konkursy & olimpiady'.allInCaps,
+              fontSize: 22.0,
+            ),
           ],
         ),
         centerTitle: true,
@@ -58,44 +60,27 @@ class YourEntriesScreen extends StatelessWidget {
                   children: [
                     const FullWidthDivider(),
                     const SizedBox(height: 20.0),
-                    subTitleText(
-                        'Lista wszystkich zgłoszeń / wpisów, które zostały przez ciebie dodane od aplikacji'),
-                    const SizedBox(height: 20.0),
                     SectionButton(
-                      label: 'ranking szkół',
-                      icon: FontAwesomeIcons.school,
-                      onTap: () {
-                        pageViewNavCubit.onTap(
-                          NavScreensEnum.yeSchoolRankingScreen.index,
-                        );
-                      },
-                    ),
-                    const SizedBox(height: 20.0),
-                    SectionButton(
-                      label: 'korepetycje & pomoc',
-                      icon: FontAwesomeIcons.handshakeAngle,
-                      onTap: () {
-                        pageViewNavCubit.onTap(
-                          NavScreensEnum.yeKorepetycjeIPomocScreen.index,
-                        );
-                      },
-                    ),
-                    const SizedBox(height: 20.0),
-                    SectionButton(
-                      label: 'konkursy & olimpiady',
+                      label: 'Konkursy dodane przez ciebie',
                       icon: FontAwesomeIcons.trophy,
-                      onTap: () {
-                        pageViewNavCubit.onTap(
-                          NavScreensEnum.yeKonkursyIOlimpiadyScreen.index,
-                        );
-                      },
-                    ),
-                    const SizedBox(height: 20.0),
-                    SectionButton(
-                      label: 'hobby & zainteresowania',
-                      icon: FontAwesomeIcons.laptopCode,
+                      fontSize: 13.0,
                       onTap: () {},
                     ),
+                    const SizedBox(height: 20.0),
+                    SectionButton(
+                      label: 'Uczestnicy twoich konkursów',
+                      icon: FontAwesomeIcons.userPlus,
+                      fontSize: 13.0,
+                      onTap: () {},
+                    ),
+                    const SizedBox(height: 20.0),
+                    SectionButton(
+                      label: 'konkursy w których uczestniczysz',
+                      icon: FontAwesomeIcons.trophy,
+                      fontSize: 14.0,
+                      onTap: () {},
+                    ),
+                    const SizedBox(height: 20.0),
                     const SizedBox(
                       height: AppTheme.kBottomNavbarHeight + 20.0,
                     ),
