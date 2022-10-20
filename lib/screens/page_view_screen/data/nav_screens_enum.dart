@@ -5,4 +5,5 @@ enum NavScreensEnum {
   profileScreen,
   homeScreenSettingsScreen,
   addSchoolScreen,
+  addSchoolConfirmationScreen,
 }

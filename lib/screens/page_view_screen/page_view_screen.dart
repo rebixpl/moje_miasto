@@ -29,8 +29,15 @@ class _PageViewScreenState extends State<PageViewScreen> {
     _pageController = PageController(initialPage: 0);
   }
 
-  void _jumpToPage(int page) async {
+  void _jumpToPage(int page) {
     _pageController.jumpToPage(page);
+  }
+
+  Future<void> _goBack() async {
+    await _pageController.previousPage(
+      duration: const Duration(milliseconds: 1),
+      curve: Curves.bounceIn,
+    );
   }
 
   @override
@@ -49,6 +56,8 @@ class _PageViewScreenState extends State<PageViewScreen> {
         listener: (context, state) async {
           if (state is ShowPageState) {
             _jumpToPage(state.page);
+          } else if (state is GoBackState) {
+            _goBack();
           }
         },
         builder: (context, state) {

@@ -2,13 +2,6 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-enum AppPagesEnum {
-  homeScreen,
-  schoolRankingScreen,
-  waldekAIChatbotScreen,
-  profilePage,
-}
-
 abstract class PageViewNavState extends Equatable {}
 
 class ShowPageState extends PageViewNavState {
@@ -20,12 +13,21 @@ class ShowPageState extends PageViewNavState {
   List<Object> get props => [page];
 }
 
+class GoBackState extends PageViewNavState {
+  @override
+  List<Object?> get props => [];
+}
+
 class PageViewNavCubit extends Cubit<PageViewNavState> {
   PageViewNavCubit()
       : super(ShowPageState(0)); // 0 - default index of a first screen
 
   Future<void> onTap(int index) async {
     emit(ShowPageState(index));
+  }
+
+  Future<void> goBack() async {
+    emit(GoBackState());
   }
 
   @override
