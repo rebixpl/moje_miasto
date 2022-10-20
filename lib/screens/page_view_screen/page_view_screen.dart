@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moje_miasto/app/app.dart';
 import 'package:moje_miasto/screens/home_screen/home_screen.dart';
+import 'package:moje_miasto/screens/home_screen/hs_settings_screen/hs_settings_screen.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/custom_bottom_navbar.dart';
+import 'package:moje_miasto/screens/profile_screen/profile_screen.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/school_ranking_screen.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/add_school_screen.dart';
+import 'package:moje_miasto/screens/waldek_ai_screen/waldek_ai_screen.dart';
 
 class PageViewScreen extends StatefulWidget {
   const PageViewScreen({super.key});
@@ -24,12 +28,8 @@ class _PageViewScreenState extends State<PageViewScreen> {
     _pageController = PageController(initialPage: 0);
   }
 
-  Future<void> _animateToPage(int page) async {
-    _pageController.animateToPage(
-      page,
-      duration: const Duration(milliseconds: 400),
-      curve: Curves.easeInOut,
-    );
+  void _jumpToPage(int page) async {
+    _pageController.jumpToPage(page);
   }
 
   @override
@@ -47,7 +47,7 @@ class _PageViewScreenState extends State<PageViewScreen> {
       child: BlocConsumer<PageViewNavCubit, PageViewNavState>(
         listener: (context, state) async {
           if (state is ShowPageState) {
-            await _animateToPage(state.page);
+            _jumpToPage(state.page);
           }
         },
         builder: (context, state) {
@@ -58,29 +58,10 @@ class _PageViewScreenState extends State<PageViewScreen> {
               children: [
                 const HomeScreen(),
                 const SchoolRankingScreen(),
-                const Scaffold(
-                  body: Center(
-                    child: Text('Waldek AI Chatbot'),
-                  ),
-                ),
-                Scaffold(
-                  body: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const Text('Profile Page'),
-                        Text('Email: ${user.email}'),
-                        MaterialButton(
-                          key: const Key('homePage_logout_iconButton'),
-                          child: const Text('Wyloguj się'),
-                          onPressed: () =>
-                              context.read<AppBloc>().add(AppLogoutRequested()),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                const WaldekAIScreen(),
+                const ProfileScreen(),
+                HomeScreenSettingsScreen(),
+                AddSchoolScreen(),
               ],
             ),
             bottomNavigationBar: CustomBottomNavBar(),

@@ -35,8 +35,9 @@ class HomeScreenSettingsScreen extends StatelessWidget {
           title: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const GoBackButton(),
                 appBarTitleText(context),
               ],
             ),
@@ -70,6 +71,7 @@ class HomeScreenSettingsScreen extends StatelessWidget {
                         formKey: _formKey,
                       ),
                       const SizedBox(height: 30.0),
+                      const SizedBox(height: AppTheme.kBottomNavbarHeight),
                     ],
                   ),
                 ),

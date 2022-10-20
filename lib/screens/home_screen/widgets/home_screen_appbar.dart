@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:moje_miasto/screens/home_screen/hs_settings_screen/hs_settings_screen.dart';
+import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 
 class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
   const HomeScreenAppbar({
@@ -9,6 +10,8 @@ class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final pageViewNavCubit = context.read<PageViewNavCubit>();
+
     return AppBar(
       elevation: 0.0,
       backgroundColor: Colors.white,
@@ -40,13 +43,14 @@ class HomeScreenAppbar extends StatelessWidget implements PreferredSizeWidget {
             IconButton(
               splashRadius: 22.0,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (BuildContext context) =>
-                        HomeScreenSettingsScreen(),
-                  ),
-                );
+                pageViewNavCubit.onTap(4);
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (BuildContext context) =>
+                //         HomeScreenSettingsScreen(),
+                //   ),
+                // );
               },
               icon: Icon(
                 FontAwesomeIcons.gear,

@@ -25,7 +25,7 @@ class CustomBottomNavBar extends StatelessWidget {
         final pageViewNavCubit = context.read<PageViewNavCubit>();
 
         return AnimatedBottomNavigationBar.builder(
-          height: 60.0,
+          height: AppTheme.kBottomNavbarHeight,
           itemCount: iconList.length,
           tabBuilder: (int index, bool isActive) {
             final color = isActive ? AppTheme.kAccentColor : Colors.white;

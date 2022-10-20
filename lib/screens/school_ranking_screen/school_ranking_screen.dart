@@ -5,6 +5,7 @@ import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_se
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/school_type_selector.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/single_school.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/sr_sliver_appbar/sr_sliver_appbar.dart';
+import 'package:moje_miasto/theme.dart';
 
 class SchoolRankingScreen extends StatelessWidget {
   const SchoolRankingScreen({super.key});
@@ -31,6 +32,9 @@ class SchoolRankingScreen extends StatelessWidget {
                     ),
                     childCount: 16,
                   ),
+                ),
+                const SliverToBoxAdapter(
+                  child: SizedBox(height: AppTheme.kBottomNavbarHeight),
                 ),
               ],
             ),

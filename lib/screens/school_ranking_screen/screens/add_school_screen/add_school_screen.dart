@@ -78,6 +78,7 @@ class AddSchoolScreen extends StatelessWidget {
                       const SizedBox(height: 30.0),
                       const SchoolTypePicker(),
                       const SizedBox(height: 30.0),
+                      const SizedBox(height: AppTheme.kBottomNavbarHeight),
                     ],
                   ),
                 ),
