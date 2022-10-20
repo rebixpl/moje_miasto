@@ -1,6 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moje_miasto/app/app.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatar_selector.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatars.dart';
+import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/cubits/avatar_selector_cubit.dart';
+import 'package:moje_miasto/screens/page_view_screen/data/nav_screens_enum.dart';
+import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
+import 'package:moje_miasto/screens/profile_screen/widgets/home_screen_personalization_btn/home_screen_personalization_btn.dart';
+import 'package:moje_miasto/screens/profile_screen/widgets/log_out_button.dart';
+import 'package:moje_miasto/screens/profile_screen/widgets/profile_screen_texts.dart';
+import 'package:moje_miasto/screens/profile_screen/widgets/user_avatar.dart';
+import 'package:moje_miasto/theme.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -8,22 +18,55 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final user = context.select((AppBloc bloc) => bloc.state.user);
+    final pageViewNavCubit = context.read<PageViewNavCubit>();
 
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text('Profile Page'),
-            Text('Email: ${user.email}'),
-            MaterialButton(
-              key: const Key('homePage_logout_iconButton'),
-              child: const Text('Wyloguj się'),
-              onPressed: () =>
-                  context.read<AppBloc>().add(AppLogoutRequested()),
+    return BlocProvider(
+      create: (context) => AvatarSelectorCubit(),
+      child: Scaffold(
+        body: Center(
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      child: Column(
+                        children: [
+                          const SizedBox(height: 10.0),
+                          UserAvatar(
+                            avatar: avatars[3],
+                          ),
+                          const SizedBox(height: 14.0),
+                          usernameText(context, 'cebullaro_drapallo'),
+                          const SizedBox(height: 20.0),
+                          emailText(context, user.email.toString()),
+                          const SizedBox(height: 20.0),
+                          userIdText(context, user.id.toString()),
+                          const SizedBox(height: 20.0),
+                          const SelectAvatar(),
+                          const SizedBox(height: 20.0),
+                          HomeScreenPersonalizationBtn(
+                            onTap: () => pageViewNavCubit.onTap(
+                              NavScreensEnum.homeScreenSettingsScreen.index,
+                            ),
+                          ),
+                          const SizedBox(height: 20.0),
+                          LogOutButton(
+                            onTap: () => context
+                                .read<AppBloc>()
+                                .add(AppLogoutRequested()),
+                          ),
+                          const SizedBox(height: AppTheme.kBottomNavbarHeight),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ],
+          ),
         ),
       ),
     );
