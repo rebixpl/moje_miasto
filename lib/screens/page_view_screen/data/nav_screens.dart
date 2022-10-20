@@ -11,7 +11,7 @@ List<Widget> navScreens = <Widget>[
   const HomeScreen(),
   const SchoolRankingScreen(),
   const WaldekAIScreen(),
-  const ProfileScreen(),
+  ProfileScreen(),
   HomeScreenSettingsScreen(),
   AddSchoolScreen(),
   const AddSchoolConfirmationScreen(),

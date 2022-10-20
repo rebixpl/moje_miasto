@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moje_miasto/app/app.dart';
-import 'package:moje_miasto/screens/home_screen/home_screen.dart';
-import 'package:moje_miasto/screens/home_screen/hs_settings_screen/hs_settings_screen.dart';
 import 'package:moje_miasto/screens/page_view_screen/data/nav_screens.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/custom_bottom_navbar.dart';
-import 'package:moje_miasto/screens/profile_screen/profile_screen.dart';
-import 'package:moje_miasto/screens/school_ranking_screen/school_ranking_screen.dart';
-import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/add_school_screen.dart';
-import 'package:moje_miasto/screens/waldek_ai_screen/waldek_ai_screen.dart';
 
 class PageViewScreen extends StatefulWidget {
   const PageViewScreen({super.key});
@@ -30,10 +24,12 @@ class _PageViewScreenState extends State<PageViewScreen> {
   }
 
   void _jumpToPage(int page) {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
     _pageController.jumpToPage(page);
   }
 
   Future<void> _goBack() async {
+    ScaffoldMessenger.of(context).hideCurrentSnackBar();
     await _pageController.previousPage(
       duration: const Duration(milliseconds: 1),
       curve: Curves.bounceIn,

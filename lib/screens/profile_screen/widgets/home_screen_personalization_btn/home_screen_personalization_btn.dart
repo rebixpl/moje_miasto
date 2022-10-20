@@ -32,16 +32,7 @@ class HomeScreenPersonalizationBtn extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                  child: Text(
-                    'personalizacja ekranu głównego'.titleCase,
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.secondary,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15.0,
-                    ),
-                    maxLines: 2,
-                    textAlign: TextAlign.center,
-                  ),
+                  child: centerText(context),
                 ),
               ),
               Icon(
@@ -53,6 +44,19 @@ class HomeScreenPersonalizationBtn extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Text centerText(BuildContext context) {
+    return Text(
+      'personalizacja ekranu głównego'.titleCase,
+      style: TextStyle(
+        color: Theme.of(context).colorScheme.secondary,
+        fontWeight: FontWeight.bold,
+        fontSize: 15.0,
+      ),
+      maxLines: 2,
+      textAlign: TextAlign.center,
     );
   }
 }
