@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moje_miasto/screens/home_screen/widgets/features_carousel_slider/data/features_carousel_data.dart';
 import 'package:moje_miasto/screens/home_screen/widgets/features_carousel_slider/widgets/background_image.dart';
 import 'package:moje_miasto/screens/home_screen/widgets/features_carousel_slider/widgets/features_carousel_texts.dart';
+import 'package:moje_miasto/screens/page_view_screen/data/nav_screens_enum.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/theme.dart';
 
@@ -28,7 +29,9 @@ class FeaturesCarouselSlider extends StatelessWidget {
             debugPrint('card ${carouselData.cardCategory} tapped');
             if (carouselData.cardCategoryId ==
                 CardCategoryTypesEnum.rankingiioceny) {
-              pageViewNavCubit.onTap(1); // navigate to school ranking screen
+              pageViewNavCubit.onTap(
+                NavScreensEnum.schoolRankingScreen.index,
+              ); // navigate to school ranking screen
             }
           },
           child: ClipRRect(

@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moje_miasto/app/app.dart';
 import 'package:moje_miasto/screens/home_screen/home_screen.dart';
 import 'package:moje_miasto/screens/home_screen/hs_settings_screen/hs_settings_screen.dart';
+import 'package:moje_miasto/screens/page_view_screen/data/nav_screens.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/custom_bottom_navbar.dart';
 import 'package:moje_miasto/screens/profile_screen/profile_screen.dart';
@@ -55,14 +56,7 @@ class _PageViewScreenState extends State<PageViewScreen> {
             body: PageView(
               physics: const NeverScrollableScrollPhysics(),
               controller: _pageController,
-              children: [
-                const HomeScreen(),
-                const SchoolRankingScreen(),
-                const WaldekAIScreen(),
-                const ProfileScreen(),
-                HomeScreenSettingsScreen(),
-                AddSchoolScreen(),
-              ],
+              children: navScreens,
             ),
             bottomNavigationBar: CustomBottomNavBar(),
           );
