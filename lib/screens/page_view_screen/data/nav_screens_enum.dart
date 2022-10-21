@@ -4,8 +4,6 @@ enum NavScreensEnum {
   waldekAIScreen,
   profileScreen,
   homeScreenSettingsScreen,
-  addSchoolScreen,
-  addSchoolConfirmationScreen,
   yourEntriesScreen,
   yeSchoolRankingScreen,
   yeKorepetycjeIPomocScreen,

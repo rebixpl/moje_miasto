@@ -7,6 +7,7 @@ import 'package:moje_miasto/shared/app/text_fields/text_field_validators.dart';
 void showEditUsernameSnackbar({
   required BuildContext context,
   required TextEditingController usernameController,
+  required GlobalKey<FormState> formKey,
 }) {
   final snackBar = SnackBar(
     duration: const Duration(days: 1),
@@ -14,18 +15,23 @@ void showEditUsernameSnackbar({
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        MyTextField(
-          myController: usernameController,
-          onChanged: (username) {},
-          fieldName: 'Nazwa Użytkownika',
-          myIcon: FontAwesomeIcons.pen,
-          validator: Validators.validateUsername,
+        Form(
+          key: formKey,
+          child: MyTextField(
+            myController: usernameController,
+            onChanged: (username) {},
+            fieldName: 'Nazwa Użytkownika',
+            myIcon: FontAwesomeIcons.pen,
+            validator: Validators.validateUsername,
+          ),
         ),
         const SizedBox(height: 10.0),
         BigElevatedButton(
           text: 'Zapisz zmiany',
           onTap: () {
-            ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            if (formKey.currentState!.validate()) {
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
+            }
           },
         ),
       ],

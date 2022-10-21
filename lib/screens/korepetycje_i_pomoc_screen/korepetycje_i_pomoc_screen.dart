@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_screen/add_help_entry_screen.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/cubit/help_type_picker_cubit.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/data/help_types.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/help_type_picker.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/widgets/single_entry.dart';
-import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/screens/your_entries_screen/widgets/your_entries_screen_texts.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
 
@@ -16,8 +16,6 @@ class KorepetycjeIPomocScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final PageViewNavCubit pageViewNavCubit = context.read<PageViewNavCubit>();
-
     return BlocProvider(
       create: (context) => HelpTypePickerCubit(),
       child: Scaffold(
@@ -42,9 +40,12 @@ class KorepetycjeIPomocScreen extends StatelessWidget {
                 IconButton(
                   splashRadius: 22.0,
                   onPressed: () {
-                    // pageViewNavCubit.onTap(
-                    //   NavScreensEnum.addSchoolScreen.index,
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => AddHelpEntryScreen(),
+                      ),
+                    );
                   },
                   icon: Icon(
                     FontAwesomeIcons.squarePlus,

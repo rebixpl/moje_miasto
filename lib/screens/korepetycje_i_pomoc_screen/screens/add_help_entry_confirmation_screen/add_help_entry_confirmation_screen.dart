@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/go_back_button.dart';
+import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_confirmation_screen/widgets/confirmation_texts.dart';
+import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_screen/widgets/background_globus_image.dart';
 import 'package:moje_miasto/screens/login/widgets/big_elevated_button.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_confirmation_screen/widgets/add_school_screen_texts.dart';
-import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/school_image.dart';
 import 'package:moje_miasto/theme.dart';
 
-class AddSchoolConfirmationScreen extends StatelessWidget {
-  const AddSchoolConfirmationScreen({super.key});
+class AddHelpEntryConfirmationScreen extends StatelessWidget {
+  const AddHelpEntryConfirmationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +32,9 @@ class AddSchoolConfirmationScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const SizedBox(height: 20.0),
-                  addSchoolText(context),
+                  dodajOgloszenieText(context),
                   const SizedBox(height: 40.0),
-                  const SchoolImage(),
+                  const BackgroundGlobusImage(),
                   const SizedBox(height: 40.0),
                   const FullWidthDivider(),
                   const SizedBox(height: 40.0),

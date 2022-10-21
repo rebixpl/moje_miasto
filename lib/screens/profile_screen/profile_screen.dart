@@ -19,6 +19,8 @@ class ProfileScreen extends StatelessWidget {
 
   final TextEditingController usernameController = TextEditingController();
 
+  final _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     final user = context.select((AppBloc bloc) => bloc.state.user);
@@ -59,6 +61,7 @@ class ProfileScreen extends StatelessWidget {
                                   showEditUsernameSnackbar(
                                     context: context,
                                     usernameController: usernameController,
+                                    formKey: _formKey,
                                   );
                                 },
                                 icon: Icon(

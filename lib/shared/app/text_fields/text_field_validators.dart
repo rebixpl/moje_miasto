@@ -62,4 +62,13 @@ class Validators {
     }
     return null;
   }
+
+  static String? validateHelpDescriptionText(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Opis nie może być pusty!';
+    } else if (value.length > 300) {
+      return 'Dozwolone maksymalnie 300 znaków!';
+    }
+    return null;
+  }
 }

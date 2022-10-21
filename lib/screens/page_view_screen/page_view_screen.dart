@@ -46,27 +46,24 @@ class _PageViewScreenState extends State<PageViewScreen> {
   Widget build(BuildContext context) {
     final user = context.select((AppBloc bloc) => bloc.state.user);
 
-    return BlocProvider(
-      create: (context) => PageViewNavCubit(),
-      child: BlocConsumer<PageViewNavCubit, PageViewNavState>(
-        listener: (context, state) async {
-          if (state is ShowPageState) {
-            _jumpToPage(state.page);
-          } else if (state is GoBackState) {
-            _goBack();
-          }
-        },
-        builder: (context, state) {
-          return Scaffold(
-            body: PageView(
-              physics: const NeverScrollableScrollPhysics(),
-              controller: _pageController,
-              children: navScreens,
-            ),
-            bottomNavigationBar: CustomBottomNavBar(),
-          );
-        },
-      ),
+    return BlocConsumer<PageViewNavCubit, PageViewNavState>(
+      listener: (context, state) async {
+        if (state is ShowPageState) {
+          _jumpToPage(state.page);
+        } else if (state is GoBackState) {
+          _goBack();
+        }
+      },
+      builder: (context, state) {
+        return Scaffold(
+          body: PageView(
+            physics: const NeverScrollableScrollPhysics(),
+            controller: _pageController,
+            children: navScreens,
+          ),
+          bottomNavigationBar: CustomBottomNavBar(),
+        );
+      },
     );
   }
 }
