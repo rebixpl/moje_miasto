@@ -31,12 +31,6 @@ class SchoolRankingAppBar extends StatelessWidget {
               pageViewNavCubit.onTap(
                 NavScreensEnum.addSchoolScreen.index,
               );
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => AddSchoolScreen(),
-              //   ),
-              // );
             },
             icon: const Icon(
               FontAwesomeIcons.squarePlus,

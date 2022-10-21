@@ -25,6 +25,7 @@ class SchoolTypeSelector extends StatelessWidget {
                 color: Colors.white,
               ),
               child: ListView.separated(
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) => Padding(
                   padding: const EdgeInsets.only(right: 20.0),

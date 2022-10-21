@@ -32,6 +32,11 @@ class FeaturesCarouselSlider extends StatelessWidget {
               pageViewNavCubit.onTap(
                 NavScreensEnum.schoolRankingScreen.index,
               ); // navigate to school ranking screen
+            } else if (carouselData.cardCategoryId ==
+                CardCategoryTypesEnum.korepetycjeipomoc) {
+              pageViewNavCubit.onTap(
+                NavScreensEnum.korepetycjeIPomocScreen.index,
+              );
             }
           },
           child: ClipRRect(

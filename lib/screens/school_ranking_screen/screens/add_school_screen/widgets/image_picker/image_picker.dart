@@ -59,17 +59,20 @@ class _ImagePickerASState extends State<ImagePickerAS> {
                           return NoImageContainer(cubit: cubit);
                         } else {
                           return Expanded(
-                            child: Container(
-                              width: double.infinity,
-                              height: double.infinity,
-                              decoration: BoxDecoration(
-                                color: Colors.grey[400],
-                                borderRadius: BorderRadius.circular(20),
-                                image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: Image.file(
-                                    File(_image!.path),
-                                  ).image,
+                            child: GestureDetector(
+                              onTap: () => cubit.takePhotoFromGallery(),
+                              child: Container(
+                                width: double.infinity,
+                                height: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: Colors.grey[400],
+                                  borderRadius: BorderRadius.circular(20),
+                                  image: DecorationImage(
+                                    fit: BoxFit.cover,
+                                    image: Image.file(
+                                      File(_image!.path),
+                                    ).image,
+                                  ),
                                 ),
                               ),
                             ),
