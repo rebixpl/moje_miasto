@@ -4,8 +4,7 @@ import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.d
 import 'package:moje_miasto/screens/forgot_password/widgets/go_back_button.dart';
 import 'package:moje_miasto/screens/page_view_screen/data/nav_screens_enum.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
-import 'package:moje_miasto/screens/your_entries_screen/screens/ye_korepetycje_i_pomoc_screen/widgets/korepetycje_i_pomoc_card.dart';
-import 'package:moje_miasto/screens/your_entries_screen/screens/ye_school_ranking_screen/widgets/ye_single_school.dart';
+import 'package:moje_miasto/screens/your_entries_screen/screens/ye_korepetycje_i_pomoc_screen/widgets/single_entry.dart';
 import 'package:moje_miasto/screens/your_entries_screen/widgets/your_entries_screen_texts.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
 
@@ -61,15 +60,14 @@ class YeKorepetycjeIPomocScreen extends StatelessWidget {
                   children: [
                     const FullWidthDivider(),
                     const SizedBox(height: 20.0),
-                    // ListView.separated(
-                    //   shrinkWrap: true,
-                    //   physics: const BouncingScrollPhysics(),
-                    //   itemBuilder: (context, index) =>
-                    //       const KorepetycjeIPomocCard(),
-                    //   separatorBuilder: (context, index) =>
-                    //       const SizedBox(height: 20.0),
-                    //   itemCount: 2,
-                    // ),
+                    ListView.separated(
+                      shrinkWrap: true,
+                      physics: const BouncingScrollPhysics(),
+                      itemBuilder: (context, index) => const SingleEntry(),
+                      separatorBuilder: (context, index) =>
+                          const SizedBox(height: 20.0),
+                      itemCount: 2,
+                    ),
                     const SizedBox(
                       height: AppTheme.kBottomNavbarHeight + 20.0,
                     ),
