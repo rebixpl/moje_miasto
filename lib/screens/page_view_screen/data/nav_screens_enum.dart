@@ -1,7 +1,7 @@
 enum NavScreensEnum {
   homeScreen,
   schoolRankingScreen,
-  waldekAIScreen,
+  waldekAIHomeScreen,
   profileScreen,
   homeScreenSettingsScreen,
   yourEntriesScreen,
@@ -11,4 +11,5 @@ enum NavScreensEnum {
   korepetycjeIPomocScreen,
   hobbyIZainteresowaniaScreen,
   yeHobbyIZainteresowaniaScreen,
+  waldekAiChatScreen,
 }

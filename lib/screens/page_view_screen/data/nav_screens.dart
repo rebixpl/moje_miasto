@@ -5,7 +5,8 @@ import 'package:moje_miasto/screens/home_screen/hs_settings_screen/hs_settings_s
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/korepetycje_i_pomoc_screen.dart';
 import 'package:moje_miasto/screens/profile_screen/profile_screen.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/school_ranking_screen.dart';
-import 'package:moje_miasto/screens/waldek_ai_screen/waldek_ai_screen.dart';
+import 'package:moje_miasto/screens/waldek_ai_screen/screens/waldek_ai_chat_screen.dart';
+import 'package:moje_miasto/screens/waldek_ai_screen/waldek_ai_home_screen.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_hobby_i_zainteresowania/ye_hobby_i_zainteresowania.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_konkursy_i_olimpiady/ye_konkursy_i_olimpiady_screen.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_korepetycje_i_pomoc_screen/ye_korepetycje_i_pomoc_screen.dart';
@@ -15,7 +16,7 @@ import 'package:moje_miasto/screens/your_entries_screen/your_entries_screen.dart
 List<Widget> navScreens = [
   const HomeScreen(),
   const SchoolRankingScreen(),
-  const WaldekAIScreen(),
+  const WaldekAIHomeScreen(),
   ProfileScreen(),
   HomeScreenSettingsScreen(),
   const YourEntriesScreen(),
@@ -25,4 +26,5 @@ List<Widget> navScreens = [
   const KorepetycjeIPomocScreen(),
   const HobbyIZainteresowaniaScreen(),
   const YeHobbyIZainteresowaniaScreen(),
+  const WaldekAiChatScreen(),
 ];
