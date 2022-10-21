@@ -12,9 +12,11 @@ Text votesCountText(int count) {
   );
 }
 
-Text schoolNameText(String text) {
+Text schoolNameText(String text, {int? maxLines}) {
   return Text(
     text,
+    maxLines: maxLines,
+    overflow: TextOverflow.ellipsis,
     style: const TextStyle(
       color: Colors.white,
       fontWeight: FontWeight.bold,

@@ -21,14 +21,29 @@ class SingleSchool extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(
         top: AppTheme.kDefaultPadding / 2,
-        left: AppTheme.kDefaultPadding / 2,
-        right: AppTheme.kDefaultPadding / 2,
+        left: AppTheme.kDefaultPadding / 1.5,
+        right: AppTheme.kDefaultPadding / 1.5,
       ),
-      child: Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(26.0),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+          gradient: const LinearGradient(
+            colors: [
+              Color(0xff6A6493),
+              Color(0xff211A4C),
+            ],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+          boxShadow: const [
+            BoxShadow(
+              color: Colors.black38,
+              blurRadius: 3.0,
+              spreadRadius: 0.0,
+              offset: Offset(1.0, 1.0),
+            )
+          ],
         ),
-        color: const Color(0xff535279),
         child: Padding(
           padding: const EdgeInsets.all(14.0),
           child: Row(
@@ -53,6 +68,7 @@ class SingleSchool extends StatelessWidget {
                         child: Center(
                           child: schoolNameText(
                             'Prywatna Szkoła Podstawowa im. Królowej Jadwigi Lublin',
+                            maxLines: 3,
                           ),
                         ),
                       ),
