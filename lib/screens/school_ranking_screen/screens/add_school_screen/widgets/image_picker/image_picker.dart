@@ -23,79 +23,74 @@ class _ImagePickerASState extends State<ImagePickerAS> {
 
   @override
   Widget build(BuildContext context) {
-    return RepositoryProvider(
-      create: (context) => ImagePickerRepository(),
-      child: Builder(builder: (context) {
-        ImagePickerCubit cubit = ImagePickerCubit(
-          RepositoryProvider.of<ImagePickerRepository>(context),
-        );
+    final ImagePickerCubit imagePickerCubit = ImagePickerCubit(
+      RepositoryProvider.of<ImagePickerRepository>(context),
+    );
 
-        return SizedBox(
-          width: double.infinity,
-          height: 200.0,
-          child: Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20.0),
-            ),
-            color: const Color(0xff211A4C).withOpacity(0.07),
-            elevation: 0.0,
-            child: Padding(
-              padding: const EdgeInsets.all(14.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  selectImageText(context),
-                  const SizedBox(height: 10.0),
-                  BlocBuilder<ImagePickerCubit, ImagePickerState>(
-                    bloc: cubit,
-                    builder: (context, state) {
-                      if (state is ImagePickerInitialize) {
-                        return NoImageContainer(cubit: cubit);
-                      }
-                      if (state is ImagePickerSuccess) {
-                        _image = state.image;
-                        if (_image == null) {
-                          return NoImageContainer(cubit: cubit);
-                        } else {
-                          return Expanded(
-                            child: GestureDetector(
-                              onTap: () => cubit.takePhotoFromGallery(),
-                              child: Container(
-                                width: double.infinity,
-                                height: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: Colors.grey[400],
-                                  borderRadius: BorderRadius.circular(20),
-                                  image: DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: Image.file(
-                                      File(_image!.path),
-                                    ).image,
-                                  ),
-                                ),
+    return SizedBox(
+      width: double.infinity,
+      height: 200.0,
+      child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        color: const Color(0xff211A4C).withOpacity(0.07),
+        elevation: 0.0,
+        child: Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              selectImageText(context),
+              const SizedBox(height: 10.0),
+              BlocBuilder<ImagePickerCubit, ImagePickerState>(
+                bloc: imagePickerCubit,
+                builder: (context, state) {
+                  if (state is ImagePickerInitialize) {
+                    return NoImageContainer(cubit: imagePickerCubit);
+                  }
+                  if (state is ImagePickerSuccess) {
+                    _image = state.image;
+                    if (_image == null) {
+                      return NoImageContainer(cubit: imagePickerCubit);
+                    } else {
+                      return Expanded(
+                        child: GestureDetector(
+                          onTap: () => imagePickerCubit.takePhotoFromGallery(),
+                          child: Container(
+                            width: double.infinity,
+                            height: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[400],
+                              borderRadius: BorderRadius.circular(20),
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: Image.file(
+                                  File(_image!.path),
+                                ).image,
                               ),
                             ),
-                          );
-                        }
-                      }
-                      if (state is ImagePickerFailure) {
-                        return Expanded(
-                          child: Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Text(state.errorMessage),
                           ),
-                        );
-                      }
-                      return const SizedBox();
-                    },
-                  ),
-                ],
+                        ),
+                      );
+                    }
+                  }
+                  if (state is ImagePickerFailure) {
+                    return Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(state.errorMessage),
+                      ),
+                    );
+                  }
+                  return const SizedBox();
+                },
               ),
-            ),
+            ],
           ),
-        );
-      }),
+        ),
+      ),
     );
   }
 }

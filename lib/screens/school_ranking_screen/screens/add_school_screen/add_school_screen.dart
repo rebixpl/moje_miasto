@@ -6,6 +6,8 @@ import 'package:moje_miasto/screens/forgot_password/widgets/go_back_button.dart'
 import 'package:moje_miasto/screens/login/widgets/big_elevated_button.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_confirmation_screen/add_school_confirmation_screen.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/add_school_screen_texts.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/cubit/image_picker_cubit.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/cubit/image_picker_provider.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/image_picker.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/school_image.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/school_type_picker/cubit/school_type_picker_cubit.dart';
@@ -46,86 +48,93 @@ class AddSchoolScreen extends StatelessWidget {
         centerTitle: true,
         toolbarHeight: 80.0,
       ),
-      body: BlocProvider(
-        create: (BuildContext context) => SchoolTypePickerCubit(),
-        child: Builder(builder: (context) {
-          final SchoolTypePickerCubit schoolTypePickerCubit =
-              context.read<SchoolTypePickerCubit>();
+      body: RepositoryProvider(
+        create: (context) => ImagePickerRepository(),
+        child: BlocProvider(
+          create: (BuildContext context) => SchoolTypePickerCubit(),
+          child: Builder(builder: (context) {
+            final SchoolTypePickerCubit schoolTypePickerCubit =
+                context.read<SchoolTypePickerCubit>();
 
-          return Stack(
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    child: SingleChildScrollView(
-                      physics: const BouncingScrollPhysics(),
-                      child: Padding(
-                        padding: const EdgeInsets.only(
-                          bottom: AppTheme.kDefaultPadding,
-                          left: AppTheme.kDefaultPadding,
-                          right: AppTheme.kDefaultPadding,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            const FullWidthDivider(),
-                            const SizedBox(height: 20.0),
-                            const SchoolImage(),
-                            const SizedBox(height: 20.0),
-                            descriptionAddSchoolText(context),
-                            const SizedBox(height: 30.0),
-                            Form(
-                              key: _formKey,
-                              child: MyTextField(
-                                myController: _schoolNameController,
-                                onChanged: (schoolName) {
-                                  debugPrint(schoolTypePickerCubit.state);
-                                },
-                                fieldName: 'Nazwa Szkoły',
-                                myIcon: FontAwesomeIcons.pen,
-                                validator: Validators.validateSchoolName,
+            final ImagePickerCubit imagePickerCubit = ImagePickerCubit(
+              RepositoryProvider.of<ImagePickerRepository>(context),
+            );
+
+            return Stack(
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      child: SingleChildScrollView(
+                        physics: const BouncingScrollPhysics(),
+                        child: Padding(
+                          padding: const EdgeInsets.only(
+                            bottom: AppTheme.kDefaultPadding,
+                            left: AppTheme.kDefaultPadding,
+                            right: AppTheme.kDefaultPadding,
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const FullWidthDivider(),
+                              const SizedBox(height: 20.0),
+                              const SchoolImage(),
+                              const SizedBox(height: 20.0),
+                              descriptionAddSchoolText(context),
+                              const SizedBox(height: 30.0),
+                              Form(
+                                key: _formKey,
+                                child: MyTextField(
+                                  myController: _schoolNameController,
+                                  onChanged: (schoolName) {
+                                    debugPrint(schoolTypePickerCubit.state);
+                                  },
+                                  fieldName: 'Nazwa Szkoły',
+                                  myIcon: FontAwesomeIcons.pen,
+                                  validator: Validators.validateSchoolName,
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 20.0),
-                            const ImagePickerAS(),
-                            const SizedBox(height: 30.0),
-                            const SchoolTypePicker(),
-                            const SizedBox(height: 40.0),
-                            const SizedBox(
-                                height: AppTheme.kBottomNavbarHeight),
-                          ],
+                              const SizedBox(height: 20.0),
+                              const ImagePickerAS(),
+                              const SizedBox(height: 30.0),
+                              const SchoolTypePicker(),
+                              const SizedBox(height: 40.0),
+                              const SizedBox(
+                                  height: AppTheme.kBottomNavbarHeight),
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Positioned(
-                bottom: 0,
-                left: 0,
-                right: 0,
-                child: Padding(
-                  padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
-                  child: BigElevatedButton(
-                    text: 'Wyślij Zgłoszenie',
-                    onTap: () {
-                      if (_formKey.currentState!.validate()) {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                const AddSchoolConfirmationScreen(),
-                          ),
-                        );
-                      }
-                    },
+                  ],
+                ),
+                Positioned(
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  child: Padding(
+                    padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
+                    child: BigElevatedButton(
+                      text: 'Wyślij Zgłoszenie',
+                      onTap: () {
+                        if (_formKey.currentState!.validate()) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const AddSchoolConfirmationScreen(),
+                            ),
+                          );
+                        }
+                      },
+                    ),
                   ),
                 ),
-              ),
-            ],
-          );
-        }),
+              ],
+            );
+          }),
+        ),
       ),
     );
   }

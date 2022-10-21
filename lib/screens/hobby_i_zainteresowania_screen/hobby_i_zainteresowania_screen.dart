@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:moje_miasto/screens/hobby_i_zainteresowania_screen/screens/add_hobby_i_zainteresowania_screen/add_hobby_i_zainteresowania_screen.dart';
 import 'package:moje_miasto/screens/hobby_i_zainteresowania_screen/widgets/single_entry.dart';
 import 'package:moje_miasto/screens/your_entries_screen/widgets/your_entries_screen_texts.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
@@ -33,12 +34,12 @@ class HobbyIZainteresowaniaScreen extends StatelessWidget {
               IconButton(
                 splashRadius: 22.0,
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => AddHelpEntryScreen(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AddHobbyIZainteresowaniaScreen(),
+                    ),
+                  );
                 },
                 icon: Icon(
                   FontAwesomeIcons.squarePlus,

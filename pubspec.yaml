@@ -92,6 +92,7 @@ flutter:
     - images/screens/home_screen/features_carousel/
     - images/screens/add_school_screen/
     - images/screens/add_help_entry_screen/
+    - images/screens/hobby_i_zainteresowania_screen/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
