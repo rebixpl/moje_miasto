@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
 import 'package:moje_miasto/theme.dart';
 
-class MoreInfoButton extends StatelessWidget {
-  const MoreInfoButton({
+class ExpandedButton extends StatelessWidget {
+  const ExpandedButton({
     Key? key,
     required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
+  final String text;
   final VoidCallback onPressed;
 
   @override
@@ -19,14 +21,14 @@ class MoreInfoButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
         ),
-        child: _buttonText(),
+        child: _buttonText(text),
       ),
     );
   }
 
-  Text _buttonText() {
+  Text _buttonText(String text) {
     return Text(
-      'więcej informacji'.allInCaps,
+      text.allInCaps,
       style: const TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.bold,

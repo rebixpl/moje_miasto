@@ -68,7 +68,10 @@ class SingleEntry extends StatelessWidget {
                     children: [
                       ArrowButton(
                         onTap: () {
-                          showDeleteConfirmationSnackbar(context);
+                          showDeleteConfirmationSnackbar(
+                            context,
+                            onYesTap: () {},
+                          );
                         },
                         icon: FontAwesomeIcons.trash,
                       ),

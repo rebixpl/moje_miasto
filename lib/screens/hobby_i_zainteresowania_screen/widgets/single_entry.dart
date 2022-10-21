@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatars.dart';
-import 'package:moje_miasto/screens/hobby_i_zainteresowania_screen/widgets/more_info_button.dart';
+import 'package:moje_miasto/screens/hobby_i_zainteresowania_screen/widgets/expanded_button.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/widgets/single_entry_texts.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_photo.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/widgets/single_school_texts.dart';
@@ -8,7 +8,12 @@ import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/
 class SingleEntry extends StatelessWidget {
   const SingleEntry({
     Key? key,
+    required this.buttonText,
+    required this.buttonOnTap,
   }) : super(key: key);
+
+  final String buttonText;
+  final VoidCallback buttonOnTap;
 
   @override
   Widget build(BuildContext context) {
@@ -90,8 +95,9 @@ class SingleEntry extends StatelessWidget {
                     const SizedBox(height: 10.0),
                     Row(
                       children: [
-                        MoreInfoButton(
-                          onPressed: () {},
+                        ExpandedButton(
+                          onPressed: buttonOnTap,
+                          text: buttonText,
                         ),
                       ],
                     ),

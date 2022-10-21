@@ -72,7 +72,10 @@ class HobbyIZainteresowaniaScreen extends StatelessWidget {
                     ListView.separated(
                       physics: const BouncingScrollPhysics(),
                       shrinkWrap: true,
-                      itemBuilder: (context, index) => const SingleEntry(),
+                      itemBuilder: (context, index) => SingleEntry(
+                        buttonOnTap: () {},
+                        buttonText: 'więcej informacji',
+                      ),
                       itemCount: 5,
                       separatorBuilder: (BuildContext context, int index) =>
                           const SizedBox(height: 20.0),

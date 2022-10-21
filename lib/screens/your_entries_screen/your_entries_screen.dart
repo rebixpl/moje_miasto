@@ -94,7 +94,11 @@ class YourEntriesScreen extends StatelessWidget {
                     SectionButton(
                       label: 'hobby & zainteresowania',
                       icon: FontAwesomeIcons.laptopCode,
-                      onTap: () {},
+                      onTap: () {
+                        pageViewNavCubit.onTap(
+                          NavScreensEnum.yeHobbyIZainteresowaniaScreen.index,
+                        );
+                      },
                     ),
                     const SizedBox(
                       height: AppTheme.kBottomNavbarHeight + 20.0,

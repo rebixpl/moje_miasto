@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_school_ranking_screen/widgets/delete_button/snackbar_button.dart';
 
-void showDeleteConfirmationSnackbar(BuildContext context) {
+void showDeleteConfirmationSnackbar(BuildContext context,
+    {required VoidCallback onYesTap}) {
   final snackBar = SnackBar(
     duration: const Duration(days: 1),
     content: Column(
@@ -25,6 +26,7 @@ void showDeleteConfirmationSnackbar(BuildContext context) {
             SnackbarButton(
               onTap: () {
                 ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                onYesTap();
               },
             ),
             // anuluj button

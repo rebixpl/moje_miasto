@@ -12,7 +12,10 @@ class DeleteButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       onPressed: () {
-        showDeleteConfirmationSnackbar(context);
+        showDeleteConfirmationSnackbar(
+          context,
+          onYesTap: () {},
+        );
       },
       color: AppTheme.kAccentColor,
       shape: RoundedRectangleBorder(
