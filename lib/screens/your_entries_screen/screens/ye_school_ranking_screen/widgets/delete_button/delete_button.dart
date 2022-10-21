@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/widgets/show_thank_you_snackbar.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_school_ranking_screen/widgets/delete_button/delete_confirmation_snackbar.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
 import 'package:moje_miasto/theme.dart';

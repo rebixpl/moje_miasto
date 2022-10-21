@@ -9,4 +9,5 @@ enum NavScreensEnum {
   yeKorepetycjeIPomocScreen,
   yeKonkursyIOlimpiadyScreen,
   korepetycjeIPomocScreen,
+  hobbyIZainteresowaniaScreen,
 }

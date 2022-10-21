@@ -37,6 +37,11 @@ class FeaturesCarouselSlider extends StatelessWidget {
               pageViewNavCubit.onTap(
                 NavScreensEnum.korepetycjeIPomocScreen.index,
               );
+            } else if (carouselData.cardCategoryId ==
+                CardCategoryTypesEnum.hobbyizainteresowania) {
+              pageViewNavCubit.onTap(
+                NavScreensEnum.hobbyIZainteresowaniaScreen.index,
+              );
             }
           },
           child: ClipRRect(

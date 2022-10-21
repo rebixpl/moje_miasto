@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/hobby_i_zainteresowania_screen/hobby_i_zainteresowania_screen.dart';
 import 'package:moje_miasto/screens/home_screen/home_screen.dart';
 import 'package:moje_miasto/screens/home_screen/hs_settings_screen/hs_settings_screen.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/korepetycje_i_pomoc_screen.dart';
@@ -21,4 +22,5 @@ List<Widget> navScreens = [
   const YeKorepetycjeIPomocScreen(),
   const YeKonkursyIOlimpiadyScreen(),
   const KorepetycjeIPomocScreen(),
+  const HobbyIZainteresowaniaScreen(),
 ];
