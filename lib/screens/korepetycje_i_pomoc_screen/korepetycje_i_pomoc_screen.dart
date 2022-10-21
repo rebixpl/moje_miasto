@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/cubit/help_type_picker_cubit.dart';
-import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/cubit/single_entry_card_cubit.dart';
+import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/data/help_types.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/help_type_picker.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/widgets/single_entry.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
@@ -25,7 +25,6 @@ class KorepetycjeIPomocScreen extends StatelessWidget {
           automaticallyImplyLeading: false, // Don't show the leading button
           backgroundColor: Colors.white,
           elevation: 0.0,
-
           title: Padding(
             padding: const EdgeInsets.only(
               left: 10.0,
@@ -77,13 +76,35 @@ class KorepetycjeIPomocScreen extends StatelessWidget {
                       const SizedBox(height: 20.0),
                       const HelpTypePicker(),
                       const SizedBox(height: 20.0),
-                      ListView.separated(
-                        physics: const BouncingScrollPhysics(),
-                        shrinkWrap: true,
-                        itemBuilder: (context, index) => const SingleEntry(),
-                        itemCount: 3,
-                        separatorBuilder: (BuildContext context, int index) =>
-                            const SizedBox(height: 20.0),
+                      BlocBuilder<HelpTypePickerCubit, String>(
+                        builder: (context, state) {
+                          if (state ==
+                              helpTypes[HelpTypesEnum.szukamPomocy.index].id) {
+                            // HelpTypesEnum.szukamPomocy
+                            return ListView.separated(
+                              physics: const BouncingScrollPhysics(),
+                              shrinkWrap: true,
+                              itemBuilder: (context, index) =>
+                                  const SingleEntry(),
+                              itemCount: 5,
+                              separatorBuilder:
+                                  (BuildContext context, int index) =>
+                                      const SizedBox(height: 20.0),
+                            );
+                          } else {
+                            // HelpTypesEnum.udzielamPomocy
+                            return ListView.separated(
+                              physics: const BouncingScrollPhysics(),
+                              shrinkWrap: true,
+                              itemBuilder: (context, index) =>
+                                  const SingleEntry(),
+                              itemCount: 2,
+                              separatorBuilder:
+                                  (BuildContext context, int index) =>
+                                      const SizedBox(height: 20.0),
+                            );
+                          }
+                        },
                       ),
                       const SizedBox(height: 20.0),
                       const SizedBox(
