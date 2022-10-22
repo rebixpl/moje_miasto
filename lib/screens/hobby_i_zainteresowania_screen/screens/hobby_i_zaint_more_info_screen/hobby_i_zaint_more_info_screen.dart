@@ -31,6 +31,7 @@ class HobbyIZaintMoreInfoScreen extends StatelessWidget {
             const HIZSliverAppBar(
               imageUrl:
                   'images/screens/home_screen/features_carousel/hobby_i_zainteresowania.jpeg',
+              title: 'Hobby & Zainteresowania',
             ),
             SliverFixedExtentList(
               itemExtent: 800,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/hobby_i_zainteresowania_screen/widgets/expanded_button.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkursy_i_olimpiady_info/konkursy_i_olimpiady_info_screen.dart';
 import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/widgets/konkursy_i_olimpiady_texts.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_photo.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/widgets/single_school_texts.dart';
@@ -90,7 +91,15 @@ class SingleCard extends StatelessWidget {
                           ),
                           const SizedBox(width: 6.0),
                           ExpandedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const KonkursyIOlimpiadyInfoScreen(),
+                                ),
+                              );
+                            },
                             text: 'więcej informacji',
                             fontSize: 11.0,
                             padding: const EdgeInsets.symmetric(vertical: 14.5),

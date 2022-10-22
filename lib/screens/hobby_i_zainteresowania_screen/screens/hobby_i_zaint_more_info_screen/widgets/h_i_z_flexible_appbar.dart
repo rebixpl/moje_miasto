@@ -5,8 +5,10 @@ class HIZFlexibleAppBar extends StatelessWidget {
   const HIZFlexibleAppBar({
     Key? key,
     required this.imageUrl,
+    required this.title,
   }) : super(key: key);
 
+  final String title;
   final String imageUrl;
   final double appBarHeight = 66.0;
 
@@ -75,7 +77,7 @@ class HIZFlexibleAppBar extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.all(14.0),
                             child: Text(
-                              'Hobby & Zainteresowania'.allInCaps,
+                              title.allInCaps,
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 color: Colors.white,

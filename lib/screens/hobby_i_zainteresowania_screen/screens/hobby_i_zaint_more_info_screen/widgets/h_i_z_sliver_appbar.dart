@@ -6,9 +6,11 @@ class HIZSliverAppBar extends StatelessWidget {
   const HIZSliverAppBar({
     super.key,
     required this.imageUrl,
+    required this.title,
   });
 
   final String imageUrl;
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class HIZSliverAppBar extends StatelessWidget {
       flexibleSpace: FlexibleSpaceBar(
         background: HIZFlexibleAppBar(
           imageUrl: imageUrl,
+          title: title,
         ),
       ),
     );
