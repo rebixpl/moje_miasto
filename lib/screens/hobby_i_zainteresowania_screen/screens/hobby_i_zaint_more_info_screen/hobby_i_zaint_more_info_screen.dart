@@ -39,35 +39,33 @@ class HobbyIZaintMoreInfoScreen extends StatelessWidget {
                 addAutomaticKeepAlives: false,
                 (context, index) => Padding(
                   padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
-                  child: Expanded(
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            CircleAvatar(
-                              backgroundColor: Color(avatars[3].bgColor),
-                              radius: 14.0,
-                              child: Image.asset(
-                                  'images/screens/create_account/avatar_selector/${avatars[3].id}.png'),
-                            ),
-                            const SizedBox(width: 10.0),
-                            usernameText('Cebullaro_Drapallo'),
-                          ],
-                        ),
-                        const SizedBox(height: 10.0),
-                        const FullWidthDivider(),
-                        const SizedBox(height: 10.0),
-                        descriptionText(
-                          'Szukam osób do projektu strony internetowej dla Muzeum Cebularza w . Mam już 2 osoby i Szukam osób do  strony internetowej dla Muzeum Cebularza w Lublinie. Mam już 2  i Szukam osób  projektu strony  dla Muzeum Cebularza w Lublinie. Mam już 2 osoby i Szukam oób do projektu  internetowej dla Muzeum  w Lublinie. Mam  2 osoby i ',
-                        ),
-                        const SizedBox(height: 10.0),
-                        const FullWidthDivider(),
-                        const SizedBox(height: 10.0),
-                        const HelpInfo(
-                          userEmail: 'cebullaro2@gmail.com',
-                        )
-                      ],
-                    ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            backgroundColor: Color(avatars[3].bgColor),
+                            radius: 14.0,
+                            child: Image.asset(
+                                'images/screens/create_account/avatar_selector/${avatars[3].id}.png'),
+                          ),
+                          const SizedBox(width: 10.0),
+                          usernameText('Cebullaro_Drapallo'),
+                        ],
+                      ),
+                      const SizedBox(height: 10.0),
+                      const FullWidthDivider(),
+                      const SizedBox(height: 10.0),
+                      descriptionText(
+                        'Szukam osób do projektu strony internetowej dla Muzeum Cebularza w . Mam już 2 osoby i Szukam osób do  strony internetowej dla Muzeum Cebularza w Lublinie. Mam już 2  i Szukam osób  projektu strony  dla Muzeum Cebularza w Lublinie. Mam już 2 osoby i Szukam oób do projektu  internetowej dla Muzeum  w Lublinie. Mam  2 osoby i ',
+                      ),
+                      const SizedBox(height: 10.0),
+                      const FullWidthDivider(),
+                      const SizedBox(height: 10.0),
+                      const HelpInfo(
+                        userEmail: 'cebullaro2@gmail.com',
+                      )
+                    ],
                   ),
                 ),
               ),

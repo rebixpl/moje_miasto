@@ -4,13 +4,13 @@ import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_se
 String debugPhotoChanger(String schoolType) {
   final String photoUrl;
 
-  if (schoolType == schoolTypes[0].id) {
+  if (schoolType == schoolTypesSelectorList[0].id) {
     photoUrl =
         'images/screens/ca_more_info/account_type_selector/maly_przedsiebiorca.jpeg';
-  } else if (schoolType == schoolTypes[1].id) {
+  } else if (schoolType == schoolTypesSelectorList[1].id) {
     photoUrl =
         'images/screens/ca_more_info/account_type_selector/obywatel.jpeg';
-  } else if (schoolType == schoolTypes[2].id) {
+  } else if (schoolType == schoolTypesSelectorList[2].id) {
     photoUrl = 'images/screens/ca_more_info/account_type_selector/uczen.jpeg';
   } else {
     photoUrl =

@@ -14,17 +14,22 @@ class SchoolRankingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => SchoolTypeSelectorCubit(),
-      child: BlocBuilder<SchoolTypeSelectorCubit, String>(
-        builder: (context, state) {
-          return Scaffold(
-            body: CustomScrollView(
-              shrinkWrap: true,
-              physics: const ClampingScrollPhysics(),
-              slivers: [
-                const SRSliverAppBarWidget(),
-                const RoundedCornersAdapter(),
-                const SchoolTypeSelector(),
-                SliverFixedExtentList(
+      child: Scaffold(
+        body: CustomScrollView(
+          shrinkWrap: true,
+          physics: const ClampingScrollPhysics(),
+          slivers: [
+            const SRSliverAppBarWidget(),
+            const RoundedCornersAdapter(),
+            const SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.only(left: 20.0),
+                child: SchoolTypeSelector(),
+              ),
+            ),
+            BlocBuilder<SchoolTypeSelectorCubit, String>(
+              builder: (context, state) {
+                return SliverFixedExtentList(
                   itemExtent: 180,
                   delegate: SliverChildBuilderDelegate(
                     (context, index) => SingleSchool(
@@ -32,14 +37,14 @@ class SchoolRankingScreen extends StatelessWidget {
                     ),
                     childCount: 16,
                   ),
-                ),
-                const SliverToBoxAdapter(
-                  child: SizedBox(height: AppTheme.kBottomNavbarHeight),
-                ),
-              ],
+                );
+              },
             ),
-          );
-        },
+            const SliverToBoxAdapter(
+              child: SizedBox(height: AppTheme.kBottomNavbarHeight),
+            ),
+          ],
+        ),
       ),
     );
   }

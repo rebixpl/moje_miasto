@@ -42,6 +42,11 @@ class FeaturesCarouselSlider extends StatelessWidget {
               pageViewNavCubit.onTap(
                 NavScreensEnum.hobbyIZainteresowaniaScreen.index,
               );
+            } else if (carouselData.cardCategoryId ==
+                CardCategoryTypesEnum.konkursyiolimpiady) {
+              pageViewNavCubit.onTap(
+                NavScreensEnum.konkursyIOlimpiadyScreen.index,
+              );
             }
           },
           child: ClipRRect(

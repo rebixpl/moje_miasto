@@ -12,4 +12,5 @@ enum NavScreensEnum {
   hobbyIZainteresowaniaScreen,
   yeHobbyIZainteresowaniaScreen,
   waldekAiChatScreen,
+  konkursyIOlimpiadyScreen,
 }

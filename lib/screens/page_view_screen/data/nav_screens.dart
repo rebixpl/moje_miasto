@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/hobby_i_zainteresowania_screen/hobby_i_zainteresowania_screen.dart';
 import 'package:moje_miasto/screens/home_screen/home_screen.dart';
 import 'package:moje_miasto/screens/home_screen/hs_settings_screen/hs_settings_screen.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/konkursy_i_olimpiady_screen.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/korepetycje_i_pomoc_screen.dart';
 import 'package:moje_miasto/screens/profile_screen/profile_screen.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/school_ranking_screen.dart';
@@ -27,4 +28,5 @@ List<Widget> navScreens = [
   const HobbyIZainteresowaniaScreen(),
   const YeHobbyIZainteresowaniaScreen(),
   const WaldekAiChatScreen(),
+  const KonkursyIOlimpiadyScreen(),
 ];

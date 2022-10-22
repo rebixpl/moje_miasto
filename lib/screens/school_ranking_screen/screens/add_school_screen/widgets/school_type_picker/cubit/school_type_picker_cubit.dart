@@ -5,7 +5,7 @@ import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_se
 // stores single value - currently selected school type id
 class SchoolTypePickerCubit extends Cubit<String> {
   // first id will be default and selected at the beginning
-  SchoolTypePickerCubit() : super(schoolTypes[0].id);
+  SchoolTypePickerCubit() : super(schoolTypesSelectorList[0].id);
 
 // set new avatar image id
   void selectSchoolTypeId(String newId) => emit(newId);

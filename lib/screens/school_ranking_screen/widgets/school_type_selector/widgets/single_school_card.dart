@@ -20,7 +20,7 @@ class SingleSchoolCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        schoolTypeSelectorCubit.setNewId(schoolTypes[index].id);
+        schoolTypeSelectorCubit.setNewId(schoolTypesSelectorList[index].id);
       },
       child: ClipPath(
         clipper: ShapeBorderClipper(
@@ -35,7 +35,7 @@ class SingleSchoolCard extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.secondary,
-            border: state == schoolTypes[index].id
+            border: state == schoolTypesSelectorList[index].id
                 ? const Border(
                     bottom: BorderSide(
                       color: AppTheme.kAccentColor,
@@ -46,7 +46,7 @@ class SingleSchoolCard extends StatelessWidget {
           ),
           height: 60,
           alignment: Alignment.center,
-          child: schoolTypeTitleText(schoolTypes[index].title),
+          child: schoolTypeTitleText(schoolTypesSelectorList[index].title),
         ),
       ),
     );

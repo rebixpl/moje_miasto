@@ -18,10 +18,10 @@ class SchoolTypePicker extends StatelessWidget {
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) => SingleCard(
-            schoolType: schoolTypes[index],
+            schoolType: schoolTypesSelectorList[index],
           ),
           separatorBuilder: (context, index) => const SizedBox(height: 16.0),
-          itemCount: schoolTypes.length,
+          itemCount: schoolTypesSelectorList.length,
         )
       ],
     );

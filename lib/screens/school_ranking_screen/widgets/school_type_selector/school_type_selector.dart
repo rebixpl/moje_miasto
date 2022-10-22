@@ -16,30 +16,25 @@ class SchoolTypeSelector extends StatelessWidget {
         SchoolTypeSelectorCubit schoolTypeSelectorCubit =
             context.read<SchoolTypeSelectorCubit>();
 
-        return SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 20.0),
-            child: Container(
-              height: 60,
-              decoration: const BoxDecoration(
-                color: Colors.white,
-              ),
-              child: ListView.separated(
-                physics: const BouncingScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.only(right: 20.0),
-                  child: SingleSchoolCard(
-                    schoolTypeSelectorCubit: schoolTypeSelectorCubit,
-                    index: index,
-                    state: state,
-                  ),
-                ),
-                itemCount: schoolTypes.length,
-                separatorBuilder: (BuildContext context, int index) =>
-                    const SizedBox(width: 0.0),
+        return Container(
+          height: 60,
+          decoration: const BoxDecoration(
+            color: Colors.white,
+          ),
+          child: ListView.separated(
+            physics: const BouncingScrollPhysics(),
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) => Padding(
+              padding: const EdgeInsets.only(right: 20.0),
+              child: SingleSchoolCard(
+                schoolTypeSelectorCubit: schoolTypeSelectorCubit,
+                index: index,
+                state: state,
               ),
             ),
+            itemCount: schoolTypesSelectorList.length,
+            separatorBuilder: (BuildContext context, int index) =>
+                const SizedBox(width: 0.0),
           ),
         );
       },

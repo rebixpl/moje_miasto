@@ -4,7 +4,7 @@ import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_se
 
 class SchoolTypeSelectorCubit extends Cubit<String> {
   // first id will be default and selected at the beginning
-  SchoolTypeSelectorCubit() : super(schoolTypes[0].id);
+  SchoolTypeSelectorCubit() : super(schoolTypesSelectorList[0].id);
 
   void setNewId(String newId) {
     emit(newId);
