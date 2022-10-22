@@ -12,11 +12,15 @@ Text addSchoolText(BuildContext context) {
   );
 }
 
-SizedBox requestSentDescriptionText(BuildContext context) {
+SizedBox requestSentDescriptionText(
+  BuildContext context, {
+  String text =
+      'Teraz administrator sprawdzi twoje zgłoszenie i jeśli jest poprawne zaakceptuje je',
+}) {
   return SizedBox(
     width: 340.0,
     child: Text(
-      'Teraz administrator sprawdzi twoje zgłoszenie i jeśli jest poprawne zaakceptuje je',
+      text,
       textAlign: TextAlign.center,
       style: TextStyle(
         color: Theme.of(context).colorScheme.secondary,

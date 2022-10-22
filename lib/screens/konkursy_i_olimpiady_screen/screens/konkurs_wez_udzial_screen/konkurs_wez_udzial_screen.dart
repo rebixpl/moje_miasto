@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/go_back_button.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_action_confirmation_screen/konkurs_action_confirmation_screen.dart';
 import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/widgets/background_cup_image.dart';
 import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/widgets/osoba_zglaszajaca_selector/cubit/osoba_zglaszajaca_selector_cubit.dart';
 import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/widgets/osoba_zglaszajaca_selector/osoba_zglaszajaca_selector.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/widgets/wez_udzial_forms.dart';
 import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/widgets/wez_udzial_screen_texts.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_screen/widgets/add_help_entry_texts.dart';
-import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_screen/widgets/help_type_selector/cubit/help_type_selector_cubit.dart';
 import 'package:moje_miasto/screens/login/widgets/big_elevated_button.dart';
-import 'package:moje_miasto/shared/app/text_fields/my_text_field.dart';
-import 'package:moje_miasto/shared/app/text_fields/text_field_validators.dart';
 import 'package:moje_miasto/theme.dart';
 
 class KonkursWezUdzialScreen extends StatelessWidget {
@@ -52,7 +50,6 @@ class KonkursWezUdzialScreen extends StatelessWidget {
         toolbarHeight: 80.0,
       ),
       body: BlocProvider(
-        // TODO:
         create: (BuildContext context) => OsobaZglaszajacaSelectorCubit(),
         child: Builder(builder: (context) {
           final OsobaZglaszajacaSelectorCubit osobaZglaszajacaSelectorCubit =
@@ -83,44 +80,12 @@ class KonkursWezUdzialScreen extends StatelessWidget {
                               competitionNameText(context,
                                   'XVII olimpiada informatyczna juniorów'),
                               const SizedBox(height: 30.0),
-                              Form(
-                                key: _formKey,
-                                child: Column(
-                                  children: [
-                                    MyTextField(
-                                      myController: _schoolNameController,
-                                      onChanged: (text) {},
-                                      fieldName: 'Pełna nazwa szkoły / szkół',
-                                      myIcon: FontAwesomeIcons.school,
-                                      validator: Validators.validateSchoolName,
-                                    ),
-                                    MyTextField(
-                                      myController: _teamNamesController,
-                                      onChanged: (text) {},
-                                      fieldName:
-                                          'Skład drużyny / Twoje Imię i Nazwisko',
-                                      myIcon: FontAwesomeIcons.solidUser,
-                                      validator: Validators.validateTeamNames,
-                                    ),
-                                    MyTextField(
-                                      myController: _phoneNumberController,
-                                      onChanged: (text) {},
-                                      isPhoneNumber: true,
-                                      fieldName:
-                                          'Numer telefonu osoby zgłaszającej',
-                                      myIcon: FontAwesomeIcons.mobile,
-                                      validator: Validators.validateMobile,
-                                    ),
-                                    MyTextField(
-                                      myController: _emailController,
-                                      onChanged: (text) {},
-                                      isEmail: true,
-                                      fieldName: 'Adres e-mail do kontaktu',
-                                      myIcon: FontAwesomeIcons.solidEnvelope,
-                                      validator: Validators.validateEmail,
-                                    ),
-                                  ],
-                                ),
+                              WezUdzialForms(
+                                formKey: _formKey,
+                                schoolNameController: _schoolNameController,
+                                teamNamesController: _teamNamesController,
+                                phoneNumberController: _phoneNumberController,
+                                emailController: _emailController,
                               ),
                               const SizedBox(height: 20.0),
                               const OsobaZglaszajacaSelector(),
@@ -145,13 +110,17 @@ class KonkursWezUdzialScreen extends StatelessWidget {
                       text: 'Wyślij Zgłoszenie',
                       onTap: () {
                         if (_formKey.currentState!.validate()) {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (BuildContext context) =>
-                          //         const AddHelpEntryConfirmationScreen(),
-                          //   ),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const KonkursActionConfirmationScreen(
+                                title: 'weź udział',
+                                description:
+                                    'Organizator konkursu skontaktuje się z tobą w przypadku potrzeby więcej informacji.',
+                              ),
+                            ),
+                          );
                         }
                       },
                     ),
