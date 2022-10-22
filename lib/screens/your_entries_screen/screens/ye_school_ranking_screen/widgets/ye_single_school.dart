@@ -41,7 +41,7 @@ class YeSingleSchool extends StatelessWidget {
             children: [
               const Expanded(
                 flex: 4,
-                child: SchoolPhoto(
+                child: PhotoContainer(
                   photoUrl:
                       'images/screens/ca_more_info/account_type_selector/uczen.jpeg',
                 ),

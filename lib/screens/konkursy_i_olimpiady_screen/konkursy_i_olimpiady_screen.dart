@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/widgets/help_type_picker/widgets/single_entry.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/widgets/single_card.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/cubit/school_type_selector_cubit.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/data/school_types.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/school_type_selector.dart';
@@ -78,32 +78,39 @@ class KonkursyIOlimpiadyScreen extends StatelessWidget {
                       const SizedBox(height: 20.0),
                       BlocBuilder<SchoolTypeSelectorCubit, String>(
                         builder: (context, state) {
-                          // debugPrint(state);
-                          if (state ==
+                          final SchoolType schoolTypePonadpodstawowe =
                               schoolTypesSelectorList[
-                                      SchoolTypesEnum.podstawowe.index]
-                                  .id) {
+                                  SchoolTypesEnum.ponadpodstawowe.index];
+
+                          final SchoolType schoolTypePodstawowe =
+                              schoolTypesSelectorList[
+                                  SchoolTypesEnum.podstawowe.index];
+
+                          final SchoolType schoolTypeStudia =
+                              schoolTypesSelectorList[
+                                  SchoolTypesEnum.studia.index];
+
+                          if (state == schoolTypePodstawowe.id) {
                             // SchoolTypesEnum.podstawowe
                             return ListView.separated(
                               physics: const BouncingScrollPhysics(),
                               shrinkWrap: true,
-                              itemBuilder: (context, index) =>
-                                  const SingleEntry(),
+                              itemBuilder: (context, index) => SingleCard(
+                                schoolTypeName: schoolTypePodstawowe.title,
+                              ),
                               itemCount: 2,
                               separatorBuilder:
                                   (BuildContext context, int index) =>
                                       const SizedBox(height: 20.0),
                             );
-                          } else if (state ==
-                              schoolTypesSelectorList[
-                                      SchoolTypesEnum.ponadpodstawowe.index]
-                                  .id) {
+                          } else if (state == schoolTypePonadpodstawowe.id) {
                             // SchoolTypesEnum.ponadpodstawowe
                             return ListView.separated(
                               physics: const BouncingScrollPhysics(),
                               shrinkWrap: true,
-                              itemBuilder: (context, index) =>
-                                  const SingleEntry(),
+                              itemBuilder: (context, index) => SingleCard(
+                                schoolTypeName: schoolTypePonadpodstawowe.title,
+                              ),
                               itemCount: 3,
                               separatorBuilder:
                                   (BuildContext context, int index) =>
@@ -114,8 +121,9 @@ class KonkursyIOlimpiadyScreen extends StatelessWidget {
                             return ListView.separated(
                               physics: const BouncingScrollPhysics(),
                               shrinkWrap: true,
-                              itemBuilder: (context, index) =>
-                                  const SingleEntry(),
+                              itemBuilder: (context, index) => SingleCard(
+                                schoolTypeName: schoolTypeStudia.title,
+                              ),
                               itemCount: 1,
                               separatorBuilder:
                                   (BuildContext context, int index) =>

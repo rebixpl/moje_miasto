@@ -7,10 +7,14 @@ class ExpandedButton extends StatelessWidget {
     Key? key,
     required this.onPressed,
     required this.text,
+    this.padding = EdgeInsets.zero,
+    this.fontSize = 12.0,
   }) : super(key: key);
 
   final String text;
   final VoidCallback onPressed;
+  final EdgeInsetsGeometry padding;
+  final double fontSize;
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +25,22 @@ class ExpandedButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
         ),
-        child: _buttonText(text),
+        child: Padding(
+          padding: padding,
+          child: _buttonText(text, fontSize),
+        ),
       ),
     );
   }
 
-  Text _buttonText(String text) {
+  Text _buttonText(String text, double fontSize) {
     return Text(
       text.allInCaps,
-      style: const TextStyle(
+      textAlign: TextAlign.center,
+      style: TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.bold,
-        fontSize: 12.0,
+        fontSize: fontSize,
       ),
     );
   }

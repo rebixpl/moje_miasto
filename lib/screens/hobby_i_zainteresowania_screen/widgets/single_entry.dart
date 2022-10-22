@@ -45,7 +45,7 @@ class SingleEntry extends StatelessWidget {
             children: [
               const Expanded(
                 flex: 1,
-                child: SchoolPhoto(
+                child: PhotoContainer(
                   height: 130.0,
                   photoUrl:
                       'images/screens/home_screen/features_carousel/rankingi_i_oceny.jpeg',

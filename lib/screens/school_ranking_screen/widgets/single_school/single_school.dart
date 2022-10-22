@@ -50,7 +50,7 @@ class SingleSchool extends StatelessWidget {
             children: [
               Expanded(
                 flex: 4,
-                child: SchoolPhoto(
+                child: PhotoContainer(
                   photoUrl: photoUrl,
                 ),
               ),

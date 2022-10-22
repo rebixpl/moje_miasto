@@ -36,9 +36,9 @@ Text rankingPlacementText(int placement) {
   );
 }
 
-Text votesText() {
+Text votesText({String text = 'głosy'}) {
   return Text(
-    'głosy'.allInCaps,
+    text.allInCaps,
     style: TextStyle(
       color: Colors.white.withOpacity(0.75),
       fontWeight: FontWeight.bold,

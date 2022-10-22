@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SchoolPhoto extends StatelessWidget {
+class PhotoContainer extends StatelessWidget {
   final String photoUrl;
   final double height;
 
-  const SchoolPhoto({
+  const PhotoContainer({
     Key? key,
     required this.photoUrl,
     this.height = double.infinity,
