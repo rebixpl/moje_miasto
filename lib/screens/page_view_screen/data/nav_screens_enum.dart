@@ -13,4 +13,5 @@ enum NavScreensEnum {
   yeHobbyIZainteresowaniaScreen,
   waldekAiChatScreen,
   konkursyIOlimpiadyScreen,
+  yeKonkursyDodanePrzezCiebieScreen,
 }

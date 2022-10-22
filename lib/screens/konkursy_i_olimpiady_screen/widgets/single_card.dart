@@ -6,12 +6,17 @@ import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_photo.d
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/single_school/widgets/single_school_texts.dart';
 
 class SingleCard extends StatelessWidget {
-  const SingleCard({
+  SingleCard({
     Key? key,
     required this.schoolTypeName,
-  }) : super(key: key);
+    this.isYourEntriesCard = false,
+    VoidCallback? yourEntriesOnTap,
+  })  : yourEntriesOnTap = yourEntriesOnTap ?? (() {}),
+        super(key: key);
 
   final String schoolTypeName;
+  final bool isYourEntriesCard;
+  final VoidCallback yourEntriesOnTap;
 
   @override
   Widget build(BuildContext context) {
@@ -91,16 +96,20 @@ class SingleCard extends StatelessWidget {
                           ),
                           const SizedBox(width: 6.0),
                           ExpandedButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const KonkursyIOlimpiadyInfoScreen(),
-                                ),
-                              );
-                            },
-                            text: 'więcej informacji',
+                            onPressed: isYourEntriesCard
+                                ? yourEntriesOnTap
+                                : () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const KonkursyIOlimpiadyInfoScreen(),
+                                      ),
+                                    );
+                                  },
+                            text: isYourEntriesCard
+                                ? 'usuń ten wpis'
+                                : 'więcej informacji',
                             fontSize: 11.0,
                             padding: const EdgeInsets.symmetric(vertical: 14.5),
                           ),
