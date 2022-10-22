@@ -3,24 +3,26 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/go_back_button.dart';
-import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_confirmation_screen/add_help_entry_confirmation_screen.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/widgets/background_cup_image.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/widgets/osoba_zglaszajaca_selector/cubit/osoba_zglaszajaca_selector_cubit.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/widgets/osoba_zglaszajaca_selector/osoba_zglaszajaca_selector.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/widgets/wez_udzial_screen_texts.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_screen/widgets/add_help_entry_texts.dart';
-import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_screen/widgets/background_globus_image.dart';
 import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_screen/widgets/help_type_selector/cubit/help_type_selector_cubit.dart';
-import 'package:moje_miasto/screens/korepetycje_i_pomoc_screen/screens/add_help_entry_screen/widgets/help_type_selector/help_type_selector.dart';
 import 'package:moje_miasto/screens/login/widgets/big_elevated_button.dart';
-import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/add_school_screen_texts.dart';
 import 'package:moje_miasto/shared/app/text_fields/my_text_field.dart';
 import 'package:moje_miasto/shared/app/text_fields/text_field_validators.dart';
 import 'package:moje_miasto/theme.dart';
 
-class AddHelpEntryScreen extends StatelessWidget {
-  AddHelpEntryScreen({super.key});
+class KonkursWezUdzialScreen extends StatelessWidget {
+  KonkursWezUdzialScreen({super.key});
 
   final _formKey = GlobalKey<FormState>();
 
-  final _helpDescriptionController = TextEditingController();
+  final _schoolNameController = TextEditingController();
   final _emailController = TextEditingController();
+  final _teamNamesController = TextEditingController();
+  final _phoneNumberController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -40,8 +42,8 @@ class AddHelpEntryScreen extends StatelessWidget {
               ),
               appBarTitleText(
                 context,
-                'dodaj ogłoszenie',
-                fontSize: 24.0,
+                'weź udział',
+                fontSize: 34.0,
               ),
             ],
           ),
@@ -51,10 +53,10 @@ class AddHelpEntryScreen extends StatelessWidget {
       ),
       body: BlocProvider(
         // TODO:
-        create: (BuildContext context) => HelpTypeSelectorCubit(),
+        create: (BuildContext context) => OsobaZglaszajacaSelectorCubit(),
         child: Builder(builder: (context) {
-          final HelpTypeSelectorCubit helpTypeSelectorCubit =
-              context.read<HelpTypeSelectorCubit>();
+          final OsobaZglaszajacaSelectorCubit osobaZglaszajacaSelectorCubit =
+              context.read<OsobaZglaszajacaSelectorCubit>();
 
           return Builder(builder: (context) {
             return Stack(
@@ -75,37 +77,53 @@ class AddHelpEntryScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const FullWidthDivider(),
-                              const SizedBox(height: 20.0),
-                              const BackgroundGlobusImage(),
-                              const SizedBox(height: 20.0),
-                              descriptionAddSchoolText(context),
+                              const SizedBox(height: 30.0),
+                              const BackgroundCupImage(),
+                              const SizedBox(height: 30.0),
+                              competitionNameText(context,
+                                  'XVII olimpiada informatyczna juniorów'),
                               const SizedBox(height: 30.0),
                               Form(
                                 key: _formKey,
                                 child: Column(
                                   children: [
                                     MyTextField(
-                                      myController: _helpDescriptionController,
+                                      myController: _schoolNameController,
+                                      onChanged: (text) {},
+                                      fieldName: 'Pełna nazwa szkoły / szkół',
+                                      myIcon: FontAwesomeIcons.school,
+                                      validator: Validators.validateSchoolName,
+                                    ),
+                                    MyTextField(
+                                      myController: _teamNamesController,
                                       onChanged: (text) {},
                                       fieldName:
-                                          'Opis / Jakiego typu pomocy oczekujesz, udzielasz',
-                                      myIcon: FontAwesomeIcons.pen,
-                                      validator: Validators
-                                          .validateHelpDescriptionText,
+                                          'Skład drużyny / Twoje Imię i Nazwisko',
+                                      myIcon: FontAwesomeIcons.solidUser,
+                                      validator: Validators.validateTeamNames,
+                                    ),
+                                    MyTextField(
+                                      myController: _phoneNumberController,
+                                      onChanged: (text) {},
+                                      isPhoneNumber: true,
+                                      fieldName:
+                                          'Numer telefonu osoby zgłaszającej',
+                                      myIcon: FontAwesomeIcons.mobile,
+                                      validator: Validators.validateMobile,
                                     ),
                                     MyTextField(
                                       myController: _emailController,
                                       onChanged: (text) {},
+                                      isEmail: true,
                                       fieldName: 'Adres e-mail do kontaktu',
                                       myIcon: FontAwesomeIcons.solidEnvelope,
                                       validator: Validators.validateEmail,
-                                      isEmail: true,
                                     ),
                                   ],
                                 ),
                               ),
                               const SizedBox(height: 20.0),
-                              const HelpTypeSelector(),
+                              const OsobaZglaszajacaSelector(),
                               const SizedBox(height: 40.0),
                               const SizedBox(
                                 height: AppTheme.kBottomNavbarHeight,
@@ -127,13 +145,13 @@ class AddHelpEntryScreen extends StatelessWidget {
                       text: 'Wyślij Zgłoszenie',
                       onTap: () {
                         if (_formKey.currentState!.validate()) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  const AddHelpEntryConfirmationScreen(),
-                            ),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (BuildContext context) =>
+                          //         const AddHelpEntryConfirmationScreen(),
+                          //   ),
+                          // );
                         }
                       },
                     ),

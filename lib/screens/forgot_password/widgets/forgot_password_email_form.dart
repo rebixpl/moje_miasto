@@ -26,6 +26,7 @@ class ForgotPasswordEmailForm extends StatelessWidget {
             fieldName: 'Email',
             myIcon: FontAwesomeIcons.solidEnvelope,
             validator: Validators.validateEmail,
+            isEmail: true,
           ),
         ],
       ),

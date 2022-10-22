@@ -18,12 +18,14 @@ class MyTextField extends StatelessWidget {
     this.isSuffixButtonActive = false,
     this.onChanged,
     this.isEmail = false,
+    this.isPhoneNumber = false,
   }) : suffixIconPressed = suffixIconPressed ?? (() {});
 
   final TextEditingController myController;
   final String fieldName;
   final IconData myIcon;
   final bool isEmail;
+  final bool isPhoneNumber;
   final Color prefixIconColor,
       focusedColor,
       textColor,
@@ -37,12 +39,15 @@ class MyTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextInputType? emailKeyboard =
+        isEmail ? TextInputType.emailAddress : null;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: TextFormField(
         // autofocus: true,
         obscureText: obscureText,
-        keyboardType: isEmail ? TextInputType.emailAddress : null,
+        keyboardType: isPhoneNumber ? TextInputType.phone : emailKeyboard,
         onChanged: onChanged,
         obscuringCharacter: '●',
         validator: validator,

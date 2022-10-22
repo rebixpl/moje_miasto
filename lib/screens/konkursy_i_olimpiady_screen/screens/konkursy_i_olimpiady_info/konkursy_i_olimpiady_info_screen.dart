@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
 import 'package:moje_miasto/screens/hobby_i_zainteresowania_screen/screens/hobby_i_zaint_more_info_screen/widgets/h_i_z_sliver_appbar.dart';
 import 'package:moje_miasto/screens/hobby_i_zainteresowania_screen/screens/hobby_i_zaint_more_info_screen/widgets/info_screen_texts.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkurs_wez_udzial_screen/konkurs_wez_udzial_screen.dart';
 import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkursy_i_olimpiady_info/widgets/card_info_container.dart';
 import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkursy_i_olimpiady_info/widgets/info_screen_texts.dart';
 import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/konkursy_i_olimpiady_info/widgets/wez_udzial_button.dart';
@@ -78,7 +79,14 @@ class KonkursyIOlimpiadyInfoScreen extends StatelessWidget {
                       const FullWidthDivider(),
                       const SizedBox(height: 20.0),
                       WezUdzialButton(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => KonkursWezUdzialScreen(),
+                            ),
+                          );
+                        },
                       ),
                     ],
                   ),

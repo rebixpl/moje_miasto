@@ -100,6 +100,7 @@ class AddHobbyIZainteresowaniaScreen extends StatelessWidget {
                                     fieldName: 'Adres e-mail do kontaktu',
                                     myIcon: FontAwesomeIcons.solidEnvelope,
                                     validator: Validators.validateEmail,
+                                    isEmail: true,
                                   ),
                                 ],
                               ),

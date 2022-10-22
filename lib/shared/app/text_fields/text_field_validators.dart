@@ -63,11 +63,34 @@ class Validators {
     return null;
   }
 
+  static String? validateTeamNames(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Skład drużyny nie może być pusty!';
+    } else if (value.length > 250) {
+      return 'Dozwolone maksymalnie 250 znaków!';
+    }
+    return null;
+  }
+
   static String? validateHelpDescriptionText(String? value) {
     if (value == null || value.isEmpty) {
       return 'Opis nie może być pusty!';
     } else if (value.length > 300) {
       return 'Dozwolone maksymalnie 300 znaków!';
+    }
+    return null;
+  }
+
+  static String? validateMobile(String? value) {
+    String patttern = r'(^(?:[+0]9)?[0-9]{9,12}$)';
+    RegExp regExp = RegExp(patttern);
+
+    if (value == null || value.isEmpty) {
+      return 'Numer telefonu nie może być pusty!';
+    } else if (value.isEmpty) {
+      return 'Proszę wpisać numer telefonu!';
+    } else if (!regExp.hasMatch(value)) {
+      return 'Numer telefonu jest niepoprawny';
     }
     return null;
   }

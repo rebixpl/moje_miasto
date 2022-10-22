@@ -87,6 +87,7 @@ class _EmailInput extends StatelessWidget {
           onChanged: (email) => context.read<SignUpCubit>().emailChanged(email),
           fieldName: 'Email',
           myIcon: FontAwesomeIcons.solidEnvelope,
+          isEmail: true,
           validator: Validators.validateEmail,
         );
       },
