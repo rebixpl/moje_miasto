@@ -86,7 +86,7 @@ class SingleEntry extends StatelessWidget {
                                     ),
                                   ),
                                 ],
-                              )
+                              ),
                             ],
                           ),
                         ),
