@@ -94,4 +94,22 @@ class Validators {
     }
     return null;
   }
+
+  static String? validateTimeText(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Pole godziny nie może być puste!';
+    } else if (value.length > 30) {
+      return 'Dozwolone maksymalnie 30 znaków!';
+    }
+    return null;
+  }
+
+  static String? validateTitleText(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Pole tytuł nie może być puste!';
+    } else if (value.length > 200) {
+      return 'Dozwolone maksymalnie 200 znaków!';
+    }
+    return null;
+  }
 }

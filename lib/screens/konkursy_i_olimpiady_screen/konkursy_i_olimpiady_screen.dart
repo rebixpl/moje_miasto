@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/dodaj_konkurs_screen/dodaj_konkurs_screen.dart';
 import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/widgets/single_card.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/cubit/school_type_selector_cubit.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/widgets/school_type_selector/data/school_types.dart';
@@ -39,12 +40,12 @@ class KonkursyIOlimpiadyScreen extends StatelessWidget {
                 IconButton(
                   splashRadius: 22.0,
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => AddHelpEntryScreen(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DodajKonkursScreen(),
+                      ),
+                    );
                   },
                   icon: Icon(
                     FontAwesomeIcons.squarePlus,

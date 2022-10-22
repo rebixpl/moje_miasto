@@ -21,10 +21,25 @@ class NoImageContainer extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
           height: double.infinity,
-          child: Icon(
-            Icons.camera_alt,
-            color: Colors.grey[800],
-            size: 40.0,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.camera_alt,
+                color: Colors.grey[800],
+                size: 40.0,
+              ),
+              const SizedBox(height: 10.0),
+              const Text(
+                'Wybierz zdjęcie w tle aby przejść dalej',
+                style: TextStyle(
+                  fontSize: 11.0,
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 126, 124, 136),
+                ),
+              ),
+            ],
           ),
         ),
       ),

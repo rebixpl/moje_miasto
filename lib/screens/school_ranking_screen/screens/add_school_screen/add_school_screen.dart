@@ -8,6 +8,7 @@ import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_con
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/add_school_screen_texts.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/cubit/image_picker_cubit.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/cubit/image_picker_provider.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/cubit/image_picker_state.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/image_picker/image_picker.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/school_image.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/school_type_picker/cubit/school_type_picker_cubit.dart';
@@ -37,8 +38,6 @@ class AddSchoolScreen extends StatelessWidget {
               GoBackButton(
                 onTap: () {
                   Navigator.pop(context);
-                  // pageViewNavCubit
-                  //     .onTap(NavScreensEnum.schoolRankingScreen.index);
                 },
               ),
               addSchoolText(context),
@@ -50,15 +49,23 @@ class AddSchoolScreen extends StatelessWidget {
       ),
       body: RepositoryProvider(
         create: (context) => ImagePickerRepository(),
-        child: BlocProvider(
-          create: (BuildContext context) => SchoolTypePickerCubit(),
+        child: MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (BuildContext context) => SchoolTypePickerCubit(),
+            ),
+            BlocProvider(
+              create: (context) => ImagePickerCubit(
+                RepositoryProvider.of<ImagePickerRepository>(context),
+              ),
+            ),
+          ],
           child: Builder(builder: (context) {
             final SchoolTypePickerCubit schoolTypePickerCubit =
                 context.read<SchoolTypePickerCubit>();
 
-            final ImagePickerCubit imagePickerCubit = ImagePickerCubit(
-              RepositoryProvider.of<ImagePickerRepository>(context),
-            );
+            final ImagePickerCubit imagePickerCubit =
+                context.read<ImagePickerCubit>();
 
             return Stack(
               children: [
@@ -101,7 +108,8 @@ class AddSchoolScreen extends StatelessWidget {
                               const SchoolTypePicker(),
                               const SizedBox(height: 40.0),
                               const SizedBox(
-                                  height: AppTheme.kBottomNavbarHeight),
+                                height: AppTheme.kBottomNavbarHeight,
+                              ),
                             ],
                           ),
                         ),
@@ -119,13 +127,15 @@ class AddSchoolScreen extends StatelessWidget {
                       text: 'Wyślij Zgłoszenie',
                       onTap: () {
                         if (_formKey.currentState!.validate()) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  const AddSchoolConfirmationScreen(),
-                            ),
-                          );
+                          if (imagePickerCubit.state is ImagePickerSuccess) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const AddSchoolConfirmationScreen(),
+                              ),
+                            );
+                          }
                         }
                       },
                     ),

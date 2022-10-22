@@ -11,6 +11,10 @@ class ImagePickerCubit extends Cubit<ImagePickerState> {
   ImagePickerCubit(this._imagePickerRepository)
       : super(ImagePickerInitialize());
 
+  void initializeCubitAgain() {
+    emit(ImagePickerInitialize());
+  }
+
   Future<void> takePhotoFromGallery() async {
     XFile? image;
     try {

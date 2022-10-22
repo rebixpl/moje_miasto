@@ -23,9 +23,7 @@ class _ImagePickerASState extends State<ImagePickerAS> {
 
   @override
   Widget build(BuildContext context) {
-    final ImagePickerCubit imagePickerCubit = ImagePickerCubit(
-      RepositoryProvider.of<ImagePickerRepository>(context),
-    );
+    final ImagePickerCubit imagePickerCubit = context.read<ImagePickerCubit>();
 
     return SizedBox(
       width: double.infinity,
@@ -53,7 +51,7 @@ class _ImagePickerASState extends State<ImagePickerAS> {
                   if (state is ImagePickerSuccess) {
                     _image = state.image;
                     if (_image == null) {
-                      return NoImageContainer(cubit: imagePickerCubit);
+                      imagePickerCubit.initializeCubitAgain();
                     } else {
                       return Expanded(
                         child: GestureDetector(

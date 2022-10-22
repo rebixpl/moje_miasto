@@ -55,80 +55,78 @@ class KonkursWezUdzialScreen extends StatelessWidget {
           final OsobaZglaszajacaSelectorCubit osobaZglaszajacaSelectorCubit =
               context.read<OsobaZglaszajacaSelectorCubit>();
 
-          return Builder(builder: (context) {
-            return Stack(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: SingleChildScrollView(
-                        physics: const BouncingScrollPhysics(),
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                            bottom: AppTheme.kDefaultPadding,
-                            left: AppTheme.kDefaultPadding,
-                            right: AppTheme.kDefaultPadding,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const FullWidthDivider(),
-                              const SizedBox(height: 30.0),
-                              const BackgroundCupImage(),
-                              const SizedBox(height: 30.0),
-                              competitionNameText(context,
-                                  'XVII olimpiada informatyczna juniorów'),
-                              const SizedBox(height: 30.0),
-                              WezUdzialForms(
-                                formKey: _formKey,
-                                schoolNameController: _schoolNameController,
-                                teamNamesController: _teamNamesController,
-                                phoneNumberController: _phoneNumberController,
-                                emailController: _emailController,
-                              ),
-                              const SizedBox(height: 20.0),
-                              const OsobaZglaszajacaSelector(),
-                              const SizedBox(height: 40.0),
-                              const SizedBox(
-                                height: AppTheme.kBottomNavbarHeight,
-                              ),
-                            ],
-                          ),
+          return Stack(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          bottom: AppTheme.kDefaultPadding,
+                          left: AppTheme.kDefaultPadding,
+                          right: AppTheme.kDefaultPadding,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            const FullWidthDivider(),
+                            const SizedBox(height: 30.0),
+                            const BackgroundCupImage(),
+                            const SizedBox(height: 30.0),
+                            competitionNameText(context,
+                                'XVII olimpiada informatyczna juniorów'),
+                            const SizedBox(height: 30.0),
+                            WezUdzialForms(
+                              formKey: _formKey,
+                              schoolNameController: _schoolNameController,
+                              teamNamesController: _teamNamesController,
+                              phoneNumberController: _phoneNumberController,
+                              emailController: _emailController,
+                            ),
+                            const SizedBox(height: 20.0),
+                            const OsobaZglaszajacaSelector(),
+                            const SizedBox(height: 40.0),
+                            const SizedBox(
+                              height: AppTheme.kBottomNavbarHeight,
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                  ],
-                ),
-                Positioned(
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  child: Padding(
-                    padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
-                    child: BigElevatedButton(
-                      text: 'Wyślij Zgłoszenie',
-                      onTap: () {
-                        if (_formKey.currentState!.validate()) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (BuildContext context) =>
-                                  const KonkursActionConfirmationScreen(
-                                title: 'weź udział',
-                                description:
-                                    'Organizator konkursu skontaktuje się z tobą w przypadku potrzeby więcej informacji.',
-                              ),
+                  ),
+                ],
+              ),
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Padding(
+                  padding: const EdgeInsets.all(AppTheme.kDefaultPadding),
+                  child: BigElevatedButton(
+                    text: 'Wyślij Zgłoszenie',
+                    onTap: () {
+                      if (_formKey.currentState!.validate()) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                const KonkursActionConfirmationScreen(
+                              title: 'weź udział',
+                              description:
+                                  'Organizator konkursu skontaktuje się z tobą w przypadku potrzeby więcej informacji.',
                             ),
-                          );
-                        }
-                      },
-                    ),
+                          ),
+                        );
+                      }
+                    },
                   ),
                 ),
-              ],
-            );
-          });
+              ),
+            ],
+          );
         }),
       ),
     );
