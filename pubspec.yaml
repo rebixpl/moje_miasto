@@ -35,6 +35,7 @@ dependencies:
   form_inputs:
     path: packages/form_inputs
   formz: ^0.4.1
+  cloud_firestore: ^3.5.1
 
 dev_dependencies:
   bloc_test: ^9.0.0
