@@ -61,6 +61,14 @@ class UserFSAddedState extends UserFSState {
   List<Object?> get props => [];
 }
 
+// user exists in firebase state
+class UserFSExistsInFBState extends UserFSState {
+  const UserFSExistsInFBState(super.userFs);
+
+  @override
+  List<Object?> get props => [];
+}
+
 class UserFSErrorState extends UserFSState {
   final String error;
   UserFSErrorState(this.error) : super(UserFS());

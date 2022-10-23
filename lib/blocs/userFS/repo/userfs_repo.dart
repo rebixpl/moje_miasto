@@ -5,6 +5,14 @@ import 'package:moje_miasto/models/models.dart';
 class UserFSRepository {
   final _db = FirebaseFirestore.instance.collection('usersFS');
 
+  Future<UserFS> getCurrentUser(String uid) async {
+    var ref = _db.doc(uid);
+
+    var snapshot = await ref.get();
+
+    return UserFS.fromJson(snapshot.data() ?? {});
+  }
+
   Future<void> createUser(UserFS userFS) async {
     var refUserFS = _db.doc(userFS.uid);
 

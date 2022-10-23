@@ -5,7 +5,6 @@ import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widget
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/city_picker/city_picker.dart';
 import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/widgets/city_picker/cubits/city_picker_cubit.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
-import 'package:moje_miasto/screens/forgot_password/widgets/go_back_button.dart';
 import 'package:moje_miasto/screens/home_screen/hs_settings_screen/widgets/hs_settings_page_texts.dart';
 import 'package:moje_miasto/theme.dart';
 

@@ -17,6 +17,7 @@ class UserFSBloc extends Bloc<UserFSEvent, UserFSState> {
     on<UserFSAddCreateAccountMoreInfoDataToStateEvent>(
         _onAddCreateAccountMoreInfoData);
     on<UserFSAddDataFromAuthUserToStateEvent>(_onAddDataFromAuthUser);
+    on<UserFSGetCurrentDataEvent>(_onGetCurrentData);
   }
 
   void _onAddDataFromAuthUser(
@@ -88,6 +89,19 @@ class UserFSBloc extends Bloc<UserFSEvent, UserFSState> {
     }
   }
 
+  void _onGetCurrentData(
+    UserFSGetCurrentDataEvent event,
+    Emitter<UserFSState> emit,
+  ) async {
+    emit(UserFSAddingState(state.userFs));
+    try {
+      UserFS currentUser = await userFSRepository.getCurrentUser(event.uid);
+      emit(UserFSAddedState(currentUser));
+    } catch (e) {
+      emit(UserFSErrorState(e.toString()));
+    }
+  }
+
   void _onCheckIfUserExistsInFirebase(
     UserFSCheckIfUserExistsInFirebaseEvent event,
     Emitter<UserFSState> emit,
@@ -96,7 +110,7 @@ class UserFSBloc extends Bloc<UserFSEvent, UserFSState> {
       bool doesUserExist =
           await userFSRepository.checkIfUserExistsInFirebase(event.uid);
       if (doesUserExist) {
-        emit(UserFSAddedState(state.userFs));
+        emit(UserFSExistsInFBState(state.userFs));
       } else {
         emit(UserFSCreateAccountState(state.userFs));
       }

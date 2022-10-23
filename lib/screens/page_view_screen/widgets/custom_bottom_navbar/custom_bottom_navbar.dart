@@ -2,6 +2,8 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:moje_miasto/blocs/userFS/bloc/userfs_bloc.dart';
+import 'package:moje_miasto/blocs/userFS/bloc/userfs_states.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatars.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/theme.dart';
@@ -30,16 +32,29 @@ class CustomBottomNavBar extends StatelessWidget {
           tabBuilder: (int index, bool isActive) {
             final color = isActive ? AppTheme.kAccentColor : Colors.white;
             if (iconList[index] == FontAwesomeIcons.solidUser) {
-              return Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 10.0,
-                  horizontal: 10.0,
-                ),
-                child: CircleAvatar(
-                  backgroundColor: Color(avatars[3].bgColor),
-                  child: Image.asset(
-                      'images/screens/create_account/avatar_selector/${avatars[3].id}.png'),
-                ),
+              return BlocBuilder<UserFSBloc, UserFSState>(
+                builder: (context, state) {
+                  final String avatarId = avatars
+                      .where((element) => element.id == state.userFs.avatarId)
+                      .first
+                      .id;
+                  final int bgColor = avatars
+                      .where((element) => element.id == state.userFs.avatarId)
+                      .first
+                      .bgColor;
+
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                      horizontal: 10.0,
+                    ),
+                    child: CircleAvatar(
+                      backgroundColor: Color(bgColor),
+                      child: Image.asset(
+                          'images/screens/create_account/avatar_selector/$avatarId.png'),
+                    ),
+                  );
+                },
               );
             } else {
               return Icon(

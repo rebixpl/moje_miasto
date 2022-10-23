@@ -1,5 +1,6 @@
 import 'package:dialog_flowtter/dialog_flowtter.dart';
 import 'package:flutter/material.dart';
+import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/screens/dodaj_konkurs_screen/widgets/date_picker/textfield_input_decoration.dart';
 import 'package:moje_miasto/screens/waldek_ai_screen/screens/widgets/chat_body.dart';
 
 class WaldekAiChatScreen extends StatefulWidget {
@@ -33,29 +34,50 @@ class _WaldekAiChatScreenState extends State<WaldekAiChatScreen> {
               messages: messages,
             ),
           ),
-          Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 10,
-              vertical: 5,
-            ),
-            color: Theme.of(context).colorScheme.secondary,
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    controller: _controller,
-                    style: const TextStyle(color: Colors.white),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 10,
+                vertical: 5,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20.0),
+                gradient: const LinearGradient(
+                  colors: [
+                    Color(0xff152C4F),
+                    Color(0xff211A4C),
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black38,
+                    blurRadius: 3.0,
+                    spreadRadius: 0.0,
+                    offset: Offset(1.0, 1.0),
+                  )
+                ],
+              ),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      controller: _controller,
+                      style: const TextStyle(color: Colors.white),
+                    ),
                   ),
-                ),
-                IconButton(
-                  color: Colors.white,
-                  icon: const Icon(Icons.send),
-                  onPressed: () {
-                    sendMessage(_controller.text);
-                    _controller.clear();
-                  },
-                ),
-              ],
+                  IconButton(
+                    color: Colors.white,
+                    icon: const Icon(Icons.send),
+                    onPressed: () {
+                      sendMessage(_controller.text);
+                      _controller.clear();
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ],

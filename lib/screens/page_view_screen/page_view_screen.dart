@@ -87,6 +87,8 @@ class _PageViewScreenState extends State<PageViewScreen> {
           );
         } else if (state is UserFSAddingAccountToFirebaseState) {
           userFSBloc.add(UserFSCreateUserEvent());
+        } else if (state is UserFSExistsInFBState) {
+          userFSBloc.add(UserFSGetCurrentDataEvent(user.id));
         }
       },
       child: BlocBuilder<UserFSBloc, UserFSState>(

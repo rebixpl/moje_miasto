@@ -61,18 +61,21 @@ class _MessageContainer extends StatelessWidget {
               return _CardContainer(card: message.card!);
             case MessageType.text:
             default:
-              return Container(
-                decoration: BoxDecoration(
-                  color: isUserMessage
-                      ? Theme.of(context).colorScheme.secondary
-                      : AppTheme.kAccentColor,
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                padding: const EdgeInsets.all(10.0),
-                child: Text(
-                  message.text?.text?[0] ?? '',
-                  style: const TextStyle(
-                    color: Colors.white,
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: isUserMessage
+                        ? Theme.of(context).colorScheme.secondary
+                        : AppTheme.kAccentColor,
+                    borderRadius: BorderRadius.circular(20.0),
+                  ),
+                  padding: const EdgeInsets.all(10.0),
+                  child: Text(
+                    message.text?.text?[0] ?? '',
+                    style: const TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               );

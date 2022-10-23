@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:moje_miasto/app/app.dart';
 import 'package:moje_miasto/blocs/userFS/bloc/userfs_bloc.dart';
+import 'package:moje_miasto/blocs/userFS/bloc/userfs_events.dart';
 import 'package:moje_miasto/blocs/userFS/bloc/userfs_states.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatar_selector.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatars.dart';

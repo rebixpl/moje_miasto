@@ -53,3 +53,9 @@ class UserFSCheckIfUserExistsInFirebaseEvent extends UserFSEvent {
 
   UserFSCheckIfUserExistsInFirebaseEvent(this.uid);
 }
+
+class UserFSGetCurrentDataEvent extends UserFSEvent {
+  final String uid;
+
+  UserFSGetCurrentDataEvent(this.uid);
+}
