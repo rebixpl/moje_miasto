@@ -85,7 +85,7 @@ class CityPickerCubit extends Cubit<CityPickerState> {
 // stores currently selected city id
 class CityPickerSelectionCubit extends Cubit<String> {
   // first id will be default and selected at the beginning
-  CityPickerSelectionCubit() : super('');
+  CityPickerSelectionCubit() : super('1');
 
 // set new avatar image id
   void selectCityId(String newId) => emit(newId);

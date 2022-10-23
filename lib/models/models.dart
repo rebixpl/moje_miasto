@@ -33,6 +33,37 @@ class UserFS {
     this.username = '',
   });
 
+  UserFS copyWith({
+    String? accountType,
+    String? avatarId,
+    List<BioreUdzialKonkurs>? bioreUdzialKonkursy,
+    String? cityId,
+    List<DodanyKonkurs>? dodaneKonkursy,
+    List<DodanaKorepetycja>? dodaneKorepetycje,
+    List<DodanaSzkola>? dodaneSzkoly,
+    List<DodaneZainteresowanie>? dodaneZainteresowania,
+    String? email,
+    List<String>? glosyNaSzkoly,
+    String? uid,
+    String? username,
+  }) {
+    return UserFS(
+      accountType: accountType ?? this.accountType,
+      avatarId: avatarId ?? this.avatarId,
+      bioreUdzialKonkursy: bioreUdzialKonkursy ?? this.bioreUdzialKonkursy,
+      cityId: cityId ?? this.cityId,
+      dodaneKonkursy: dodaneKonkursy ?? this.dodaneKonkursy,
+      dodaneKorepetycje: dodaneKorepetycje ?? this.dodaneKorepetycje,
+      dodaneSzkoly: dodaneSzkoly ?? this.dodaneSzkoly,
+      dodaneZainteresowania:
+          dodaneZainteresowania ?? this.dodaneZainteresowania,
+      email: email ?? this.email,
+      glosyNaSzkoly: glosyNaSzkoly ?? this.glosyNaSzkoly,
+      uid: uid ?? this.uid,
+      username: username ?? this.username,
+    );
+  }
+
   /// Connect the generated [_$UserFSFromJson] function to the `fromJson`
   /// factory.
   factory UserFS.fromJson(Map<String, dynamic> json) => _$UserFSFromJson(json);

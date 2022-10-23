@@ -2,7 +2,8 @@ import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:formz/formz.dart';
-import 'package:moje_miasto/screens/account_creation_screens/ca_more_info/ca_more_info_screen.dart';
+import 'package:moje_miasto/blocs/userFS/bloc/userfs_bloc.dart';
+import 'package:moje_miasto/blocs/userFS/bloc/userfs_events.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/cubit/sign_up_cubit.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/avatar_selector.dart';
 import 'package:moje_miasto/screens/account_creation_screens/create_account/widgets/avatar_selector/cubits/avatar_selector_cubit.dart';
@@ -78,7 +79,10 @@ class CreateAccountScreen extends StatelessWidget {
                           const SizedBox(height: 20.0),
                           const SelectAvatar(),
                           const SizedBox(height: 40.0),
-                          _SignUpButton(formKey: _formKey),
+                          _SignUpButton(
+                            formKey: _formKey,
+                            usernameController: _usernameController,
+                          ),
                           const SizedBox(height: 30.0),
                           const GoogleAuthBtnCentred(),
                           const SizedBox(height: 20.0),
@@ -102,13 +106,18 @@ class _SignUpButton extends StatelessWidget {
   const _SignUpButton({
     Key? key,
     required GlobalKey<FormState> formKey,
+    required this.usernameController,
   })  : _formKey = formKey,
         super(key: key);
 
   final GlobalKey<FormState> _formKey;
+  final TextEditingController usernameController;
 
   @override
   Widget build(BuildContext context) {
+    final avatarSelectorCubit = context.read<AvatarSelectorCubit>();
+    final userFSBloc = BlocProvider.of<UserFSBloc>(context);
+
     return BlocBuilder<SignUpCubit, SignUpState>(
       buildWhen: (previous, current) => previous.status != current.status,
       builder: (context, state) {
@@ -120,26 +129,18 @@ class _SignUpButton extends StatelessWidget {
                 onTap: () {
                   if (_formKey.currentState!.validate()) {
                     if (state.status.isValidated) {
-                      context.read<SignUpCubit>().signUpFormSubmitted();
+                      if (avatarSelectorCubit.state != null) {
+                        userFSBloc.add(
+                          UserFSAddCreateAccountWithEmailDataToStateEvent(
+                            avatarSelectorCubit.state!,
+                            usernameController.text,
+                          ),
+                        );
+                        context.read<SignUpCubit>().signUpFormSubmitted();
+                      }
                     }
                   }
                 },
-                // onTap: () {
-                //   // TODO: also validate avatar selector, or create a cubit with default first avatar
-                //   if (_formKey.currentState!.validate()) {
-                //     // TODO: navigate to CA Additional Informations Screen
-                //     Navigator.push(
-                //       context,
-                //       MaterialPageRoute(
-                //         builder: (context) => CAMoreInfoScreen(),
-                //       ),
-                //     );
-                //     debugPrint(
-                //         'validation successfull, navigate to CA Additional Informations Screen');
-                //   } else {
-                //     debugPrint('ERROR validating create account!');
-                //   }
-                // },
               );
       },
     );
