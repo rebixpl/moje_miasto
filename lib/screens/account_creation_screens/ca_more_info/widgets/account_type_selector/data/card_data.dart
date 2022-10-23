@@ -19,6 +19,12 @@ class CardData {
   });
 }
 
+enum AccountCardsListEnum {
+  uczen,
+  obywatel,
+  przedsiebiorca,
+}
+
 const List<CardData> cards = [
   CardData(
     cardTitle: 'Uczniem',
