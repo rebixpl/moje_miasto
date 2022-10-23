@@ -83,7 +83,7 @@ class InfoScreen extends StatelessWidget {
                         SizedBox(width: 20.0),
                         Expanded(
                           child: PersonCard(
-                            imgPath: 'images/screens/info/fac.jpeg',
+                            imgPath: 'images/screens/info/fac.jpg',
                             name: 'Jan Fac',
                           ),
                         ),
