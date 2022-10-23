@@ -6,8 +6,14 @@ abstract class UserFSEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class CreateUserEvent extends UserFSEvent {
+class UserFSCreateUserEvent extends UserFSEvent {
   final UserFS userFS;
 
-  CreateUserEvent(this.userFS);
+  UserFSCreateUserEvent(this.userFS);
+}
+
+class UserFSCheckIfUserExistsInFirebaseEvent extends UserFSEvent {
+  final String uid;
+
+  UserFSCheckIfUserExistsInFirebaseEvent(this.uid);
 }

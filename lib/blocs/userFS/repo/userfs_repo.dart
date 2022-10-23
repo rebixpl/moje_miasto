@@ -23,4 +23,10 @@ class UserFSRepository {
       throw Exception(e.toString());
     }
   }
+
+  Future<bool> checkIfUserExistsInFirebase(String uid) async {
+    var ds = await _db.doc(uid).get();
+
+    return ds.exists;
+  }
 }

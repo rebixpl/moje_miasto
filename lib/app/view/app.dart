@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moje_miasto/app/app.dart';
+import 'package:moje_miasto/blocs/userFS/bloc/userfs_bloc.dart';
+import 'package:moje_miasto/blocs/userFS/repo/userfs_repo.dart';
 import 'package:moje_miasto/routes/routes.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/theme.dart';
@@ -17,12 +19,33 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RepositoryProvider.value(
-      value: _authenticationRepository,
-      child: BlocProvider(
-        create: (context) => AppBloc(
-          authenticationRepository: _authenticationRepository,
+    return MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider.value(
+          value: _authenticationRepository,
         ),
+        // Inject UserFS repository
+        RepositoryProvider(
+          create: (context) => UserFSRepository(),
+        ),
+      ],
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            // AppBloc just logs / registers the user with firebase auth, that's it
+            create: (context) => AppBloc(
+              authenticationRepository: _authenticationRepository,
+            ),
+          ),
+          // inject the UserFS BLOC
+          BlocProvider(
+            // UserFSBloc makes user an account in firebase and uploads the user data there
+            create: (context) => UserFSBloc(
+              userFSRepository:
+                  RepositoryProvider.of<UserFSRepository>(context),
+            ),
+          ),
+        ],
         child: const AppView(),
       ),
     );

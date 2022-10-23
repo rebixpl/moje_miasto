@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moje_miasto/app/app.dart';
+import 'package:moje_miasto/blocs/userFS/bloc/userfs_bloc.dart';
+import 'package:moje_miasto/blocs/userFS/bloc/userfs_events.dart';
+import 'package:moje_miasto/blocs/userFS/bloc/userfs_states.dart';
 import 'package:moje_miasto/screens/page_view_screen/data/nav_screens.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/custom_bottom_navbar.dart';
@@ -45,24 +48,68 @@ class _PageViewScreenState extends State<PageViewScreen> {
   @override
   Widget build(BuildContext context) {
     final user = context.select((AppBloc bloc) => bloc.state.user);
-
-    return BlocConsumer<PageViewNavCubit, PageViewNavState>(
-      listener: (context, state) async {
-        if (state is ShowPageState) {
-          _jumpToPage(state.page);
-        } else if (state is GoBackState) {
-          _goBack();
-        }
-      },
+    final userFSBloc = BlocProvider.of<UserFSBloc>(context);
+    // AppBloc has finished login / registration process, we have some data in user variable
+    // now the UserFS bloc will try to upload user data into firestore if the user has not created an account before
+    return BlocBuilder<UserFSBloc, UserFSState>(
       builder: (context, state) {
-        return Scaffold(
-          body: PageView(
-            physics: const NeverScrollableScrollPhysics(),
-            controller: _pageController,
-            children: navScreens,
-          ),
-          bottomNavigationBar: CustomBottomNavBar(),
-        );
+        if (state is UsersFSInitialState) {
+          userFSBloc.add(UserFSCheckIfUserExistsInFirebaseEvent(user.id));
+          return const Scaffold(
+            body: Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
+        } else if (state is UserFSAddingState) {
+          return const Scaffold(
+            body: Center(
+              child: CircularProgressIndicator(),
+            ),
+          );
+        } else if (state is UserFSErrorState) {
+          return Scaffold(
+            body: Center(
+              child: Text('Error: ${state.error}'),
+            ),
+          );
+        } else if (state is UserFSCreateAccountState) {
+          if (user.name == null) {
+            // user registered through password and email
+            return const Scaffold(
+              body: Center(
+                child: Text('password and email'),
+              ),
+            );
+          } else {
+            // user registereg through google sign in
+            return const Scaffold(
+              body: Center(
+                child: Text('google sign in'),
+              ),
+            );
+          }
+        } else {
+          // UserFSAddedState, user exists in the firebase
+          return BlocConsumer<PageViewNavCubit, PageViewNavState>(
+            listener: (context, state) async {
+              if (state is ShowPageState) {
+                _jumpToPage(state.page);
+              } else if (state is GoBackState) {
+                _goBack();
+              }
+            },
+            builder: (context, state) {
+              return Scaffold(
+                body: PageView(
+                  physics: const NeverScrollableScrollPhysics(),
+                  controller: _pageController,
+                  children: navScreens,
+                ),
+                bottomNavigationBar: CustomBottomNavBar(),
+              );
+            },
+          );
+        }
       },
     );
   }

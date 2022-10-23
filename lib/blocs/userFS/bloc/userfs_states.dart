@@ -6,11 +6,15 @@ abstract class UserFSState extends Equatable {}
 
 class UsersFSInitialState extends UserFSState {
   @override
-// TODO: implement props
   List<Object?> get props => [];
 }
 
 class UserFSAddingState extends UserFSState {
+  @override
+  List<Object?> get props => [];
+}
+
+class UserFSCreateAccountState extends UserFSState {
   @override
   List<Object?> get props => [];
 }
