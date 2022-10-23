@@ -14,4 +14,6 @@ enum NavScreensEnum {
   waldekAiChatScreen,
   konkursyIOlimpiadyScreen,
   yeKonkursyDodanePrzezCiebieScreen,
+  yeUczestnicyTwoichKonkursowScreen,
+  yeDaneUczestnikowTwojegoKonkursuScreen,
 }

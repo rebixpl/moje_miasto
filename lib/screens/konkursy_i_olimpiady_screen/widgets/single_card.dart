@@ -11,12 +11,14 @@ class SingleCard extends StatelessWidget {
     required this.schoolTypeName,
     this.isYourEntriesCard = false,
     VoidCallback? yourEntriesOnTap,
+    this.customBtnText,
   })  : yourEntriesOnTap = yourEntriesOnTap ?? (() {}),
         super(key: key);
 
   final String schoolTypeName;
   final bool isYourEntriesCard;
   final VoidCallback yourEntriesOnTap;
+  final String? customBtnText;
 
   @override
   Widget build(BuildContext context) {
@@ -107,9 +109,11 @@ class SingleCard extends StatelessWidget {
                                       ),
                                     );
                                   },
-                            text: isYourEntriesCard
-                                ? 'usuń ten wpis'
-                                : 'więcej informacji',
+                            text: customBtnText == null
+                                ? isYourEntriesCard
+                                    ? 'usuń ten wpis'
+                                    : 'więcej informacji'
+                                : customBtnText!,
                             fontSize: 11.0,
                             padding: const EdgeInsets.symmetric(vertical: 14.5),
                           ),

@@ -10,6 +10,8 @@ import 'package:moje_miasto/screens/waldek_ai_screen/screens/waldek_ai_chat_scre
 import 'package:moje_miasto/screens/waldek_ai_screen/waldek_ai_home_screen.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_hobby_i_zainteresowania/ye_hobby_i_zainteresowania.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_konkursy_i_olimpiady/screens/konkursy_dodane_przez_ciebie/konkursy_dodane_przez_ciebie_screen.dart';
+import 'package:moje_miasto/screens/your_entries_screen/screens/ye_konkursy_i_olimpiady/screens/uczestnicy_twoich_konkursow/screens/ye_dane_uczestnikow_twojego_konkursu/ye_dane_uczestnikow_twojego_konkursu_screen.dart';
+import 'package:moje_miasto/screens/your_entries_screen/screens/ye_konkursy_i_olimpiady/screens/uczestnicy_twoich_konkursow/uczestnicy_twoich_konkursow_screen.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_konkursy_i_olimpiady/ye_konkursy_i_olimpiady_screen.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_korepetycje_i_pomoc_screen/ye_korepetycje_i_pomoc_screen.dart';
 import 'package:moje_miasto/screens/your_entries_screen/screens/ye_school_ranking_screen/ye_school_ranking_screen.dart';
@@ -31,4 +33,6 @@ List<Widget> navScreens = [
   const WaldekAiChatScreen(),
   const KonkursyIOlimpiadyScreen(),
   const YeKonkursyDodanePrzezCiebieScreen(),
+  const YeUczestnicyTwoichKonkursowScreen(),
+  const YeDaneUczestnikowTwojegoKonkursuScreen(),
 ];

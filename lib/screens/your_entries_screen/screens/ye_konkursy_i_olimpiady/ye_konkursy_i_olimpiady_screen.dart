@@ -76,7 +76,12 @@ class YeKonkursyIOlimpiadyScreen extends StatelessWidget {
                       label: 'Uczestnicy twoich konkursów',
                       icon: FontAwesomeIcons.userPlus,
                       fontSize: 13.0,
-                      onTap: () {},
+                      onTap: () {
+                        pageViewNavCubit.onTap(
+                          NavScreensEnum
+                              .yeUczestnicyTwoichKonkursowScreen.index,
+                        );
+                      },
                     ),
                     const SizedBox(height: 20.0),
                     SectionButton(

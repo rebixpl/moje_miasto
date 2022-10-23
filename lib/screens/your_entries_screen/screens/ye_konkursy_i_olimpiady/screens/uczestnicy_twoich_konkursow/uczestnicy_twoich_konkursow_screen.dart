@@ -6,14 +6,13 @@ import 'package:moje_miasto/screens/konkursy_i_olimpiady_screen/widgets/single_c
 import 'package:moje_miasto/screens/page_view_screen/data/nav_screens_enum.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
 import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/school_type_picker/data/school_type_picker_data.dart';
-import 'package:moje_miasto/screens/your_entries_screen/screens/ye_school_ranking_screen/widgets/delete_button/delete_confirmation_snackbar.dart';
 import 'package:moje_miasto/screens/your_entries_screen/widgets/your_entries_screen_texts.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
 
 import 'package:moje_miasto/theme.dart';
 
-class YeKonkursyDodanePrzezCiebieScreen extends StatelessWidget {
-  const YeKonkursyDodanePrzezCiebieScreen({super.key});
+class YeUczestnicyTwoichKonkursowScreen extends StatelessWidget {
+  const YeUczestnicyTwoichKonkursowScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +63,7 @@ class YeKonkursyDodanePrzezCiebieScreen extends StatelessWidget {
                     const FullWidthDivider(),
                     const SizedBox(height: 20.0),
                     subTitleText(
-                      'Konkursy dodane przez ciebie',
+                      'Uczestnicy twoich konkursów',
                     ),
                     const SizedBox(height: 20.0),
                     ListView.separated(
@@ -73,10 +72,11 @@ class YeKonkursyDodanePrzezCiebieScreen extends StatelessWidget {
                       itemBuilder: (context, index) => SingleCard(
                         schoolTypeName: schoolTypes[0].title,
                         isYourEntriesCard: true,
+                        customBtnText: 'Zobacz listę',
                         yourEntriesOnTap: () {
-                          showDeleteConfirmationSnackbar(
-                            context,
-                            onYesTap: () {},
+                          pageViewNavCubit.onTap(
+                            NavScreensEnum
+                                .yeDaneUczestnikowTwojegoKonkursuScreen.index,
                           );
                         },
                       ),
