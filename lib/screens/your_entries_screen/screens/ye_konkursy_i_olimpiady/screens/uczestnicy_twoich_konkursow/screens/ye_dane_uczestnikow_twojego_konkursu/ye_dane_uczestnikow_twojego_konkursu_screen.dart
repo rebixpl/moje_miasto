@@ -69,17 +69,6 @@ class YeDaneUczestnikowTwojegoKonkursuScreen extends StatelessWidget {
                       shrinkWrap: true,
                       physics: const BouncingScrollPhysics(),
                       itemBuilder: (context, index) => const SingleEntry(),
-                      // SingleCard(
-                      //   schoolTypeName: schoolTypes[0].title,
-                      //   isYourEntriesCard: true,
-                      //   customBtnText: 'Zobacz listę',
-                      //   yourEntriesOnTap: () {
-                      //     showDeleteConfirmationSnackbar(
-                      //       context,
-                      //       onYesTap: () {},
-                      //     );
-                      //   },
-                      // ),
                       separatorBuilder: (context, index) =>
                           const SizedBox(height: 20.0),
                       itemCount: 4,

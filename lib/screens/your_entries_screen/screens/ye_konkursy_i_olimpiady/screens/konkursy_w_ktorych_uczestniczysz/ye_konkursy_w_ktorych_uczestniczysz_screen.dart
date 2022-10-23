@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/full_width_divider.dart';
 import 'package:moje_miasto/screens/forgot_password/widgets/go_back_button.dart';
 import 'package:moje_miasto/screens/page_view_screen/data/nav_screens_enum.dart';
 import 'package:moje_miasto/screens/page_view_screen/widgets/custom_bottom_navbar/cubit/cb_navbar_cubit.dart';
-import 'package:moje_miasto/screens/profile_screen/widgets/home_screen_personalization_btn/section_button.dart';
+import 'package:moje_miasto/screens/school_ranking_screen/screens/add_school_screen/widgets/school_type_picker/data/school_type_picker_data.dart';
+import 'package:moje_miasto/screens/your_entries_screen/screens/ye_konkursy_i_olimpiady/screens/konkursy_w_ktorych_uczestniczysz/widgets/single_card_kwku.dart';
 import 'package:moje_miasto/screens/your_entries_screen/widgets/your_entries_screen_texts.dart';
 import 'package:moje_miasto/shared/app/text/title_case.dart';
+
 import 'package:moje_miasto/theme.dart';
 
-class YeKonkursyIOlimpiadyScreen extends StatelessWidget {
-  const YeKonkursyIOlimpiadyScreen({super.key});
+class YeKonkursyWKtorychUczestniczyszScreen extends StatelessWidget {
+  const YeKonkursyWKtorychUczestniczyszScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +30,13 @@ class YeKonkursyIOlimpiadyScreen extends StatelessWidget {
               child: GoBackButton(
                 onTap: () {
                   pageViewNavCubit.onTap(
-                    NavScreensEnum.yourEntriesScreen.index,
+                    NavScreensEnum.yeKonkursyIOlimpiadyScreen.index,
                   );
                 },
               ),
             ),
             appBarTitleText(
-              'konkursy & olimpiady'.allInCaps,
+              'konkursy & olimpiady'.titleCase,
               fontSize: 22.0,
             ),
           ],
@@ -56,46 +57,25 @@ class YeKonkursyIOlimpiadyScreen extends StatelessWidget {
                   right: AppTheme.kDefaultPadding,
                 ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const FullWidthDivider(),
                     const SizedBox(height: 20.0),
-                    SectionButton(
-                      label: 'Konkursy dodane przez ciebie',
-                      icon: FontAwesomeIcons.trophy,
-                      fontSize: 13.0,
-                      onTap: () {
-                        pageViewNavCubit.onTap(
-                          NavScreensEnum
-                              .yeKonkursyDodanePrzezCiebieScreen.index,
-                        );
-                      },
+                    subTitleText(
+                      'Konkursy w których uczestniczysz',
                     ),
                     const SizedBox(height: 20.0),
-                    SectionButton(
-                      label: 'Uczestnicy twoich konkursów',
-                      icon: FontAwesomeIcons.userPlus,
-                      fontSize: 13.0,
-                      onTap: () {
-                        pageViewNavCubit.onTap(
-                          NavScreensEnum
-                              .yeUczestnicyTwoichKonkursowScreen.index,
-                        );
-                      },
+                    ListView.separated(
+                      shrinkWrap: true,
+                      physics: const BouncingScrollPhysics(),
+                      itemBuilder: (context, index) => SingleCardKWKU(
+                        schoolTypeName: schoolTypes[0].title,
+                      ),
+                      separatorBuilder: (context, index) =>
+                          const SizedBox(height: 20.0),
+                      itemCount: 3,
                     ),
-                    const SizedBox(height: 20.0),
-                    SectionButton(
-                      label: 'konkursy w których uczestniczysz',
-                      icon: FontAwesomeIcons.trophy,
-                      fontSize: 14.0,
-                      onTap: () {
-                        pageViewNavCubit.onTap(
-                          NavScreensEnum
-                              .yeKonkursyWKtorychUczestniczyszScreen.index,
-                        );
-                      },
-                    ),
-                    const SizedBox(height: 20.0),
                     const SizedBox(
                       height: AppTheme.kBottomNavbarHeight + 20.0,
                     ),
