@@ -12,6 +12,8 @@ class UserFSBloc extends Bloc<UserFSEvent, UserFSState> {
     on<UserFSCheckIfUserExistsInFirebaseEvent>(_onCheckIfUserExistsInFirebase);
     on<UserFSAddCreateAccountWithEmailDataToStateEvent>(
         _onAddCreateAccountWithEmailData);
+    on<UserFSAddCreateAccountWithGmailDataToStateEvent>(
+        _onAddCreateAccountWithGmailData);
     on<UserFSAddCreateAccountMoreInfoDataToStateEvent>(
         _onAddCreateAccountMoreInfoData);
     on<UserFSAddDataFromAuthUserToStateEvent>(_onAddDataFromAuthUser);
@@ -51,6 +53,20 @@ class UserFSBloc extends Bloc<UserFSEvent, UserFSState> {
   ) {
     emit(
       UsersFSInitialState(
+        state.userFs.copyWith(
+          username: event.username,
+          avatarId: event.avatarId,
+        ),
+      ),
+    );
+  }
+
+  void _onAddCreateAccountWithGmailData(
+    UserFSAddCreateAccountWithGmailDataToStateEvent event,
+    Emitter<UserFSState> emit,
+  ) {
+    emit(
+      UserFSGmailAddMoreInfoState(
         state.userFs.copyWith(
           username: event.username,
           avatarId: event.avatarId,

@@ -5,7 +5,7 @@ Text bestSchoolsText() {
   return Text(
     'najlepsze szkoły'.allInCaps,
     style: const TextStyle(
-      fontSize: 28.0,
+      fontSize: 22.0,
       fontWeight: FontWeight.bold,
     ),
   );

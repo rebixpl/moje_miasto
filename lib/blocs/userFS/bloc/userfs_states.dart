@@ -47,6 +47,13 @@ class UserFSCreateAccountState extends UserFSState {
   List<Object?> get props => [];
 }
 
+class UserFSGmailAddMoreInfoState extends UserFSState {
+  const UserFSGmailAddMoreInfoState(super.userFs);
+
+  @override
+  List<Object?> get props => [];
+}
+
 class UserFSAddedState extends UserFSState {
   const UserFSAddedState(super.userFs);
 

@@ -18,6 +18,16 @@ class UserFSAddCreateAccountWithEmailDataToStateEvent extends UserFSEvent {
   );
 }
 
+class UserFSAddCreateAccountWithGmailDataToStateEvent extends UserFSEvent {
+  final String avatarId;
+  final String username;
+
+  UserFSAddCreateAccountWithGmailDataToStateEvent(
+    this.avatarId,
+    this.username,
+  );
+}
+
 class UserFSAddDataFromAuthUserToStateEvent extends UserFSEvent {
   final String uid;
   final String email;

@@ -14,7 +14,6 @@ class SchoolRankingAppBar extends StatelessWidget {
       padding: const EdgeInsets.only(
         left: 10.0,
         right: 10.0,
-        top: 20.0,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -66,6 +66,7 @@ class _PageViewScreenState extends State<PageViewScreen> {
             );
           } else {
             // user registereg through google sign in
+
             Navigator.push(
               context,
               MaterialPageRoute(
@@ -73,6 +74,13 @@ class _PageViewScreenState extends State<PageViewScreen> {
               ),
             );
           }
+        } else if (state is UserFSGmailAddMoreInfoState) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => CAMoreInfoScreen(),
+            ),
+          );
         } else if (state is UserFSAddingDataFromAuthState) {
           userFSBloc.add(
             UserFSAddDataFromAuthUserToStateEvent(user.id, user.email!),
